@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         movement2D.Move(x);
         movement2D.Jump();
+        movement2D.Direction();
         if (Input.GetKeyDown(KeyCode.LeftShift))
             movement2D.Dash(x);
 

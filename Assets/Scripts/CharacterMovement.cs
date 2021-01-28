@@ -12,32 +12,47 @@ public class CharacterMovement : MonoBehaviour
     private int jumpCount = 0;
     private bool isGrounded = false;
 
+    public bool canMove=true;
     public void Move(float x)
     {
-        rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
+        if (canMove)
+            rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
     }
 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
+        if (canMove)
         {
-            jumpCount++;
-            rigid2D.velocity = Vector2.zero;
-            rigid2D.AddForce(new Vector2(0, jumpForce));
-        }
-        else if (Input.GetKeyUp(KeyCode.Space) && rigid2D.velocity.y > 0)
-        {
-            rigid2D.velocity *= 0.5f;
+            if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
+            {
+                jumpCount++;
+                rigid2D.velocity = Vector2.zero;
+                rigid2D.AddForce(new Vector2(0, jumpForce));
+            }
+            else if (Input.GetKeyUp(KeyCode.Space) && rigid2D.velocity.y > 0)
+            {
+                rigid2D.velocity *= 0.5f;
+            }
         }
     }
 
+    public void Hit(float x)
+    {
+        rigid2D.velocity = new Vector2(x * 3, 3);
+    }
     public void Dash(float x)
     {
+        if(canMove)
+            StartCoroutine(waitDash());
         
-        
-        
-        StartCoroutine(waitDash());
-        
+    }
+
+    public void Direction()
+    {
+        if (rigid2D.velocity.x < 0)
+            transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        else if (rigid2D.velocity.x > 0)
+            transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f);
     }
 
     void Start()
@@ -64,9 +79,9 @@ public class CharacterMovement : MonoBehaviour
     private IEnumerator waitDash()
     {
         moveSpeed = 30f;
-        Debug.LogError(moveSpeed);
+        //Debug.LogError(moveSpeed);
         yield return new WaitForSeconds(0.1f);
         moveSpeed = 5f;
-        Debug.LogError(moveSpeed);
+        //Debug.LogError(moveSpeed);
     }
 }
