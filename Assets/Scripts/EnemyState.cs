@@ -54,6 +54,13 @@ public class EnemyState : LivingEntity
         }
     }
 
+    public override void OnDamage(float damage)
+    {
+        base.OnDamage(damage);
+
+
+    }
+
     private void Start()
     {
         lastAttTime = Time.time;
@@ -62,7 +69,7 @@ public class EnemyState : LivingEntity
     }
     private void Update()
     {
-        enemyMove.Move(1);
+        //enemyMove.Move(1);
     }
 
     private IEnumerator UpdateMove()

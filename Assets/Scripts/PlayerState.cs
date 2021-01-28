@@ -6,6 +6,8 @@ public class PlayerState : LivingEntity
 {
     public CharacterMovement movement;
 
+    private float lastAttTime;
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -20,6 +22,7 @@ public class PlayerState : LivingEntity
     private void Start()
     {
         movement = GetComponent<CharacterMovement>();
+        lastAttTime = 0f;
 
     }
 
@@ -56,6 +59,42 @@ public class PlayerState : LivingEntity
         base.Die();
         dead = true;
         movement.canMove = false;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.tag == "Player")
+        {
+            if (!dead && Time.time >= lastAttTime + attSpeed)
+            {
+
+                LivingEntity target = other.GetComponent<LivingEntity>();
+
+                PlayerState playerState = other.GetComponent<PlayerState>();
+                target.OnDamage(attDamage);
+                lastAttTime = Time.time;
+                //playerState.HitDetect(enemyMove.moveSpeed);
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+
+        if (other.tag == "Player")
+        {
+            if (!dead && Time.time >= lastAttTime + attSpeed)
+            {
+                LivingEntity target = other.GetComponent<LivingEntity>();
+                PlayerState playerState = other.GetComponent<PlayerState>();
+                target.OnDamage(attDamage);
+                lastAttTime = Time.time;
+                //playerState.HitDetect(enemyMove.moveSpeed);
+
+            }
+        }
     }
 
 }
