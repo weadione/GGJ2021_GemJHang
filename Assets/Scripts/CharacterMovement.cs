@@ -13,6 +13,16 @@ public class CharacterMovement : MonoBehaviour
     private bool isGrounded = false;
 
     public bool canMove=true;
+
+    public GameObject head;
+    public GameObject arm;
+    public GameObject leg;
+
+
+    int playerLayer, platformLayer, footLayer;
+    private Animator bodyAnimator;
+    private Animator armAnimator; 
+
     public void Move(float x)
     {
         if (canMove)
@@ -28,10 +38,25 @@ public class CharacterMovement : MonoBehaviour
                 jumpCount++;
                 rigid2D.velocity = Vector2.zero;
                 rigid2D.AddForce(new Vector2(0, jumpForce));
+                bodyAnimator.SetTrigger("jump");
+                armAnimator.SetTrigger("jump");
             }
             else if (Input.GetKeyUp(KeyCode.Space) && rigid2D.velocity.y > 0)
             {
                 rigid2D.velocity *= 0.5f;
+                bodyAnimator.SetTrigger("jump");
+                armAnimator.SetTrigger("jump");
+            }
+
+
+
+            if(rigid2D.velocity.y <= 0)
+            {
+                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, false);
+            }
+            else
+            {
+                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, true);
             }
         }
     }
@@ -50,14 +75,35 @@ public class CharacterMovement : MonoBehaviour
     public void Direction()
     {
         if (rigid2D.velocity.x < 0)
+        {
             transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            bodyAnimator.SetBool("moving", true);
+            armAnimator.SetBool("moving", true);
+        }
         else if (rigid2D.velocity.x > 0)
+        {
             transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f);
+            bodyAnimator.SetBool("moving", true);
+            armAnimator.SetBool("moving", true);
+        }
+        else
+        {
+            bodyAnimator.SetBool("moving", false);
+            armAnimator.SetBool("moving", false);
+        }
+
     }
 
     void Start()
     {
         rigid2D = GetComponent<Rigidbody2D>();
+        bodyAnimator = GetComponent<Animator>();
+        armAnimator = arm.GetComponent<Animator>();
+
+        playerLayer = LayerMask.NameToLayer("Player");
+        platformLayer = LayerMask.NameToLayer("Platform");
+        footLayer = LayerMask.NameToLayer("PlayerFoot");
+        Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
