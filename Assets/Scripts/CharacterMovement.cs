@@ -52,11 +52,11 @@ public class CharacterMovement : MonoBehaviour
 
             if(rigid2D.velocity.y <= 0)
             {
-                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, false);
+                //Physics2D.IgnoreLayerCollision(footLayer, platformLayer, false);
             }
             else
             {
-                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, true);
+                //Physics2D.IgnoreLayerCollision(footLayer, platformLayer, true);
             }
         }
     }
