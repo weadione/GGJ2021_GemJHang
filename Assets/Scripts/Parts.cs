@@ -1,0 +1,14 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Parts : MonoBehaviour
+{
+    public float partsHealth { get; protected set; }
+    public float partsDamage { get; protected set; }
+    public bool partsType { get; set; }
+    public float partsAttSpeed { get; protected set; }
+    public float partsMoveSpeed { get; protected set; }
+
+
+}
