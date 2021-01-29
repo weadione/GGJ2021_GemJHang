@@ -8,6 +8,8 @@ public class PlayerState : LivingEntity
 
     public float lastAttTime;
 
+    public int[] partsNum; 
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -23,7 +25,7 @@ public class PlayerState : LivingEntity
     {
         movement = GetComponent<CharacterMovement>();
         lastAttTime = 0f;
-
+        partsNum = new int[3]; //0이 머리, 1이 팔, 2가 다리
     }
 
     public override void OnDamage(float damage)

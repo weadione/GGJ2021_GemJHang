@@ -8,23 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public float tmpTime;
     public bool canAttack =true;
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-
-    //    if (other.tag == "Enemy")
-    //    {
-    //        if (!state.dead && canAttack)
-    //        {
-
-    //            LivingEntity target = other.GetComponent<LivingEntity>();
-
-    //            PlayerState playerState = other.GetComponent<PlayerState>();
-    //            target.OnDamage(state.attDamage);
-                
-    //            //playerState.HitDetect(enemyMove.moveSpeed);
-    //        }
-    //    }
-    //}
+    public Animator attackAnimator;
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -38,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
                 state.lastAttTime = Time.time;
                 canAttack = false;
                 enemyState.HitDetect(0);
+                attackAnimator.SetTrigger("attack");
 
             }
         }
