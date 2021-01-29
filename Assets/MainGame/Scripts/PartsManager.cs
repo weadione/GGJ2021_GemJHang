@@ -13,6 +13,7 @@ public class PartsManager : MonoBehaviour
     public Parts[] headParts;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,27 +23,7 @@ public class PartsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            armParts[0].mainObject.SetActive(true);
-            armParts[1].mainObject.SetActive(false);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            armParts[1].mainObject.SetActive(true);
-            armParts[0].mainObject.SetActive(false);
-        }
 
-        if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            legParts[0].mainObject.SetActive(true);
-            legParts[1].mainObject.SetActive(false);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            legParts[1].mainObject.SetActive(true);
-            legParts[0].mainObject.SetActive(false);
-        }
 
     }
 
@@ -52,14 +33,15 @@ public class PartsManager : MonoBehaviour
         legParts = new Parts[2];
         headParts = new Parts[1];
 
-        armParts[0] = new Parts(0f, 10f, true, 1f, 0f, "bug");
-        armParts[1] = new Parts(0f, 20f, true, 1f, 0f, "elephant");
+        //체력, 뎀지, 근/원거리, 공속, 이속, 이름, 사거리, 대쉬여부, 점프카운트, 점프력
+        armParts[0] = new Parts(0f, 10f, true, 1f, 0f, "bug", 6,false,1,0);
+        armParts[1] = new Parts(0f, 20f, true, 1f, 0f, "elephant", 6, false, 1,0);
 
 
-        legParts[0] = new Parts(0f, 0f, true, 0f, 10f, "snake");
-        legParts[1] = new Parts(0f, 0f, true, 0f, 15f, "horse");
+        legParts[0] = new Parts(0f, 0f, true, 0f, 10f, "snake",0, false, 1, 400);
+        legParts[1] = new Parts(0f, 0f, true, 0f, 15f, "horse",0, false, 1, 400);
 
-        headParts[0] = new Parts(50f, 0f, true, 0f, 0f, "bug");
+        headParts[0] = new Parts(50f, 0f, true, 0f, 0f, "bug",0, false, 1, 0);
 
         for (int i = 0; i < armList.Length; i++)
             armParts[i].mainObject = armList[i];
@@ -70,5 +52,38 @@ public class PartsManager : MonoBehaviour
         for (int i = 0; i < headList.Length; i++)
             headParts[i].mainObject = headList[i];
     }
+
+    public void ChangeParts(int partsType, int changeNum)   //partsType: 파츠타입, changNum: 원하는 파츠의 번호
+    {
+        if(partsType==0)    //머리
+        {
+            headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
+            headParts[changeNum].mainObject.SetActive(true);
+            PlayerState.Instance.partsNum[0] = changeNum;
+            PlayerState.Instance.updateStatus(0);
+        }
+        else if(partsType == 1)    //팔
+        {
+            armParts[PlayerState.Instance.partsNum[1]].mainObject.SetActive(false);
+            armParts[changeNum].mainObject.SetActive(true);
+            PlayerState.Instance.partsNum[1] = changeNum;
+            PlayerState.Instance.updateStatus(1);
+        }
+        else if (partsType == 2)    //다리
+        {
+            legParts[PlayerState.Instance.partsNum[2]].mainObject.SetActive(false);
+            legParts[changeNum].mainObject.SetActive(true);
+            PlayerState.Instance.partsNum[2] = changeNum;
+            PlayerState.Instance.updateStatus(2);
+        }
+        else
+        {
+            Debug.LogError("ChangeParts 오류!");
+        }
+
+        
+
+    }
+
 
 }

@@ -9,6 +9,8 @@ public class EnemyState : LivingEntity
 
     int playerLayer, enemyLayer, footLayer;
 
+    public int[] item;
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -32,10 +34,10 @@ public class EnemyState : LivingEntity
 
                 LivingEntity target = other.GetComponent<LivingEntity>();
 
-                PlayerState playerState = other.GetComponent<PlayerState>();
+               
                 target.OnDamage(attDamage);
                 lastAttTime = Time.time;
-                playerState.HitDetect(enemyMove.moveSpeed);
+                PlayerState.Instance.HitDetect(enemyMove.moveSpeed);
             }
         }
     }
@@ -49,10 +51,9 @@ public class EnemyState : LivingEntity
             if (!dead && Time.time >= lastAttTime + attSpeed)
             {
                 LivingEntity target = other.GetComponent<LivingEntity>();
-                PlayerState playerState = other.GetComponent<PlayerState>();
                 target.OnDamage(attDamage);
                 lastAttTime = Time.time;
-                playerState.HitDetect(enemyMove.moveSpeed);
+                PlayerState.Instance.HitDetect(enemyMove.moveSpeed);
 
             }
         }
@@ -88,6 +89,8 @@ public class EnemyState : LivingEntity
         enemyMove = GetComponent<CharacterMovement>();
         StartCoroutine(UpdateMove());
 
+        item = new int[3];
+
         playerLayer = LayerMask.NameToLayer("Player");
         enemyLayer = LayerMask.NameToLayer("Enemy");
         footLayer = LayerMask.NameToLayer("PlayerFoot");
@@ -97,7 +100,7 @@ public class EnemyState : LivingEntity
     private void Update()
     {
         enemyMove.Move(1);
-        Debug.Log("벌레:"+ health);
+        //Debug.Log("벌레:"+ health);
     }
 
     private IEnumerator UpdateMove()
@@ -117,5 +120,7 @@ public class EnemyState : LivingEntity
         base.Die();
         dead = true;
         enemyMove.canMove = false;
+        tag = "Dead";
+       
     }
 }

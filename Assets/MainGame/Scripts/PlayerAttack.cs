@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public PlayerState state;
     public float tmpTime;
     public bool canAttack =true;
 
@@ -14,14 +13,15 @@ public class PlayerAttack : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            if (!state.dead && canAttack && Time.time >= state.lastAttTime + state.attSpeed)
+            if (!PlayerState.Instance.dead && canAttack && Time.time >= PlayerState.Instance.lastAttTime + PlayerState.Instance.attSpeed)
             {
                 LivingEntity target = other.GetComponent<LivingEntity>();
                 EnemyState enemyState = other.GetComponent<EnemyState>();
-                target.OnDamage(state.attDamage);
-                state.lastAttTime = Time.time;
+                target.OnDamage(PlayerState.Instance.attDamage);
+                PlayerState.Instance.lastAttTime = Time.time;
                 canAttack = false;
                 enemyState.HitDetect(0);
+
                 attackAnimator.SetTrigger("attack");
 
             }
@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftControl) && !canAttack)
+        if(Input.GetKeyDown(KeyCode.LeftControl) && !canAttack && Time.time >= PlayerState.Instance.lastAttTime + PlayerState.Instance.attSpeed)
         {
             
             canAttack = true;

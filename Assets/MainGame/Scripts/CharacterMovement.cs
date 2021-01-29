@@ -25,6 +25,7 @@ public class CharacterMovement : MonoBehaviour
     private Animator lowerBodyAnimator, upperBodyAnimator;
     private Animator armAnimator; 
 
+
     public void Move(float x)                       //기본 캐릭터 이동 함수, x가 +면 이동속도와 곱해져서 오른쪽으로 이동 / -면 왼쪽으로 이동
     {
         if (canMove)
@@ -35,11 +36,11 @@ public class CharacterMovement : MonoBehaviour
     {
         if (canMove)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)       // 점프 카운트가 2이상이면 점프 불가능(땅에 있을때 0임)
+            if (Input.GetKeyDown(KeyCode.Space) && jumpCount < PlayerState.Instance.jumpCount)       // 점프 카운트가 2이상이면 점프 불가능(땅에 있을때 0임)
             {
                 jumpCount++;
                 rigid2D.velocity = Vector2.zero;
-                rigid2D.AddForce(new Vector2(0, jumpForce));
+                rigid2D.AddForce(new Vector2(0, PlayerState.Instance.jumpForce));
                 lowerBodyAnimator.SetTrigger("jump");
             }
             else if (Input.GetKeyUp(KeyCode.Space) && rigid2D.velocity.y > 0)   //스페이스 키가 떼어질 때 실행되어서 짧은 점프 실행하는거
@@ -67,10 +68,12 @@ public class CharacterMovement : MonoBehaviour
 
     public void Dash(float x)                                                   //대쉬 함수 코루틴으로 돌아감
     {
-        if(canMove)
+        if(canMove && PlayerState.Instance.dash)
             StartCoroutine(waitDash());
         
     }
+
+
 
     public void Direction()                                                     //
     {
@@ -94,6 +97,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         rigid2D = GetComponent<Rigidbody2D>();
+        isGrounded = true;
         lowerBodyAnimator = lowerBody.GetComponentInChildren<Animator>();
 
         playerLayer = LayerMask.NameToLayer("Player");
@@ -102,15 +106,16 @@ public class CharacterMovement : MonoBehaviour
         Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);                       //Player레이어가 Platform 레이어와 충돌하지 않게 만드는 함수
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)                                      
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log(collision.contacts[0].normal.y);
         // 바닥에 닿았음을 감지하는 처리
-        if (collision.contacts[0].normal.y > 0f)
+
+        if (collision.contacts[0].normal.y > 0.7f)
         {
             isGrounded = true;
             jumpCount = 0;
-            
+
         }
     }
 
@@ -123,9 +128,9 @@ public class CharacterMovement : MonoBehaviour
     private IEnumerator waitDash()
     {
         moveSpeed = 30f;
-        //Debug.LogError(moveSpeed);
         yield return new WaitForSeconds(0.1f);
         moveSpeed = 5f;
-        //Debug.LogError(moveSpeed);
     }
+
+ 
 }

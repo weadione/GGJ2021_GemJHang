@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     public string[] sceneName;
 
+
     private void Awake()
     {
         if (instance)
