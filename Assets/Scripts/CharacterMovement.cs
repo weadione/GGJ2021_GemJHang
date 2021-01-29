@@ -50,13 +50,13 @@ public class CharacterMovement : MonoBehaviour
 
 
 
-            if(rigid2D.velocity.y <= 0)
+            if(!isGrounded && rigid2D.velocity.y > 0)
             {
-                //Physics2D.IgnoreLayerCollision(footLayer, platformLayer, false);
+                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, true);
             }
             else
             {
-                //Physics2D.IgnoreLayerCollision(footLayer, platformLayer, true);
+                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, false);
             }
         }
     }
@@ -108,11 +108,13 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.contacts[0].normal.y);
         // 바닥에 닿았음을 감지하는 처리
-        if (collision.contacts[0].normal.y > 0.7f)
+        if (collision.contacts[0].normal.y > 0f)
         {
             isGrounded = true;
             jumpCount = 0;
+            
         }
     }
 

@@ -35,7 +35,7 @@ public class PlayerState : LivingEntity
 
     private void Update()
     {
-        Debug.Log(health);
+        //Debug.Log(health);
     }
     
     public void HitDetect(float x)

@@ -44,7 +44,6 @@ public class PartsManager : MonoBehaviour
             legParts[0].mainObject.SetActive(false);
         }
 
-        Debug.Log(armParts[0].partsDamage);
     }
 
     public void initalize()
