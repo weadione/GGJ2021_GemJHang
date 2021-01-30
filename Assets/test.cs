@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class WorldmapNodeScript : MonoBehaviour
+public class test : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,9 +14,5 @@ public class WorldmapNodeScript : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnClick(){
-        Debug.Log("OnClick");
     }
 }
