@@ -38,7 +38,7 @@ public class EnemyState : LivingEntity
         this.attType = attType;
         this.attSpeed = attSpeed;
         this.moveSpeed = moveSpeed;
-        Debug.Log(this.health);
+        //Debug.Log(this.health);
     }
 
 
@@ -143,7 +143,6 @@ public class EnemyState : LivingEntity
         Physics2D.IgnoreLayerCollision(enemyFootLayer, playBulletLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, enemyLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, enemyFootLayer, true);
-        Physics2D.IgnoreLayerCollision(detecterLayer, playBulletLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, detecterLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, monsterBulletLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, footLayer, true);

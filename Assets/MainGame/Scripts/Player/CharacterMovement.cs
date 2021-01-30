@@ -23,8 +23,14 @@ public class CharacterMovement : MonoBehaviour
 
     int playerLayer, platformLayer, footLayer, maplePlatformLayer, bulletLayer;
     private Animator lowerBodyAnimator, upperBodyAnimator;
-    private Animator armAnimator; 
+    private Animator armAnimator;
 
+
+    private void Update()
+    {
+        //Debug.Log("스텟: " + PlayerState.Instance.jumpCount);
+        //Debug.Log(jumpCount);
+    }
 
     public void Move(float x)                       //기본 캐릭터 이동 함수, x가 +면 이동속도와 곱해져서 오른쪽으로 이동 / -면 왼쪽으로 이동
     {
@@ -38,10 +44,12 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && jumpCount < PlayerState.Instance.jumpCount)       // 점프 카운트가 2이상이면 점프 불가능(땅에 있을때 0임)
             {
+                
                 jumpCount++;
                 rigid2D.velocity = Vector2.zero;
                 rigid2D.AddForce(new Vector2(0, PlayerState.Instance.jumpForce));
                 lowerBodyAnimator.SetTrigger("jump");
+                
             }
             else if (Input.GetKeyUp(KeyCode.Space) && rigid2D.velocity.y > 0)   //스페이스 키가 떼어질 때 실행되어서 짧은 점프 실행하는거
             {
@@ -112,28 +120,36 @@ public class CharacterMovement : MonoBehaviour
         Physics2D.IgnoreLayerCollision(playerLayer, bulletLayer, true);
         Physics2D.IgnoreLayerCollision(bulletLayer, bulletLayer, true);
         Physics2D.IgnoreLayerCollision(footLayer, bulletLayer, true);
+        Physics2D.IgnoreLayerCollision(14, 15, true);
 
 
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    //Debug.Log(collision.contacts[0].normal.y);
-    //    // 바닥에 닿았음을 감지하는 처리
-    //    //Debug.Log(collision.contacts[0].normal.y);
-        
-    //}
-
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Debug.Log(collision.contacts[0].normal.y);
+        // 바닥에 닿았음을 감지하는 처리
+        //Debug.Log(collision.contacts[0].normal.y);
         for (int i = 0; i < collision.contacts.Length; i++)
             if (collision.contacts[i].normal.y > 0.7f && collision.contacts[i].collider.tag == "Map")
             {
-                //Debug.Log(i + "번: " + collision.contacts[0].normal.y);
+                Debug.Log(collision.contacts.Length);
                 isGrounded = true;
                 jumpCount = 0;
             }
+
     }
+
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    for (int i = 0; i < collision.contacts.Length; i++)
+    //        if (collision.contacts[i].normal.y > 0.7f && collision.contacts[i].collider.tag == "Map")
+    //        {
+    //            //Debug.Log(i + "번: " + collision.contacts[0].normal.y);
+    //            isGrounded = true;
+    //            jumpCount = 0;
+    //        }
+    //}
 
 
     private void OnCollisionExit2D(Collision2D collision)

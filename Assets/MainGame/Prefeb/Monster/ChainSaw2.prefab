@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8096755324728790738}
   - component: {fileID: 8473089687337155383}
   - component: {fileID: 1567894573}
+  - component: {fileID: 1758295397}
   m_Layer: 11
   m_Name: ChainSaw2
   m_TagString: Enemy
@@ -102,16 +103,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c7805103faf8b4cbdf575200ffba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 150
   dead: 0
-  attDamage: 0
-  attType: 0
-  attSpeed: 0
-  moveSpeed: 0
+  attDamage: 60
+  attType: 1
+  attSpeed: 1
+  moveSpeed: 8
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
   item: 
+  attackAnimator: {fileID: 1758295397}
+  monsterBullet: {fileID: 0}
 --- !u!50 &8096755324728790741
 Rigidbody2D:
   serializedVersion: 4
@@ -206,7 +209,11 @@ PolygonCollider2D:
       - {x: 2.8091462, y: 0.7746297}
       - {x: 2.2637014, y: 0.4169309}
       - {x: 1.7286955, y: -0.09116662}
-      - {x: 1.4854326, y: -0.8638484}
+      - {x: 0.93650854, y: 2.0789912}
+      - {x: 0.18723422, y: 1.1787676}
+      - {x: -0.6265531, y: 0.11059183}
+      - {x: -1.103024, y: -1.0993202}
+      - {x: -0.51166904, y: -1.7713883}
       - {x: 1.4317721, y: -1.7403361}
       - {x: 1.9138899, y: -1.9962561}
       - {x: 3.78, y: -1.6899999}
@@ -232,6 +239,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3034747642196590218}
+--- !u!95 &1758295397
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096755324728790737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a3953b9890b3ac4ca757cdcbc2529e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8096755324833436219
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8096755325079498216
 Transform:
   m_ObjectHideFlags: 0
@@ -305,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8096755325079498215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.89, z: 0}
+  m_LocalPosition: {x: 1.92, y: 0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8096755324728790744}

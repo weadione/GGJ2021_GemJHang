@@ -6,7 +6,7 @@ public class MonsterBullet : MonoBehaviour
 {
     private void Start()
     {
-        Destroy(gameObject, 5.0f);
+        Destroy(gameObject, 3.0f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

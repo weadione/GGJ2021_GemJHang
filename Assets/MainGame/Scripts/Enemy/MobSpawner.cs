@@ -19,6 +19,8 @@ public class MobSpawner : MonoBehaviour
         Spawn();
     }
 
+
+
     private void Spawn()
     {
         if (selectPattern == 1)

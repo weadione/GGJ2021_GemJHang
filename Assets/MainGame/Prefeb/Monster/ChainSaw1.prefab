@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7157546850820945352
 Transform:
   m_ObjectHideFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7157546850820945351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.89, z: 0}
+  m_LocalPosition: {x: 1.52, y: 0.89, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7157546851205256952}
@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 7157546851205256946}
   - component: {fileID: 7394827902392066839}
   - component: {fileID: 1831953871}
+  - component: {fileID: 1830254920}
   m_Layer: 11
   m_Name: ChainSaw1
   m_TagString: Enemy
@@ -197,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fa27da8437b46ba4480034343df68965, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba1583cf77e0e2047870d278d64898b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -220,16 +221,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c7805103faf8b4cbdf575200ffba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 200
   dead: 0
-  attDamage: 0
-  attType: 0
-  attSpeed: 0
-  moveSpeed: 0
+  attDamage: 50
+  attType: 1
+  attSpeed: 1
+  moveSpeed: 8
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
   item: 
+  attackAnimator: {fileID: 1830254920}
+  monsterBullet: {fileID: 0}
 --- !u!50 &7157546851205256949
 Rigidbody2D:
   serializedVersion: 4
@@ -325,6 +328,12 @@ PolygonCollider2D:
       - {x: 2.2637014, y: 0.4169309}
       - {x: 1.7286955, y: -0.09116662}
       - {x: 1.4854326, y: -0.8638484}
+      - {x: 1.8000695, y: 1.2526088}
+      - {x: 0.43976146, y: 1.5543818}
+      - {x: -0.8137236, y: 0.6806998}
+      - {x: -1.3798072, y: -0.2379847}
+      - {x: -1.1366807, y: -1.0334675}
+      - {x: -0.4509557, y: -1.6414295}
       - {x: 1.4317721, y: -1.7403361}
       - {x: 1.9138899, y: -1.9962561}
       - {x: 3.78, y: -1.6899999}
@@ -350,6 +359,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3034747642347861506}
+--- !u!95 &1830254920
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157546851205256945}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 888462365a468874abe356a1f9e5a4a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1635636884
 PrefabInstance:
   m_ObjectHideFlags: 0

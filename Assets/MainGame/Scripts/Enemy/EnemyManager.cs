@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
         enemyList[1].GetComponent<EnemyState>().changeState(120f, 20f, true, 1f, 6f);
         enemyList[2].GetComponent<EnemyState>().changeState(150f, 40f, true, 1f, 7f);
         enemyList[3].GetComponent<EnemyState>().changeState(70f, 10f, false, 1f, 5f);   //슬라임1,2
-        enemyList[4].GetComponent<EnemyState>().changeState(100f, 20f, false, 1f, 6f);
+        enemyList[4].GetComponent<EnemyState>().changeState(100f, 20f, false, 0.8f, 7f);
         enemyList[5].GetComponent<EnemyState>().changeState(100f, 10f, true, 1f, 5f);   //송충이
         enemyList[6].GetComponent<EnemyState>().changeState(100f, 10f, true, 1f, 7f);   //범퍼카1,2
         enemyList[7].GetComponent<EnemyState>().changeState(150f, 20f, true, 1f, 9f);

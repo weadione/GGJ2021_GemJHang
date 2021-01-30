@@ -12,6 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bullet;
 
     public Animator attackAnimator;
+    public Animator[] armAttackAnimator;
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -26,8 +27,8 @@ public class PlayerAttack : MonoBehaviour
                 canAttack = false;
                 enemyState.HitDetect(0);
 
-                attackAnimator.SetTrigger("attack");
-
+                attackAnimator.SetTrigger("attackTrigger");
+                armAttackAnimator[PlayerState.Instance.partsNum[1]-1].SetTrigger("attackTrigger");
             }
         }
     }
@@ -50,6 +51,9 @@ public class PlayerAttack : MonoBehaviour
                 tmpBullet.GetComponent<Rigidbody2D>().velocity = PlayerState.Instance.transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
                 tmpBullet.transform.localScale = PlayerState.Instance.transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
                 PlayerState.Instance.lastAttTime = Time.time;
+
+                attackAnimator.SetTrigger("attackTrigger");
+                armAttackAnimator[PlayerState.Instance.partsNum[1]-1].SetTrigger("attackTrigger");
             }
 
         }
