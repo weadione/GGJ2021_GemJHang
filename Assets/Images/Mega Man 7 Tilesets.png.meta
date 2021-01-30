@@ -1,0 +1,5507 @@
+fileFormatVersion: 2
+guid: 4c6a44e3702bb6e4aba3bf66da20f061
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1436678166767944959
+    second: Mega Man 7 Tilesets_0
+  - first:
+      213: -5428867864723735086
+    second: Mega Man 7 Tilesets_1
+  - first:
+      213: -7728069659150632398
+    second: Mega Man 7 Tilesets_2
+  - first:
+      213: -6881062260594916103
+    second: Mega Man 7 Tilesets_3
+  - first:
+      213: -1772135736973037435
+    second: Mega Man 7 Tilesets_4
+  - first:
+      213: -2339514034525828579
+    second: Mega Man 7 Tilesets_5
+  - first:
+      213: 1362682395133519228
+    second: Mega Man 7 Tilesets_6
+  - first:
+      213: 6200161259222901564
+    second: Mega Man 7 Tilesets_7
+  - first:
+      213: 7731439708293926721
+    second: Mega Man 7 Tilesets_8
+  - first:
+      213: 9163048537707935629
+    second: Mega Man 7 Tilesets_9
+  - first:
+      213: 5346680118037575712
+    second: Mega Man 7 Tilesets_10
+  - first:
+      213: 2332733764381122059
+    second: Mega Man 7 Tilesets_11
+  - first:
+      213: 1158626087387951787
+    second: Mega Man 7 Tilesets_12
+  - first:
+      213: -6427168273410302641
+    second: Mega Man 7 Tilesets_13
+  - first:
+      213: -4769379793741650817
+    second: Mega Man 7 Tilesets_14
+  - first:
+      213: 2779998216933145559
+    second: Mega Man 7 Tilesets_15
+  - first:
+      213: -4825551268114933918
+    second: Mega Man 7 Tilesets_16
+  - first:
+      213: -280241743070666794
+    second: Mega Man 7 Tilesets_17
+  - first:
+      213: 3540428950625010285
+    second: Mega Man 7 Tilesets_18
+  - first:
+      213: 357125706644129622
+    second: Mega Man 7 Tilesets_19
+  - first:
+      213: 4761111502765963417
+    second: Mega Man 7 Tilesets_20
+  - first:
+      213: 5800555859040652673
+    second: Mega Man 7 Tilesets_21
+  - first:
+      213: 3891023659823424254
+    second: Mega Man 7 Tilesets_22
+  - first:
+      213: 3038315729887416371
+    second: Mega Man 7 Tilesets_23
+  - first:
+      213: 3020715560442907325
+    second: Mega Man 7 Tilesets_24
+  - first:
+      213: -792267977157208334
+    second: Mega Man 7 Tilesets_25
+  - first:
+      213: -4495894934873814485
+    second: Mega Man 7 Tilesets_26
+  - first:
+      213: -3942744347566917320
+    second: Mega Man 7 Tilesets_27
+  - first:
+      213: 7041280230089032615
+    second: Mega Man 7 Tilesets_28
+  - first:
+      213: -3113791372937585753
+    second: Mega Man 7 Tilesets_29
+  - first:
+      213: 6332756276558019611
+    second: Mega Man 7 Tilesets_30
+  - first:
+      213: 991508157560599671
+    second: Mega Man 7 Tilesets_31
+  - first:
+      213: 4464954895610240279
+    second: Mega Man 7 Tilesets_32
+  - first:
+      213: 3956597693989369803
+    second: Mega Man 7 Tilesets_33
+  - first:
+      213: 8621082678453093745
+    second: Mega Man 7 Tilesets_34
+  - first:
+      213: 4624274214927440541
+    second: Mega Man 7 Tilesets_35
+  - first:
+      213: 5336606149884086485
+    second: Mega Man 7 Tilesets_36
+  - first:
+      213: -1891347395985805921
+    second: Mega Man 7 Tilesets_37
+  - first:
+      213: 2136363649766582363
+    second: Mega Man 7 Tilesets_38
+  - first:
+      213: -5508262521558870556
+    second: Mega Man 7 Tilesets_39
+  - first:
+      213: 2180764348491871426
+    second: Mega Man 7 Tilesets_40
+  - first:
+      213: -1686971333842840481
+    second: Mega Man 7 Tilesets_41
+  - first:
+      213: -4388600448852627269
+    second: Mega Man 7 Tilesets_42
+  - first:
+      213: 7373067525064449354
+    second: Mega Man 7 Tilesets_43
+  - first:
+      213: 2911688660631532217
+    second: Mega Man 7 Tilesets_44
+  - first:
+      213: 5006407073849066669
+    second: Mega Man 7 Tilesets_45
+  - first:
+      213: -2166160039593674280
+    second: Mega Man 7 Tilesets_46
+  - first:
+      213: -1781416754075313379
+    second: Mega Man 7 Tilesets_47
+  - first:
+      213: 3325590033680342588
+    second: Mega Man 7 Tilesets_48
+  - first:
+      213: 8736452291245706372
+    second: Mega Man 7 Tilesets_49
+  - first:
+      213: 3562225806146609262
+    second: Mega Man 7 Tilesets_50
+  - first:
+      213: 157668374638203482
+    second: Mega Man 7 Tilesets_51
+  - first:
+      213: 7738249722089681552
+    second: Mega Man 7 Tilesets_52
+  - first:
+      213: -4752877463267383106
+    second: Mega Man 7 Tilesets_53
+  - first:
+      213: 6476625853640168368
+    second: Mega Man 7 Tilesets_54
+  - first:
+      213: 792501591471091080
+    second: Mega Man 7 Tilesets_55
+  - first:
+      213: 4014035555831592461
+    second: Mega Man 7 Tilesets_56
+  - first:
+      213: 6685430801810006020
+    second: Mega Man 7 Tilesets_57
+  - first:
+      213: -1700797903556009728
+    second: Mega Man 7 Tilesets_58
+  - first:
+      213: -7407606695715288322
+    second: Mega Man 7 Tilesets_59
+  - first:
+      213: -5726521123440370576
+    second: Mega Man 7 Tilesets_60
+  - first:
+      213: 697390946686665609
+    second: Mega Man 7 Tilesets_61
+  - first:
+      213: -3560074084521964449
+    second: Mega Man 7 Tilesets_62
+  - first:
+      213: 4654907814439362782
+    second: Mega Man 7 Tilesets_63
+  - first:
+      213: 2650741241612641987
+    second: Mega Man 7 Tilesets_64
+  - first:
+      213: -1935421384448163494
+    second: Mega Man 7 Tilesets_65
+  - first:
+      213: 6515764191270508664
+    second: Mega Man 7 Tilesets_66
+  - first:
+      213: -3702553845333944514
+    second: Mega Man 7 Tilesets_67
+  - first:
+      213: -6057806230839115300
+    second: Mega Man 7 Tilesets_68
+  - first:
+      213: -1157099252923891707
+    second: Mega Man 7 Tilesets_69
+  - first:
+      213: 1000811805176116416
+    second: Mega Man 7 Tilesets_70
+  - first:
+      213: -1928690058763157068
+    second: Mega Man 7 Tilesets_71
+  - first:
+      213: -7032515863050671804
+    second: Mega Man 7 Tilesets_72
+  - first:
+      213: -1741948140356586448
+    second: Mega Man 7 Tilesets_73
+  - first:
+      213: -3059529367272487108
+    second: Mega Man 7 Tilesets_74
+  - first:
+      213: 103076899606545128
+    second: Mega Man 7 Tilesets_75
+  - first:
+      213: -6690621689019013391
+    second: Mega Man 7 Tilesets_76
+  - first:
+      213: -49138716780568215
+    second: Mega Man 7 Tilesets_77
+  - first:
+      213: -476018611745943422
+    second: Mega Man 7 Tilesets_78
+  - first:
+      213: 4088041398388587502
+    second: Mega Man 7 Tilesets_79
+  - first:
+      213: 4160986849176408698
+    second: Mega Man 7 Tilesets_80
+  - first:
+      213: -1738688619680157962
+    second: Mega Man 7 Tilesets_81
+  - first:
+      213: 6334728642571814477
+    second: Mega Man 7 Tilesets_82
+  - first:
+      213: 5872756482457606124
+    second: Mega Man 7 Tilesets_83
+  - first:
+      213: 1953388952112484582
+    second: Mega Man 7 Tilesets_84
+  - first:
+      213: -4047919845575101743
+    second: Mega Man 7 Tilesets_85
+  - first:
+      213: 593644509116814471
+    second: Mega Man 7 Tilesets_86
+  - first:
+      213: -6625971056752573525
+    second: Mega Man 7 Tilesets_87
+  - first:
+      213: -6237328220648223615
+    second: Mega Man 7 Tilesets_88
+  - first:
+      213: 2668177610536643227
+    second: Mega Man 7 Tilesets_89
+  - first:
+      213: -3276640395934167092
+    second: Mega Man 7 Tilesets_90
+  - first:
+      213: 3425110505227399226
+    second: Mega Man 7 Tilesets_91
+  - first:
+      213: 8898453615715998473
+    second: Mega Man 7 Tilesets_92
+  - first:
+      213: 4806593316967932797
+    second: Mega Man 7 Tilesets_93
+  - first:
+      213: -640713197355902941
+    second: Mega Man 7 Tilesets_94
+  - first:
+      213: 4088818359401567932
+    second: Mega Man 7 Tilesets_95
+  - first:
+      213: 268952489320523636
+    second: Mega Man 7 Tilesets_96
+  - first:
+      213: 661123782531190285
+    second: Mega Man 7 Tilesets_97
+  - first:
+      213: -8051626906070527824
+    second: Mega Man 7 Tilesets_98
+  - first:
+      213: 4944538871276356044
+    second: Mega Man 7 Tilesets_99
+  - first:
+      213: -3203438358546839918
+    second: Mega Man 7 Tilesets_100
+  - first:
+      213: 5421004750700730655
+    second: Mega Man 7 Tilesets_101
+  - first:
+      213: -2830938362371291134
+    second: Mega Man 7 Tilesets_102
+  - first:
+      213: 3521396480379929707
+    second: Mega Man 7 Tilesets_103
+  - first:
+      213: -6049893672509630616
+    second: Mega Man 7 Tilesets_104
+  - first:
+      213: -5882989000679414954
+    second: Mega Man 7 Tilesets_105
+  - first:
+      213: 8261811338305008680
+    second: Mega Man 7 Tilesets_106
+  - first:
+      213: -7036779020973573288
+    second: Mega Man 7 Tilesets_107
+  - first:
+      213: -6720103064896769892
+    second: Mega Man 7 Tilesets_108
+  - first:
+      213: 2295549050733385268
+    second: Mega Man 7 Tilesets_109
+  - first:
+      213: 4592000529789828164
+    second: Mega Man 7 Tilesets_110
+  - first:
+      213: -5337206629002562128
+    second: Mega Man 7 Tilesets_111
+  - first:
+      213: -6318408333969552971
+    second: Mega Man 7 Tilesets_112
+  - first:
+      213: -7248113896594799218
+    second: Mega Man 7 Tilesets_113
+  - first:
+      213: 46367053454193810
+    second: Mega Man 7 Tilesets_114
+  - first:
+      213: -3700618010345735850
+    second: Mega Man 7 Tilesets_115
+  - first:
+      213: -430651691117878119
+    second: Mega Man 7 Tilesets_116
+  - first:
+      213: 4527153602048498050
+    second: Mega Man 7 Tilesets_117
+  - first:
+      213: 882593995418249035
+    second: Mega Man 7 Tilesets_118
+  - first:
+      213: -3631745778344268076
+    second: Mega Man 7 Tilesets_119
+  - first:
+      213: -7378010735711620850
+    second: Mega Man 7 Tilesets_120
+  - first:
+      213: -2894386011577447650
+    second: Mega Man 7 Tilesets_121
+  - first:
+      213: 5260672553900767444
+    second: Mega Man 7 Tilesets_122
+  - first:
+      213: 4197740027118309579
+    second: Mega Man 7 Tilesets_123
+  - first:
+      213: 4575347368686589386
+    second: Mega Man 7 Tilesets_124
+  - first:
+      213: -5446648135472114989
+    second: Mega Man 7 Tilesets_125
+  - first:
+      213: -6985989116302642985
+    second: Mega Man 7 Tilesets_126
+  - first:
+      213: 6723839364226246737
+    second: Mega Man 7 Tilesets_127
+  - first:
+      213: -4169756824110675495
+    second: Mega Man 7 Tilesets_128
+  - first:
+      213: -6353486151280532329
+    second: Mega Man 7 Tilesets_129
+  - first:
+      213: 6106693207847813802
+    second: Mega Man 7 Tilesets_130
+  - first:
+      213: -6146735922101500562
+    second: Mega Man 7 Tilesets_131
+  - first:
+      213: -7315144563146738515
+    second: Mega Man 7 Tilesets_132
+  - first:
+      213: -8087753074281016187
+    second: Mega Man 7 Tilesets_133
+  - first:
+      213: -1446369418135076
+    second: Mega Man 7 Tilesets_134
+  - first:
+      213: -6139137282475988521
+    second: Mega Man 7 Tilesets_135
+  - first:
+      213: -7916296714130244593
+    second: Mega Man 7 Tilesets_136
+  - first:
+      213: -3787943711766860200
+    second: Mega Man 7 Tilesets_137
+  - first:
+      213: 5621604342442999988
+    second: Mega Man 7 Tilesets_138
+  - first:
+      213: 8303914503825518580
+    second: Mega Man 7 Tilesets_139
+  - first:
+      213: -5765407234989299470
+    second: Mega Man 7 Tilesets_140
+  - first:
+      213: 517915985426394706
+    second: Mega Man 7 Tilesets_141
+  - first:
+      213: -6412550548702736106
+    second: Mega Man 7 Tilesets_142
+  - first:
+      213: 114349501430326035
+    second: Mega Man 7 Tilesets_143
+  - first:
+      213: 6651730572543901396
+    second: Mega Man 7 Tilesets_144
+  - first:
+      213: -8990834926867853927
+    second: Mega Man 7 Tilesets_145
+  - first:
+      213: -5502235806799437365
+    second: Mega Man 7 Tilesets_146
+  - first:
+      213: -6708558814679797059
+    second: Mega Man 7 Tilesets_147
+  - first:
+      213: -2031805950317944997
+    second: Mega Man 7 Tilesets_148
+  - first:
+      213: 3870064086286752038
+    second: Mega Man 7 Tilesets_149
+  - first:
+      213: 8486563263766779892
+    second: Mega Man 7 Tilesets_150
+  - first:
+      213: -7367043439771361732
+    second: Mega Man 7 Tilesets_151
+  - first:
+      213: -8763001110633637828
+    second: Mega Man 7 Tilesets_152
+  - first:
+      213: 2913570749091694717
+    second: Mega Man 7 Tilesets_153
+  - first:
+      213: -5601544701596972364
+    second: Mega Man 7 Tilesets_154
+  - first:
+      213: -1097253948554613040
+    second: Mega Man 7 Tilesets_155
+  - first:
+      213: -1547883857850118056
+    second: Mega Man 7 Tilesets_156
+  - first:
+      213: -3439796059276876169
+    second: Mega Man 7 Tilesets_157
+  - first:
+      213: 9207406395273553195
+    second: Mega Man 7 Tilesets_158
+  - first:
+      213: -7876834891934259482
+    second: Mega Man 7 Tilesets_159
+  - first:
+      213: -414360746528392876
+    second: Mega Man 7 Tilesets_160
+  - first:
+      213: -7171823911169511317
+    second: Mega Man 7 Tilesets_161
+  - first:
+      213: -1597823176548512278
+    second: Mega Man 7 Tilesets_162
+  - first:
+      213: -4163369414822372525
+    second: Mega Man 7 Tilesets_163
+  - first:
+      213: 6090138975040309474
+    second: Mega Man 7 Tilesets_164
+  - first:
+      213: -5079135148155150114
+    second: Mega Man 7 Tilesets_165
+  - first:
+      213: 757850450133603902
+    second: Mega Man 7 Tilesets_166
+  - first:
+      213: 5087881237881139852
+    second: Mega Man 7 Tilesets_167
+  - first:
+      213: 7302488715668078831
+    second: Mega Man 7 Tilesets_168
+  - first:
+      213: 4586438930884885645
+    second: Mega Man 7 Tilesets_169
+  - first:
+      213: -5186535277983671740
+    second: Mega Man 7 Tilesets_170
+  - first:
+      213: 8239280161096638735
+    second: Mega Man 7 Tilesets_171
+  - first:
+      213: 395359782649719184
+    second: Mega Man 7 Tilesets_172
+  - first:
+      213: 925946905966856477
+    second: Mega Man 7 Tilesets_173
+  - first:
+      213: 408489386961852185
+    second: Mega Man 7 Tilesets_174
+  - first:
+      213: 2449736091722715415
+    second: Mega Man 7 Tilesets_175
+  - first:
+      213: -3919452593196176985
+    second: Mega Man 7 Tilesets_176
+  - first:
+      213: -1404934956874949099
+    second: Mega Man 7 Tilesets_177
+  - first:
+      213: -2917425287497100727
+    second: Mega Man 7 Tilesets_178
+  - first:
+      213: 5594336265246179001
+    second: Mega Man 7 Tilesets_179
+  - first:
+      213: 5623261879603463131
+    second: Mega Man 7 Tilesets_180
+  - first:
+      213: 2010690898164786228
+    second: Mega Man 7 Tilesets_181
+  - first:
+      213: -298203273152225722
+    second: Mega Man 7 Tilesets_182
+  - first:
+      213: -9015623185532414316
+    second: Mega Man 7 Tilesets_183
+  - first:
+      213: -2845662208154938672
+    second: Mega Man 7 Tilesets_184
+  - first:
+      213: 3083963790126377180
+    second: Mega Man 7 Tilesets_185
+  - first:
+      213: -2431848262352327555
+    second: Mega Man 7 Tilesets_186
+  - first:
+      213: 4606050425324904134
+    second: Mega Man 7 Tilesets_187
+  - first:
+      213: 137488400555317078
+    second: Mega Man 7 Tilesets_188
+  - first:
+      213: -6902917338010225790
+    second: Mega Man 7 Tilesets_189
+  - first:
+      213: 8115183084666072671
+    second: Mega Man 7 Tilesets_190
+  - first:
+      213: 2602501943807976682
+    second: Mega Man 7 Tilesets_191
+  - first:
+      213: 5163387330652226183
+    second: Mega Man 7 Tilesets_192
+  - first:
+      213: -9002810696780103953
+    second: Mega Man 7 Tilesets_193
+  - first:
+      213: -7483975370526454048
+    second: Mega Man 7 Tilesets_194
+  - first:
+      213: 6373836985610389879
+    second: Mega Man 7 Tilesets_195
+  - first:
+      213: 4263397083637333543
+    second: Mega Man 7 Tilesets_196
+  - first:
+      213: -2972754568337856653
+    second: Mega Man 7 Tilesets_197
+  - first:
+      213: 9070024015374046797
+    second: Mega Man 7 Tilesets_198
+  - first:
+      213: -4881728594901371986
+    second: Mega Man 7 Tilesets_199
+  - first:
+      213: 7349715745352785948
+    second: Mega Man 7 Tilesets_200
+  - first:
+      213: -5584584653761702792
+    second: Mega Man 7 Tilesets_201
+  - first:
+      213: -2256888569614220981
+    second: Mega Man 7 Tilesets_202
+  - first:
+      213: -2659601698058070111
+    second: Mega Man 7 Tilesets_203
+  - first:
+      213: -3615657786586434243
+    second: Mega Man 7 Tilesets_204
+  - first:
+      213: -2175836114009397393
+    second: Mega Man 7 Tilesets_205
+  - first:
+      213: -4682445018587043053
+    second: Mega Man 7 Tilesets_206
+  - first:
+      213: -2135367865184803702
+    second: Mega Man 7 Tilesets_207
+  - first:
+      213: 66050020670896187
+    second: Mega Man 7 Tilesets_208
+  - first:
+      213: -5339891330810833130
+    second: Mega Man 7 Tilesets_209
+  - first:
+      213: -7250272625550941850
+    second: Mega Man 7 Tilesets_210
+  - first:
+      213: -9037924648917033505
+    second: Mega Man 7 Tilesets_211
+  - first:
+      213: -6172982380027269357
+    second: Mega Man 7 Tilesets_212
+  - first:
+      213: 1116998880926216051
+    second: Mega Man 7 Tilesets_213
+  - first:
+      213: -1639286425661562670
+    second: Mega Man 7 Tilesets_214
+  - first:
+      213: -5523559103184318579
+    second: Mega Man 7 Tilesets_215
+  - first:
+      213: -2386851397652382162
+    second: Mega Man 7 Tilesets_216
+  - first:
+      213: -5344489305318948019
+    second: Mega Man 7 Tilesets_217
+  - first:
+      213: -8959327776602295792
+    second: Mega Man 7 Tilesets_218
+  - first:
+      213: -8649686218441321779
+    second: Mega Man 7 Tilesets_219
+  - first:
+      213: -4692618413894664611
+    second: Mega Man 7 Tilesets_220
+  - first:
+      213: 8237743489469613951
+    second: Mega Man 7 Tilesets_221
+  - first:
+      213: -2675222179698935098
+    second: Mega Man 7 Tilesets_222
+  - first:
+      213: 5744257644823968621
+    second: Mega Man 7 Tilesets_223
+  - first:
+      213: 7796079350666705865
+    second: Mega Man 7 Tilesets_224
+  - first:
+      213: -5629284034367986486
+    second: Mega Man 7 Tilesets_225
+  - first:
+      213: 7503574682400247411
+    second: Mega Man 7 Tilesets_226
+  - first:
+      213: 2446274006973458279
+    second: Mega Man 7 Tilesets_227
+  - first:
+      213: -2598866863622062085
+    second: Mega Man 7 Tilesets_228
+  - first:
+      213: -7959632838870533750
+    second: Mega Man 7 Tilesets_229
+  - first:
+      213: -8099352052786061139
+    second: Mega Man 7 Tilesets_230
+  - first:
+      213: -2764794256061032057
+    second: Mega Man 7 Tilesets_231
+  - first:
+      213: -4538556302761667085
+    second: Mega Man 7 Tilesets_232
+  - first:
+      213: 3752321090836985043
+    second: Mega Man 7 Tilesets_233
+  - first:
+      213: 652302335228284015
+    second: Mega Man 7 Tilesets_234
+  - first:
+      213: -5295669243857800311
+    second: Mega Man 7 Tilesets_235
+  - first:
+      213: 8274076726515638138
+    second: Mega Man 7 Tilesets_236
+  - first:
+      213: -105724844606581131
+    second: Mega Man 7 Tilesets_237
+  - first:
+      213: 514092338573640500
+    second: Mega Man 7 Tilesets_238
+  - first:
+      213: 3195963382442368639
+    second: Mega Man 7 Tilesets_239
+  - first:
+      213: 7404980964732386300
+    second: Mega Man 7 Tilesets_240
+  - first:
+      213: -3907132184392706255
+    second: Mega Man 7 Tilesets_241
+  - first:
+      213: -4268310196259102304
+    second: Mega Man 7 Tilesets_242
+  - first:
+      213: 2076976630083682441
+    second: Mega Man 7 Tilesets_243
+  - first:
+      213: -3340779244160595374
+    second: Mega Man 7 Tilesets_244
+  - first:
+      213: -7043858200082690292
+    second: Mega Man 7 Tilesets_245
+  - first:
+      213: 8705617660233970036
+    second: Mega Man 7 Tilesets_246
+  - first:
+      213: 8125371226921628952
+    second: Mega Man 7 Tilesets_247
+  - first:
+      213: 6826745811460859820
+    second: Mega Man 7 Tilesets_248
+  - first:
+      213: -6402726587785730016
+    second: Mega Man 7 Tilesets_249
+  - first:
+      213: -4440874485311750290
+    second: Mega Man 7 Tilesets_250
+  - first:
+      213: 4600569529936055797
+    second: Mega Man 7 Tilesets_251
+  - first:
+      213: -4625909471493405175
+    second: Mega Man 7 Tilesets_252
+  - first:
+      213: -8077944408072811588
+    second: Mega Man 7 Tilesets_253
+  - first:
+      213: 8550615681981246344
+    second: Mega Man 7 Tilesets_254
+  - first:
+      213: -7731809985764614097
+    second: Mega Man 7 Tilesets_255
+  - first:
+      213: 8135704584326575504
+    second: Mega Man 7 Tilesets_256
+  - first:
+      213: -173952716025269859
+    second: Mega Man 7 Tilesets_257
+  - first:
+      213: 5365752615804819655
+    second: Mega Man 7 Tilesets_258
+  - first:
+      213: -6986523622559795357
+    second: Mega Man 7 Tilesets_259
+  - first:
+      213: 5954902115992057569
+    second: Mega Man 7 Tilesets_260
+  - first:
+      213: -6590226872676523926
+    second: Mega Man 7 Tilesets_261
+  - first:
+      213: 8037991912168844355
+    second: Mega Man 7 Tilesets_262
+  - first:
+      213: -1384394218456605882
+    second: Mega Man 7 Tilesets_263
+  - first:
+      213: -1804982985493427701
+    second: Mega Man 7 Tilesets_264
+  - first:
+      213: -1026082880960355196
+    second: Mega Man 7 Tilesets_265
+  - first:
+      213: -2046331722668803420
+    second: Mega Man 7 Tilesets_266
+  - first:
+      213: -7250182448946365842
+    second: Mega Man 7 Tilesets_267
+  - first:
+      213: -7376973193211757994
+    second: Mega Man 7 Tilesets_268
+  - first:
+      213: -154788314002069377
+    second: Mega Man 7 Tilesets_269
+  - first:
+      213: -3477584823131985350
+    second: Mega Man 7 Tilesets_270
+  - first:
+      213: 3314431781758375573
+    second: Mega Man 7 Tilesets_271
+  - first:
+      213: 6180414882023933399
+    second: Mega Man 7 Tilesets_272
+  - first:
+      213: 5019446836390322579
+    second: Mega Man 7 Tilesets_273
+  - first:
+      213: 6223385558637623725
+    second: Mega Man 7 Tilesets_274
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 17
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff443ca4e2b10f310800000000000000
+      internalID: 1436678166767944959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddbb9eb079c8a4b0800000000000000
+      internalID: -5428867864723735086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a3ade079160c490800000000000000
+      internalID: -7728069659150632398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4c4e7d45e8180a0800000000000000
+      internalID: -6881062260594916103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58072f7bfeb1867e0800000000000000
+      internalID: -1772135736973037435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a0c018160688fd0800000000000000
+      internalID: -2339514034525828579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75ac972b6839e210800000000000000
+      internalID: 1362682395133519228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33ae1eb0d56b0650800000000000000
+      internalID: 6200161259222901564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f8537a3779b4b60800000000000000
+      internalID: 7731439708293926721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_9
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d877ebdd810b92f70800000000000000
+      internalID: 9163048537707935629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028f54b4d39333a40800000000000000
+      internalID: 5346680118037575712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_11
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e1f75dff88f5020800000000000000
+      internalID: 2332733764381122059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2724ea944441010800000000000000
+      internalID: 1158626087387951787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_13
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dd7b7028c1ec6a0800000000000000
+      internalID: -6427168273410302641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_14
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f746a1bc852cfcdb0800000000000000
+      internalID: -4769379793741650817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbf48436a9849620800000000000000
+      internalID: 2779998216933145559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_16
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267d29240b2380db0800000000000000
+      internalID: -4825551268114933918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_17
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df59059e916c1cf0800000000000000
+      internalID: -280241743070666794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_18
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6243826f51222130800000000000000
+      internalID: 3540428950625010285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_19
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 171.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6570fa420f3c4f400800000000000000
+      internalID: 357125706644129622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f690aee87c4105f0800000000000000
+      internalID: -792267977157208334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_26
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a4e53806f5b91c0800000000000000
+      internalID: -4495894934873814485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_27
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839381bc7ee8849c0800000000000000
+      internalID: -3942744347566917320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_28
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3007e1017a7b160800000000000000
+      internalID: 7041280230089032615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_29
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab116f6e3799c4d0800000000000000
+      internalID: -3113791372937585753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_30
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cbd59f74872e750800000000000000
+      internalID: 6332756276558019611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_31
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7743d438a6b82cd00800000000000000
+      internalID: 991508157560599671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_32
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d5dfa32d4b6fd30800000000000000
+      internalID: 4464954895610240279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_33
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7bd55c3a8a8e630800000000000000
+      internalID: 3956597693989369803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_34
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1754874050d34a770800000000000000
+      internalID: 8621082678453093745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_35
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a9fb4e5e8bc2040800000000000000
+      internalID: 4624274214927440541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_36
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8810ec40f6f0a40800000000000000
+      internalID: 5336606149884086485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_37
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9de76b609590c5e0800000000000000
+      internalID: -1891347395985805921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_38
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58e467ab63e5ad10800000000000000
+      internalID: 2136363649766582363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_39
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5d2e0bb68be83b0800000000000000
+      internalID: -5508262521558870556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_40
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4b1baee91a34e10800000000000000
+      internalID: 2180764348491871426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_41
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54d704828ca698e0800000000000000
+      internalID: -1686971333842840481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_42
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0f401c42f8813c0800000000000000
+      internalID: -4388600448852627269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_43
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d5f6099d5625660800000000000000
+      internalID: 7373067525064449354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_44
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2b979f865686820800000000000000
+      internalID: 2911688660631532217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_45
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4c6c565b45a7540800000000000000
+      internalID: 5006407073849066669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_46
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d97f59bbe040f1e0800000000000000
+      internalID: -2166160039593674280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_47
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b596886e22747e0800000000000000
+      internalID: -1781416754075313379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_48
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 154.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e9812148ed62e20800000000000000
+      internalID: 3325590033680342588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6029194f719f6130800000000000000
+      internalID: 3562225806146609262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_51
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a529f962d86203200800000000000000
+      internalID: 157668374638203482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_52
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092bb6c8f19c36b60800000000000000
+      internalID: 7738249722089681552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_53
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8ecf401236a0eb0800000000000000
+      internalID: -4752877463267383106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_54
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3555536e891e950800000000000000
+      internalID: 6476625853640168368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_55
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88de093aff78ffa00800000000000000
+      internalID: 792501591471091080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_56
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06312d1218b4b730800000000000000
+      internalID: 4014035555831592461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_57
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4002750b4eb67cc50800000000000000
+      internalID: 6685430801810006020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_58
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001a0d3615d8568e0800000000000000
+      internalID: -1700797903556009728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_59
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efac51a15f4e23990800000000000000
+      internalID: -7407606695715288322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_60
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cd09ee06f4780b0800000000000000
+      internalID: -5726521123440370576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_61
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98305defe51ada900800000000000000
+      internalID: 697390946686665609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_62
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c8ef17b73189ec0800000000000000
+      internalID: -3560074084521964449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_63
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed029d59efd899040800000000000000
+      internalID: 4654907814439362782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_64
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6acc17d1359c420800000000000000
+      internalID: 2650741241612641987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_65
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51c54151800425e0800000000000000
+      internalID: -1935421384448163494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_66
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87893ec8205ac6a50800000000000000
+      internalID: 6515764191270508664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_67
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e371d1705e2ed9cc0800000000000000
+      internalID: -3702553845333944514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_68
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1cfa424595eeba0800000000000000
+      internalID: -6057806230839115300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_69
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5000a9b2c5821ffe0800000000000000
+      internalID: -1157099252923891707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_70
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c43a86c80993ed00800000000000000
+      internalID: 1000811805176116416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_71
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b148953c9aeb35e0800000000000000
+      internalID: -1928690058763157068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_72
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449a099151c776e90800000000000000
+      internalID: -7032515863050671804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_73
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034b4e4456b53d7e0800000000000000
+      internalID: -1741948140356586448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_74
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 137.81818
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3709d3204e5a85d0800000000000000
+      internalID: -3059529367272487108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2c891e4e33e6100800000000000000
+      internalID: 103076899606545128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_76
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f66f73b5032623a0800000000000000
+      internalID: -6690621689019013391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_77
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9616391f89c615ff0800000000000000
+      internalID: -49138716780568215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_78
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280986c3897d469f0800000000000000
+      internalID: -476018611745943422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_79
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebfa021ef3abb830800000000000000
+      internalID: 4088041398388587502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_80
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a725b345e7bceb930800000000000000
+      internalID: 4160986849176408698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_81
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe23f099efeed7e0800000000000000
+      internalID: -1738688619680157962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_82
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d464cf8332a79e750800000000000000
+      internalID: 6334728642571814477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_83
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce71245d7e8308150800000000000000
+      internalID: 5872756482457606124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_84
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e056d607e4db1b10800000000000000
+      internalID: 1953388952112484582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_85
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2fd35e856e2d7c0800000000000000
+      internalID: -4047919845575101743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_86
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784d4c8298c0d3800800000000000000
+      internalID: 593644509116814471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_87
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba34e360e62db04a0800000000000000
+      internalID: -6625971056752573525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_88
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c4eb4b70f8079a0800000000000000
+      internalID: -6237328220648223615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_89
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9aefa17665470520800000000000000
+      internalID: 2668177610536643227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_90
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf06a79be80782d0800000000000000
+      internalID: -3276640395934167092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_91
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30b9848bdf688f20800000000000000
+      internalID: 3425110505227399226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_92
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bda0fda68ad7b70800000000000000
+      internalID: 8898453615715998473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_94
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32852bcddbabb17f0800000000000000
+      internalID: -640713197355902941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_95
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6d93762a66eb830800000000000000
+      internalID: 4088818359401567932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_96
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47728633dd28bb300800000000000000
+      internalID: 268952489320523636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_97
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e8552d398cc2900800000000000000
+      internalID: 661123782531190285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_99
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 120.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1c988f7e78e9440800000000000000
+      internalID: 4944538871276356044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29684f219c91b83d0800000000000000
+      internalID: -3203438358546839918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_101
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19d83b59174b3b40800000000000000
+      internalID: 5421004750700730655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_102
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20845d1fe8c76b8d0800000000000000
+      internalID: -2830938362371291134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_103
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b644b5611738ed030800000000000000
+      internalID: 3521396480379929707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_104
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8671e2132c57a0ca0800000000000000
+      internalID: -6049893672509630616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_105
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65329fc5cac6b5ea0800000000000000
+      internalID: -5882989000679414954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_106
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824f6f4a3a9d7a270800000000000000
+      internalID: 8261811338305008680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_107
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bf2fb43c6585e90800000000000000
+      internalID: -7036779020973573288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_108
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9070dafdd56db2a0800000000000000
+      internalID: -6720103064896769892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_109
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436d27503bd6bdf10800000000000000
+      internalID: 2295549050733385268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_110
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c378207201abf30800000000000000
+      internalID: 4592000529789828164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_111
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5317149de6ee5b0800000000000000
+      internalID: -5337206629002562128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_112
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b980ebb8118058a0800000000000000
+      internalID: -6318408333969552971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_113
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8505ed20d6896b90800000000000000
+      internalID: -7248113896594799218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_114
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2943b66e69ab4a000800000000000000
+      internalID: 46367053454193810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_116
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9946ff09194060af0800000000000000
+      internalID: -430651691117878119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_120
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01f3e4835a0c9990800000000000000
+      internalID: -7378010735711620850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_121
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b0111f14315d7d0800000000000000
+      internalID: -2894386011577447650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_122
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8f6e6c0d9a10940800000000000000
+      internalID: 5260672553900767444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_123
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc053d7605e514a30800000000000000
+      internalID: 4197740027118309579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_124
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 103.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5159ac036ee7f30800000000000000
+      internalID: 4575347368686589386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_129
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7946f83f102e3d7a0800000000000000
+      internalID: -6353486151280532329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_130
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa24f0e2e155fb450800000000000000
+      internalID: 6106693207847813802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_131
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65c103ee3862baa0800000000000000
+      internalID: -6146735922101500562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_132
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da43201f6c26b7a90800000000000000
+      internalID: -7315144563146738515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_134
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd93e90e88cdafff0800000000000000
+      internalID: -1446369418135076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_135
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d969aa0b276dcaa0800000000000000
+      internalID: -6139137282475988521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_136
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cbca1b41aa32290800000000000000
+      internalID: -7916296714130244593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_137
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e26f673458e6bc0800000000000000
+      internalID: -3787943711766860200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_138
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0cb1b6d53f30e40800000000000000
+      internalID: 5621604342442999988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_139
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffebb5ce3e6d3370800000000000000
+      internalID: 8303914503825518580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_140
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8eefc8aa82dffa0800000000000000
+      internalID: -5765407234989299470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_145
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99dcdddf4432a3380800000000000000
+      internalID: -8990834926867853927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_146
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1e8419fa124a3b0800000000000000
+      internalID: -5502235806799437365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_147
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2f1303d4966e2a0800000000000000
+      internalID: -6708558814679797059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_148
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 86.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f16cec0439dc3e0800000000000000
+      internalID: -2031805950317944997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7d2bc135456c570800000000000000
+      internalID: 8486563263766779892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_151
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e5e87160103c990800000000000000
+      internalID: -7367043439771361732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_152
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3814521be0936680800000000000000
+      internalID: -8763001110633637828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_153
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d784497d8251f6820800000000000000
+      internalID: 2913570749091694717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_155
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dee108e855c5c0f0800000000000000
+      internalID: -1097253948554613040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_156
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850584315dfc48ae0800000000000000
+      internalID: -1547883857850118056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_157
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776630b75b36340d0800000000000000
+      internalID: -3439796059276876169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_158
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25a0f4655747cf70800000000000000
+      internalID: 9207406395273553195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_159
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e62bd7266cdfa290800000000000000
+      internalID: -7876834891934259482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_160
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4593f4ea815ef3af0800000000000000
+      internalID: -414360746528392876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_161
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60b6179620987c90800000000000000
+      internalID: -7171823911169511317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_162
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed80fb594463d9e0800000000000000
+      internalID: -1597823176548512278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_163
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b59c0639db836c0800000000000000
+      internalID: -4163369414822372525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_164
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e80a008125848450800000000000000
+      internalID: 6090138975040309474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_165
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0e2004e794389b0800000000000000
+      internalID: -5079135148155150114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_166
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36551918fc648a00800000000000000
+      internalID: 757850450133603902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_167
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82b7437709cb9640800000000000000
+      internalID: 5087881237881139852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_168
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0c1b1fbc6a75560800000000000000
+      internalID: 7302488715668078831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_169
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c7a6b58ed46af30800000000000000
+      internalID: 4586438930884885645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_170
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 69.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a50c4e4a9b508b0800000000000000
+      internalID: -5186535277983671740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71116940ff53ff120800000000000000
+      internalID: 2449736091722715415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_176
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9ee84f1ae4b99c0800000000000000
+      internalID: -3919452593196176985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_177
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e90f2b91ba08ce0800000000000000
+      internalID: -1404934956874949099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_178
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9425eff78293387d0800000000000000
+      internalID: -2917425287497100727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_180
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd382ccd2e6d90e40800000000000000
+      internalID: 5623261879603463131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_181
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434293208b867eb10800000000000000
+      internalID: 2010690898164786228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_182
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e17e8f3b19cdbf0800000000000000
+      internalID: -298203273152225722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_183
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4969095ca7212e280800000000000000
+      internalID: -9015623185532414316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_184
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2db247c4d2288d0800000000000000
+      internalID: -2845662208154938672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_185
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd866a24ab07cca20800000000000000
+      internalID: 3083963790126377180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_186
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ca6dec3e6504ed0800000000000000
+      internalID: -2431848262352327555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_187
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce170b357afbef30800000000000000
+      internalID: 4606050425324904134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_188
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65716dbc8f478e100800000000000000
+      internalID: 137488400555317078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_189
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283f30a1149e330a0800000000000000
+      internalID: -6902917338010225790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_190
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ea7c8f40cee9070800000000000000
+      internalID: 8115183084666072671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_191
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae420ffaab1fd1420800000000000000
+      internalID: 2602501943807976682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_192
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7824741ab6908a740800000000000000
+      internalID: 5163387330652226183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_193
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feeb556ce579f0380800000000000000
+      internalID: -9002810696780103953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_194
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee8ff36d04932890800000000000000
+      internalID: -7483975370526454048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_195
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 52.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779cd87e7fa647850800000000000000
+      internalID: 6373836985610389879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1029d9a78f6ff560800000000000000
+      internalID: 7349715745352785948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_201
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8749f6688d19f72b0800000000000000
+      internalID: -5584584653761702792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_202
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41418eadcbeda0e0800000000000000
+      internalID: -2256888569614220981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_203
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a71937c852371bd0800000000000000
+      internalID: -2659601698058070111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_204
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35f321566a92ddc0800000000000000
+      internalID: -3615657786586434243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_205
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67e0071590edc1e0800000000000000
+      internalID: -2175836114009397393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_206
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b62d2701d940fb0800000000000000
+      internalID: -4682445018587043053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_207
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8420e28d36ad52e0800000000000000
+      internalID: -2135367865184803702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_208
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38fe73d428aae000800000000000000
+      internalID: 66050020670896187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_209
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61715d76025e4e5b0800000000000000
+      internalID: -5339891330810833130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_210
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6612c4de57bd16b90800000000000000
+      internalID: -7250272625550941850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_211
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd9d82ba67d29280800000000000000
+      internalID: -9037924648917033505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_212
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31faab13b39255aa0800000000000000
+      internalID: -6172982380027269357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_214
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0a2516ea51049e0800000000000000
+      internalID: -1639286425661562670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_215
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fc2deb2406853b0800000000000000
+      internalID: -5523559103184318579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_216
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ef847cc4330eed0800000000000000
+      internalID: -2386851397652382162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_217
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43079a0b4f84d5b0800000000000000
+      internalID: -5344489305318948019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_218
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01274511bd21aa380800000000000000
+      internalID: -8959327776602295792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_219
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2963b563426f780800000000000000
+      internalID: -8649686218441321779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_220
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 35.818184
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ef9554a6870eeb0800000000000000
+      internalID: -4692618413894664611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_225
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4e7b7fef3c0e1b0800000000000000
+      internalID: -5629284034367986486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_226
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ec4120b6d022860800000000000000
+      internalID: 7503574682400247411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_227
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767ace89f39e2f120800000000000000
+      internalID: 2446274006973458279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_228
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfff54f5b58feebd0800000000000000
+      internalID: -2598866863622062085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_229
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a897690ea14b98190800000000000000
+      internalID: -7959632838870533750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_230
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da02bde5832599f80800000000000000
+      internalID: -8099352052786061139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_231
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789117ac54a71a9d0800000000000000
+      internalID: -2764794256061032057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_232
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5d7c4c61fc301c0800000000000000
+      internalID: -4538556302761667085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_234
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c807194817d0900800000000000000
+      internalID: 652302335228284015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_235
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983f4ef51e00286b0800000000000000
+      internalID: -5295669243857800311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_236
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f9a40e1fc63d270800000000000000
+      internalID: 8274076726515638138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_237
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5769a4160d3688ef0800000000000000
+      internalID: -105724844606581131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_242
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a16cc0bd7ae3c4c0800000000000000
+      internalID: -4268310196259102304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_243
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9800de2ad37e2dc10800000000000000
+      internalID: 2076976630083682441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_244
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 18.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a4fc64afa23a1d0800000000000000
+      internalID: -3340779244160595374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_250
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fb5e23f28de52c0800000000000000
+      internalID: -4440874485311750290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_251
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd0354dc9188df30800000000000000
+      internalID: 4600569529936055797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_252
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906458448d77dcfb0800000000000000
+      internalID: -4625909471493405175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_253
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb87711c5065ef80800000000000000
+      internalID: -8077944408072811588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_254
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b606fd8a3e9a670800000000000000
+      internalID: 8550615681981246344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_255
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20aea768c713b490800000000000000
+      internalID: -7731809985764614097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_259
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367b27e08c1ea0f90800000000000000
+      internalID: -6986523622559795357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_260
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6bdef8cef04a250800000000000000
+      internalID: 5954902115992057569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_261
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60e1e8639fca84a0800000000000000
+      internalID: -6590226872676523926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_262
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c69489e0fac8f60800000000000000
+      internalID: 8037991912168844355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_263
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b1acb0bc4a9cce0800000000000000
+      internalID: -1384394218456605882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_264
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a4a04b98963f6e0800000000000000
+      internalID: -1804982985493427701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_266
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa76b1e328f993e0800000000000000
+      internalID: -2046331722668803420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_267
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ab7cdc97d226b90800000000000000
+      internalID: -7250182448946365842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man 7 Tilesets_268
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1.818182
+        width: 17.04
+        height: 17.181818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ab80537f9bf9990800000000000000
+      internalID: -7376973193211757994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
