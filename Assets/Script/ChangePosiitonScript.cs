@@ -11,6 +11,7 @@ public class ChangePosiitonScript : MonoBehaviour
     public static int cur;          // 지나온, 현재 스테이지 레벨.
     public static bool [, ] isVisited = new bool [10,3];
 
+
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
 
     bool isVisitedThis;
@@ -19,29 +20,31 @@ public class ChangePosiitonScript : MonoBehaviour
     WorldmapScript call;
     void start(){
         call = GameObject.Find("Worldmap").GetComponent<WorldmapScript>();
-        cur = call.currentStage;
+        cur = call.currentStage; 
+        DontDestroyOnLoad(gameObject);
+
         isVisitedThis = isVisited[stageLevel,stem];
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(yetChanged){
+
             yetChanged = false;
-            Debug.Log("2nd condition " + (cur == stageLevel+1 && isVisited[stageLevel,stem] == true));
-            Debug.Log("cur : " + cur +"   isVisited: " + isVisited[stageLevel,stem]);
             tryApsoluteXY();
         }
 
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
             isVisited[stageLevel,stem] = true;
             yetChanged = true;
-            Debug.Log("currentStage: " + cur);
             cur++;
             stageSelect();           
         }
     }
     void tryApsoluteXY(){
+//        Debug.Log();
+
+
         battle = transform.GetChild(0).gameObject;      //  defaultZ: 0
         staying = transform.GetChild(1).gameObject;      //  defaultZ: -20
         chNode = transform.GetChild(2).gameObject;      //  defaultZ: -40
@@ -56,67 +59,44 @@ public class ChangePosiitonScript : MonoBehaviour
          
         Vector3 arrowPos =  arrow.transform.position;   
         Vector3 arrow2Pos =  arrow2.transform.position; 
-        Debug.Log(abBattle); 
-        Debug.Log(arrowPos); 
-        Debug.Log(arrow2Pos); 
-                 
-        if(cur == stageLevel){
-            Debug.Log("001 : show battle," );
-            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
-            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
-            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
-        }
-        else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == true){
-            // show my icon
-            Debug.Log("002 : show staying" + staying.transform.localPosition);
-
-            staying.transform.position = new Vector3(abStaying.x,abStaying.y,10);   // 보이게
-            battle.transform.position = new Vector3(abBattle.x,abBattle.y,-20);   // 안 보이게
-            arrow.transform.position = new Vector3(abBattle.x,abBattle.y,-20);  
-            arrow2.transform.position = new Vector3(arrowPos.x,arrow2Pos.y,-20);   
-        }else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == false){
-            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
-            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
-            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
-            // do nothing
-        }else if(cur > stageLevel && isVisited[stageLevel,stem] == true){
-            staying.transform.localPosition = new Vector3(0,0,-50);
-            chNode.transform.localPosition = new Vector3(0,0,50);
-        }
-    }
-    void newnewOnHit(){            
-        battle = transform.GetChild(0).gameObject;      //  defaultZ: 0
-        staying = transform.GetChild(1).gameObject;      //  defaultZ: -20
-        chNode = transform.GetChild(2).gameObject;      //  defaultZ: -40
-        eNode = transform.GetChild(3).gameObject;
-        arrow = gameObject.transform.parent.gameObject.transform.GetChild(0).gameObject;
-        arrow2 = gameObject.transform.parent.gameObject.transform.GetChild(1).gameObject;
-
         
+
+
         if(cur == stageLevel){
-            Debug.Log("001 : show battle," );
-            battle.transform.localPosition = new Vector3(0,0,50);   // 보이게
-            arrow.transform.localPosition = new Vector3(0,0,50);   // 보이게
-            arrow2.transform.localPosition = new Vector3(0,0,50);   // 보이게
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
         }
         else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == true){
             // show my icon
-            staying.transform.localPosition = new Vector3(0,0,50);
-            battle.transform.localPosition = new Vector3(0,0,-50);
-            arrow.transform.localPosition = new Vector3(0,0,-50);
-            arrow2.transform.localPosition = new Vector3(0,0,-50);
 
-        }else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == false){
-            battle.transform.localPosition = new Vector3(0,0,50);
-            arrow.transform.localPosition = new Vector3(0,0,50); 
-            arrow2.transform.localPosition = new Vector3(0,0,50);
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,-20);   // 안 보이게
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);  
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y, 10);  
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,10);   // 보이게
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20); 
+        }else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == false){      // 다음방
+
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);   
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20); 
             // do nothing
-        }else if(cur > stageLevel && isVisited[stageLevel,stem] == true){
-            staying.transform.localPosition = new Vector3(0,0,-50);
-            chNode.transform.localPosition = new Vector3(0,0,50);
+        }else if(cur > stageLevel && isVisited[stageLevel,stem] == true){       // 방문한 지난 방
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,-20);   // 보이게            
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);   
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,20); 
+        }else if(cur > stageLevel && isVisited[stageLevel,stem] == false){      // 방문하지 않은 지난 방
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게            
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);   
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20); 
         }
     }
-    
 
     void stageSelect(){            
         string NextScene = "";
@@ -138,8 +118,8 @@ public class ChangePosiitonScript : MonoBehaviour
         if(isFront){
         switch(bsn){
             case 0:
-                NextScene = "BS_001";
-                break;
+                // NextScene = "BS_001";
+                // break;
             case 1:
                 NextScene = "BS_002";
                 break;
@@ -194,15 +174,6 @@ public class ChangePosiitonScript : MonoBehaviour
         SceneManager.LoadScene(NextScene);
 
    }
-    // void newOnHit(int hitt){
-    //     obj1 = transform.GetChild(hitt).gameObject;//
-    //     if(hitt>0)
-    //         obj2 = transform.GetChild(hitt-1).gameObject;//
-    //     obj1.transform.localPosition = new Vector3(0,0,+50*hitt);
-    //     if(hitt>0){
-    //         obj2.transform.localPosition = new Vector3(0,0,-150*hitt);
-    //     }
-    // }
     bool isHit(){
          if (Input.GetMouseButtonDown(0))
         {

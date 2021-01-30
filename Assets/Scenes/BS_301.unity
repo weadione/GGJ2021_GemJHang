@@ -4626,7 +4626,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 43
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10350,9 +10350,8 @@ Tilemap:
   - m_RefCount: 7
     m_Data: {fileID: -7432292904655343407, guid: 8dc318053c957e54cb70efabae134fe3,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2203806246375907279, guid: 8dc318053c957e54cb70efabae134fe3,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: -1133396036227288929, guid: 8dc318053c957e54cb70efabae134fe3,
       type: 3}
@@ -10421,8 +10420,9 @@ Tilemap:
   - m_RefCount: 4
     m_Data: {fileID: -3793318268266622534, guid: 8dc318053c957e54cb70efabae134fe3,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -2203806246375907279, guid: 8dc318053c957e54cb70efabae134fe3,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -5004847747254422268, guid: 8dc318053c957e54cb70efabae134fe3,
       type: 3}
@@ -10591,6 +10591,49 @@ Transform:
   - {fileID: 1340163516}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1017588964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017588966}
+  - component: {fileID: 1017588965}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1017588965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017588964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da83d8070c4b7c44930080a3147d721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1017588966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017588964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.5, y: 8.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1340163515
 GameObject:
