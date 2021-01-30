@@ -7,9 +7,12 @@ public class EnemyState : LivingEntity
     public EnemyMovement enemyMove;
     public float lastAttTime;
 
-    int playerLayer, enemyLayer, footLayer, enemyFootLayer, detecterLayer;
+    int playerLayer, enemyLayer, footLayer, enemyFootLayer, detecterLayer, playBulletLayer, monsterBulletLayer;
 
     public int[] item;  //드랍할 파츠
+
+    public Animator attackAnimator;
+    public GameObject monsterBullet;
 
     float tmpDamage, tmpHealth, tmpattSpeed, tmpmoveSpeed;
     //bool tmp
@@ -28,14 +31,14 @@ public class EnemyState : LivingEntity
 
     //}
 
-    public void changeState(float damage, float health,bool attType,float attSpeed, float moveSpeed)
+    public void changeState(float health, float damage, bool attType,float attSpeed, float moveSpeed)
     {
         this.attDamage = damage;
         this.health = health;
         this.attType = attType;
         this.attSpeed = attSpeed;
         this.moveSpeed = moveSpeed;
-        Debug.LogError(this.attDamage);
+        Debug.Log(this.health);
     }
 
 
@@ -52,7 +55,8 @@ public class EnemyState : LivingEntity
                
                 target.OnDamage(attDamage);
                 lastAttTime = Time.time;
-                PlayerState.Instance.HitDetect(enemyMove.moveSpeed);
+                PlayerState.Instance.HitDetect(GetComponent<Rigidbody2D>().velocity.x);
+                attackAnimator.SetTrigger("attackTrigger");
             }
         }
     }
@@ -68,10 +72,27 @@ public class EnemyState : LivingEntity
                 LivingEntity target = other.GetComponent<LivingEntity>();
                 target.OnDamage(attDamage);
                 lastAttTime = Time.time;
-                PlayerState.Instance.HitDetect(enemyMove.moveSpeed);
-
+                PlayerState.Instance.HitDetect(GetComponent<Rigidbody2D>().velocity.x);
+                attackAnimator.SetTrigger("attackTrigger");
             }
         }
+    }
+
+    public void DistanceAttack()
+    {
+        if (attType)
+            return;
+
+        if(Time.time>=lastAttTime+attSpeed)
+        {
+            GameObject tmpBullet = Instantiate(monsterBullet, transform.position, transform.rotation);
+            tmpBullet.transform.parent = transform;
+            tmpBullet.GetComponent<Rigidbody2D>().velocity = transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
+            tmpBullet.transform.localScale = transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
+            lastAttTime = Time.time;
+            attackAnimator.SetTrigger("attackTrigger");
+        }
+
     }
 
 
@@ -94,7 +115,7 @@ public class EnemyState : LivingEntity
     public override void OnDamage(float damage)
     {
         base.OnDamage(damage);
-        
+        GetComponent<HitEffect>().RunEffect();
 
     }
 
@@ -111,19 +132,26 @@ public class EnemyState : LivingEntity
         playerLayer = LayerMask.NameToLayer("Player");
         enemyLayer = LayerMask.NameToLayer("Enemy");
         footLayer = LayerMask.NameToLayer("PlayerFoot");
+        playBulletLayer = LayerMask.NameToLayer("Bullet");
+        monsterBulletLayer = LayerMask.NameToLayer("MonsterBullet");
         Physics2D.IgnoreLayerCollision(playerLayer, enemyFootLayer, true);
         Physics2D.IgnoreLayerCollision(footLayer, enemyFootLayer, true);
         Physics2D.IgnoreLayerCollision(footLayer, enemyLayer, true);
         Physics2D.IgnoreLayerCollision(footLayer, detecterLayer, true);
         Physics2D.IgnoreLayerCollision(playerLayer, detecterLayer, true);
         Physics2D.IgnoreLayerCollision(enemyFootLayer, enemyFootLayer, true);
-        Physics2D.IgnoreLayerCollision(enemyFootLayer, 15, true);
-
+        Physics2D.IgnoreLayerCollision(enemyFootLayer, playBulletLayer, true);
+        Physics2D.IgnoreLayerCollision(monsterBulletLayer, enemyLayer, true);
+        Physics2D.IgnoreLayerCollision(monsterBulletLayer, enemyFootLayer, true);
+        Physics2D.IgnoreLayerCollision(detecterLayer, playBulletLayer, true);
+        Physics2D.IgnoreLayerCollision(monsterBulletLayer, detecterLayer, true);
+        Physics2D.IgnoreLayerCollision(monsterBulletLayer, monsterBulletLayer, true);
+        Physics2D.IgnoreLayerCollision(monsterBulletLayer, footLayer, true);
     }
     private void Update()
     {
         enemyMove.Direction();
-        //enemyMove.Move(1);
+        DistanceAttack();
         //Debug.Log("벌레:"+ health);
     }
 

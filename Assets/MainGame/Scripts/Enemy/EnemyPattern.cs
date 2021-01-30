@@ -77,7 +77,7 @@ public class EnemyPattern : MonoBehaviour
             {
                 int paramter = Random.Range(1, 7);
 
-                Debug.Log(paramter);
+                //Debug.Log(paramter);
                 if (paramter <= 2)
                 {
                     movement.Move(-0.5f);

@@ -2,25 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class MonsterBullet : MonoBehaviour
 {
+    private void Start()
+    {
+        Destroy(gameObject, 5.0f);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Player")
         {
             LivingEntity target = collision.GetComponent<LivingEntity>();
-            EnemyState enemyState = collision.GetComponent<EnemyState>();
-            target.OnDamage(PlayerState.Instance.attDamage);
-            enemyState.HitDetect(0);
-            Destroy(gameObject);
+            target.OnDamage(GetComponentInParent<EnemyState>().attDamage);
+            PlayerState.Instance.HitDetect(GetComponent<Rigidbody2D>().velocity.x);
+
         }
 
-        if(collision.tag != "Dead")
-            Destroy(gameObject);
+
+
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
     }
+
 }

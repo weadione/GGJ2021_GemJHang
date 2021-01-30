@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
+    public int currentStage;
+
     public string[] sceneName;
 
     public int monsterRemain;
@@ -40,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         initialzeScene();
         monsterRemain = 0;
+        currentStage = 0;
     }
 
     private void Update()

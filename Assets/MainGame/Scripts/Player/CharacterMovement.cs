@@ -63,7 +63,8 @@ public class CharacterMovement : MonoBehaviour
 
     public void Hit(float x)                                                    //피격 시 x방향으로 밀려나고 위로도 조금 밀려남(x가 때린 방향)
     {
-        rigid2D.velocity = new Vector2(x * 3, 3);
+        x = x >= 0 ? 1 : -1;
+        rigid2D.velocity = new Vector2(x * 15, 3);
     }
 
     public void Dash(float x)                                                   //대쉬 함수 코루틴으로 돌아감

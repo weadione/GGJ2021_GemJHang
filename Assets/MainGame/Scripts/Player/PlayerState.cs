@@ -93,13 +93,13 @@ public class PlayerState : LivingEntity
     public override void OnDamage(float damage)
     {
         base.OnDamage(damage);
-            
+        GetComponent<HitEffect>().RunEffect();    
         
     }
 
     private void Update()
     {
-        Debug.Log(health);
+        //Debug.Log(health);
     }
     
     public void HitDetect(float x)
