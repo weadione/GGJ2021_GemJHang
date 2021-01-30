@@ -6,13 +6,13 @@ using UnityEngine;
 //살아있는 모든 개체의 
 public class LivingEntity : MonoBehaviour
 {
-    public float health { get; protected set; }
-    public bool dead { get; protected set; }
-    public float attDamage { get; protected set; }
-    public bool attType { get; set; }//true: 근거리, false :원거리
-    public float attSpeed { get; protected set; }
-    public float moveSpeed { get; protected set; }
-    public float dashSpeed { get; protected set; }
+    public float health;
+    public bool dead;
+    public float attDamage;
+    public bool attType;//true: 근거리, false :원거리
+    public float attSpeed;
+    public float moveSpeed;
+    public float dashSpeed;
 
     public event Action onDeath;
 
