@@ -1,5 +1,76 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1778495006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778495007}
+  - component: {fileID: 1778495008}
+  - component: {fileID: 1778495009}
+  m_Layer: 14
+  m_Name: WallDetecter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1778495007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778495006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7919373784084091947}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1778495008
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778495006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.3195314, y: 1.220196}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.50247, y: 4.9142685}
+  m_EdgeRadius: 0
+--- !u!114 &1778495009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778495006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b72a88ced342e0a46a0fedcb2fbd2830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 1538375384}
 --- !u!1 &7919373782809059197
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,8 +81,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7919373782809059138}
   - component: {fileID: 7919373782809059139}
-  m_Layer: 11
-  m_Name: GameObject
+  m_Layer: 9
+  m_Name: Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +96,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7919373782809059197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.73, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7919373784084091947}
@@ -44,8 +115,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8211321, y: -0.2972791}
-  m_Size: {x: 8.701438, y: 2.330725}
+  m_Offset: {x: -0.8033175, y: -0.86753273}
+  m_Size: {x: 2.621365, y: 1.1902338}
   m_Direction: 1
 --- !u!1 &7919373784084091940
 GameObject:
@@ -58,11 +129,12 @@ GameObject:
   - component: {fileID: 7919373784084091947}
   - component: {fileID: 7919373784084091946}
   - component: {fileID: 7919373784084091944}
-  - component: {fileID: 7919373784084091945}
   - component: {fileID: 7919373784084091950}
   - component: {fileID: 7919373784084091941}
-  m_Layer: 0
-  m_Name: "\uC1A1\uCDA9\uC77400"
+  - component: {fileID: 1538375382}
+  - component: {fileID: 1538375384}
+  m_Layer: 11
+  m_Name: bug
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,11 +147,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7919373784084091940}
-  m_LocalRotation: {x: -0.00000013805143, y: 0.0034353428, z: 0.000040185398, w: 0.99999416}
+  m_LocalRotation: {x: 0.000000150011, y: 0.0034382485, z: 0.000043629807, w: 0.9999941}
   m_LocalPosition: {x: 4.08, y: -1.85, z: 10}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 7919373782809059138}
+  - {fileID: 1778495007}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0.39400002, z: 0.0050000004}
@@ -145,30 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c7805103faf8b4cbdf575200ffba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMove: {fileID: 7919373784084091945}
+  enemyMove: {fileID: 0}
   lastAttTime: 0
   item: 
---- !u!114 &7919373784084091945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7919373784084091940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90216ec481660c34995713c00d89d7cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  dashSpeed: 100
-  jumpForce: 700
-  canMove: 1
-  head: {fileID: 0}
-  arm: {fileID: 0}
-  leg: {fileID: 0}
-  upperBody: {fileID: 0}
-  lowerBody: {fileID: 0}
 --- !u!50 &7919373784084091950
 Rigidbody2D:
   serializedVersion: 4
@@ -206,3 +258,37 @@ CapsuleCollider2D:
   m_Offset: {x: -0.82405674, y: -0.2725708}
   m_Size: {x: 8.729454, y: 2.4279957}
   m_Direction: 1
+--- !u!114 &1538375382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7919373784084091940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45146a708fbc23146a3932e15de38411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actNum: 0
+  movement: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  Tracer: {fileID: 0}
+--- !u!114 &1538375384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7919373784084091940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986e13b251347fb4daf41f7784440a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  dashSpeed: 30
+  jumpForce: 400
+  canMove: 1
+  enemySclae: {x: 0, y: 0, z: 0}

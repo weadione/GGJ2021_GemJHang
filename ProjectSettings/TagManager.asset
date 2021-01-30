@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Dead
+  - Map
   layers:
   - Default
   - TransparentFX
@@ -16,12 +17,12 @@ TagManager:
   - 
   - 
   - PlayerFoot
-  - Platform
+  - EnemyFoot
   - Player
   - Enemy
-  - 
-  - 
-  - 
+  - Platform
+  - MaplePlatform
+  - Detecter
   - 
   - 
   - 

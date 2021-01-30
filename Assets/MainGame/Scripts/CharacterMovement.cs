@@ -21,7 +21,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObject lowerBody;
 
 
-    int playerLayer, platformLayer, footLayer;
+    int playerLayer, platformLayer, footLayer, maplePlatformLayer;
     private Animator lowerBodyAnimator, upperBodyAnimator;
     private Animator armAnimator; 
 
@@ -52,11 +52,11 @@ public class CharacterMovement : MonoBehaviour
 
             if(!isGrounded && rigid2D.velocity.y > 0)                           //*메이플 맵* 땅에 안붙어있고, 위로 올라가는 상태일 때 footLayer와 platformLayer의 충돌을 없애는 것
             {
-                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, true);
+                Physics2D.IgnoreLayerCollision(footLayer, maplePlatformLayer, true);
             }
             else
             {
-                Physics2D.IgnoreLayerCollision(footLayer, platformLayer, false);
+                Physics2D.IgnoreLayerCollision(footLayer, maplePlatformLayer, false);
             }
         }
     }
@@ -103,21 +103,32 @@ public class CharacterMovement : MonoBehaviour
         playerLayer = LayerMask.NameToLayer("Player");
         platformLayer = LayerMask.NameToLayer("Platform");
         footLayer = LayerMask.NameToLayer("PlayerFoot");
-        Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);                       //Player레이어가 Platform 레이어와 충돌하지 않게 만드는 함수
+        maplePlatformLayer = LayerMask.NameToLayer("MaplePlatform");
+        Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);           //Player레이어가 Platform 레이어와 충돌하지 않게 만드는 함수
+        Physics2D.IgnoreLayerCollision(playerLayer, maplePlatformLayer, true);
+        Physics2D.IgnoreLayerCollision(footLayer, maplePlatformLayer, false);
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    //Debug.Log(collision.contacts[0].normal.y);
+    //    // 바닥에 닿았음을 감지하는 처리
+    //    //Debug.Log(collision.contacts[0].normal.y);
+        
+    //}
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        //Debug.Log(collision.contacts[0].normal.y);
-        // 바닥에 닿았음을 감지하는 처리
-
-        if (collision.contacts[0].normal.y > 0.7f)
-        {
-            isGrounded = true;
-            jumpCount = 0;
-
-        }
+        for (int i = 0; i < collision.contacts.Length; i++)
+            if (collision.contacts[i].normal.y > 0.7f && collision.contacts[i].collider.tag == "Map")
+            {
+                //Debug.Log(i + "번: " + collision.contacts[0].normal.y);
+                isGrounded = true;
+                jumpCount = 0;
+            }
     }
+
 
     private void OnCollisionExit2D(Collision2D collision)
     {
