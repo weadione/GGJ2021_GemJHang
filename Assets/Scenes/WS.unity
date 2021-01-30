@@ -406,7 +406,6 @@ GameObject:
   m_Component:
   - component: {fileID: 307621767}
   - component: {fileID: 307621768}
-  - component: {fileID: 307621769}
   m_Layer: 20
   m_Name: Icon_me
   m_TagString: Untagged
@@ -478,19 +477,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &307621769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307621766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9188633f239da5c4b98919d2d4e95396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageLevel: 0
 --- !u!1 &320520630
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +603,7 @@ GameObject:
   - component: {fileID: 438157163}
   m_Layer: 22
   m_Name: Icon_arrow_normal
-  m_TagString: Untagged
+  m_TagString: IconArrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,11 +666,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438157162}
   m_LocalRotation: {x: -0.022168946, y: -0.014992339, z: -0.42153093, w: 0.90641904}
-  m_LocalPosition: {x: 0.54, y: 0.38, z: 0}
+  m_LocalPosition: {x: 0.5400009, y: 0.38, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1062406975}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -3.028, y: -0.48700002, z: -49.869003}
 --- !u!1 &499848719
 GameObject:
@@ -779,7 +765,7 @@ GameObject:
   - component: {fileID: 629627457}
   m_Layer: 20
   m_Name: Icon_arrow_normal
-  m_TagString: Untagged
+  m_TagString: IconArrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -792,7 +778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629627455}
   m_LocalRotation: {x: 0.025728516, y: -0.0073672216, z: 0.80931455, w: -0.5867656}
-  m_LocalPosition: {x: 0.55, y: -0.32, z: -0.01}
+  m_LocalPosition: {x: 0.54999924, y: -0.31999993, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 833214717}
@@ -860,7 +846,7 @@ GameObject:
   - component: {fileID: 728118539}
   m_Layer: 20
   m_Name: Icon_arrow_long
-  m_TagString: Untagged
+  m_TagString: IconArrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -923,7 +909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728118538}
   m_LocalRotation: {x: -0, y: -0, z: -0.86856014, w: 0.4955838}
-  m_LocalPosition: {x: -0.74, y: 0.36, z: 0}
+  m_LocalPosition: {x: -0.7399998, y: 0.36000013, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 833214717}
@@ -939,7 +925,6 @@ GameObject:
   m_Component:
   - component: {fileID: 748257183}
   - component: {fileID: 748257184}
-  - component: {fileID: 748257185}
   m_Layer: 20
   m_Name: Icon_already
   m_TagString: Untagged
@@ -1011,19 +996,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &748257185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748257182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9188633f239da5c4b98919d2d4e95396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageLevel: 0
 --- !u!1 &748719107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9188633f239da5c4b98919d2d4e95396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageLevel: 1
+  stageLevel: 0
+  stem: 0
 --- !u!61 &1008952016
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1681,8 +1654,8 @@ Transform:
   m_LocalPosition: {x: -22.02, y: 0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 438157164}
   - {fileID: 1840957121}
+  - {fileID: 438157164}
   - {fileID: 1008952014}
   m_Father: {fileID: 2015080242}
   m_RootOrder: 1
@@ -1941,6 +1914,7 @@ GameObject:
   - component: {fileID: 1193829498}
   - component: {fileID: 1193829500}
   - component: {fileID: 1193829499}
+  - component: {fileID: 1193829501}
   m_Layer: 22
   m_Name: boss_stage
   m_TagString: Untagged
@@ -1999,12 +1973,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193829497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9188633f239da5c4b98919d2d4e95396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageLevel: 2
+  stageLevel: 1
+  stem: 0
+--- !u!114 &1193829501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193829497}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9188633f239da5c4b98919d2d4e95396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageLevel: 1
+  stem: 0
 --- !u!1 &1210508859
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageLevel: 0
+  stem: 1
 --- !u!61 &1428532384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2414,7 +2404,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1733619096}
   - component: {fileID: 1733619097}
-  - component: {fileID: 1733619098}
   m_Layer: 20
   m_Name: Icon_mob
   m_TagString: Untagged
@@ -2486,19 +2475,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1733619098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733619095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9188633f239da5c4b98919d2d4e95396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageLevel: 0
 --- !u!1 &1734173309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2590,7 +2566,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1811981219}
   - component: {fileID: 1811981218}
-  - component: {fileID: 1811981220}
   m_Layer: 22
   m_Name: Icon_already
   m_TagString: Untagged
@@ -2662,18 +2637,6 @@ Transform:
   m_Father: {fileID: 1008952014}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1811981220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811981217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfb32436fa5be8499f1311686b61142, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1840957119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,7 +2649,7 @@ GameObject:
   - component: {fileID: 1840957120}
   m_Layer: 22
   m_Name: Icon_arrow_short
-  m_TagString: Untagged
+  m_TagString: IconArrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2749,11 +2712,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840957119}
   m_LocalRotation: {x: -0, y: -0, z: -0.43879476, w: 0.89858735}
-  m_LocalPosition: {x: -0.56, y: -0.31, z: 0}
+  m_LocalPosition: {x: -0.55999947, y: -0.31, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1062406975}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -52.054}
 --- !u!1 &1994549535
 GameObject:
@@ -2846,7 +2809,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2015080242}
   - component: {fileID: 2015080241}
-  - component: {fileID: 2015080243}
   m_Layer: 21
   m_Name: Worldmap
   m_TagString: Untagged
@@ -2923,16 +2885,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2015080243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015080240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 758f4abf3a2dd724eadeaa30453c6e5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentStage: 0

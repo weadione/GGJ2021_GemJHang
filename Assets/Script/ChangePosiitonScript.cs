@@ -50,31 +50,34 @@ public class ChangePosiitonScript : MonoBehaviour
         arrow2 = gameObject.transform.parent.gameObject.transform.GetChild(1).gameObject;
 
         
-        Vector3 tempPos =  battle.transform.position;   
+        Vector3 abBattle =  battle.transform.position;  
+        Vector3 abStaying =  staying.transform.position;  
+        Vector3 abChNode =  chNode.transform.position;  
+         
         Vector3 arrowPos =  arrow.transform.position;   
         Vector3 arrow2Pos =  arrow2.transform.position; 
-        Debug.Log(tempPos); 
+        Debug.Log(abBattle); 
         Debug.Log(arrowPos); 
         Debug.Log(arrow2Pos); 
                  
         if(cur == stageLevel){
             Debug.Log("001 : show battle," );
-            battle.transform.localPosition = new Vector3(0,0,50);   // 보이게
-            arrow.transform.localPosition = new Vector3(0,0,50);   // 보이게
-            arrow2.transform.localPosition = new Vector3(0,0,50);   // 보이게
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
         }
         else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == true){
             // show my icon
             Debug.Log("002 : show staying" + staying.transform.localPosition);
-            staying.transform.localPosition = new Vector3(0,0,50);
-            battle.transform.localPosition = new Vector3(0,0,-50);
-            arrow.transform.localPosition = new Vector3(0,0,-50);
-            arrow2.transform.localPosition = new Vector3(0,0,-50);
 
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,10);   // 보이게
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,-20);   // 안 보이게
+            arrow.transform.position = new Vector3(abBattle.x,abBattle.y,-20);  
+            arrow2.transform.position = new Vector3(arrowPos.x,arrow2Pos.y,-20);   
         }else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == false){
-            battle.transform.localPosition = new Vector3(0,0,50);
-            arrow.transform.localPosition = new Vector3(0,0,50); 
-            arrow2.transform.localPosition = new Vector3(0,0,50);
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
             // do nothing
         }else if(cur > stageLevel && isVisited[stageLevel,stem] == true){
             staying.transform.localPosition = new Vector3(0,0,-50);

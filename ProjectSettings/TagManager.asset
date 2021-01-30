@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Dead
   - Map
+  - IconArrow
   layers:
   - Default
   - TransparentFX
