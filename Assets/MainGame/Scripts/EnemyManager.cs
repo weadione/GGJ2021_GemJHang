@@ -13,7 +13,7 @@ public class EnemyManager : MonoBehaviour
 
     public void initialize()
     {
-        enemyList[0].GetComponent<EnemyState>().changeState(10f, 10f, true, 1f, 5f);
+        enemyList[0].GetComponent<EnemyState>().changeState(10f, 20f, true, 1f, 5f);
         
     }
 }

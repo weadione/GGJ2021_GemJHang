@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     public string[] sceneName;
 
-
+    public int monsterRemain;
     private void Awake()
     {
         if (instance)
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         initialzeScene();
+        monsterRemain = 0;
     }
 
     private void Update()
@@ -69,5 +70,6 @@ public class GameManager : MonoBehaviour
         sceneName[1] = "GameEnd";
         sceneName[2] = "testscenes";
     }
+
 
 }

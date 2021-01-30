@@ -21,7 +21,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObject lowerBody;
 
 
-    int playerLayer, platformLayer, footLayer, maplePlatformLayer;
+    int playerLayer, platformLayer, footLayer, maplePlatformLayer, bulletLayer;
     private Animator lowerBodyAnimator, upperBodyAnimator;
     private Animator armAnimator; 
 
@@ -104,9 +104,14 @@ public class CharacterMovement : MonoBehaviour
         platformLayer = LayerMask.NameToLayer("Platform");
         footLayer = LayerMask.NameToLayer("PlayerFoot");
         maplePlatformLayer = LayerMask.NameToLayer("MaplePlatform");
+        bulletLayer = LayerMask.NameToLayer("Bullet");
         Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);           //Player레이어가 Platform 레이어와 충돌하지 않게 만드는 함수
         Physics2D.IgnoreLayerCollision(playerLayer, maplePlatformLayer, true);
         Physics2D.IgnoreLayerCollision(footLayer, maplePlatformLayer, false);
+        Physics2D.IgnoreLayerCollision(playerLayer, bulletLayer, true);
+        Physics2D.IgnoreLayerCollision(bulletLayer, bulletLayer, true);
+        Physics2D.IgnoreLayerCollision(footLayer, bulletLayer, true);
+
 
     }
 

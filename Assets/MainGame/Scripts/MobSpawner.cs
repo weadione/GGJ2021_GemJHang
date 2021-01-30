@@ -30,6 +30,7 @@ public class MobSpawner : MonoBehaviour
                 monster.GetComponent<EnemyPattern>().left = left;
                 monster.GetComponent<EnemyPattern>().right = right;
                 monster.GetComponent<EnemyPattern>().SelectPattern(1);
+                GameManager.Instance.monsterRemain++;
             }
         }
         else if(selectPattern==2)
@@ -42,6 +43,7 @@ public class MobSpawner : MonoBehaviour
                 monster.GetComponent<EnemyPattern>().right = right;
                 monster.GetComponent<EnemyPattern>().Tracer = tracer.GetComponent<BoxCollider2D>();
                 monster.GetComponent<EnemyPattern>().SelectPattern(2);
+                GameManager.Instance.monsterRemain++;
             }
         }
         else if (selectPattern == 3)
@@ -54,6 +56,7 @@ public class MobSpawner : MonoBehaviour
                 monster.GetComponent<EnemyPattern>().right = right;
                 monster.GetComponent<EnemyPattern>().Tracer = tracer.GetComponent<BoxCollider2D>();
                 monster.GetComponent<EnemyPattern>().SelectPattern(3);
+                GameManager.Instance.monsterRemain++;
             }
         }
     }

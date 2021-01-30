@@ -117,6 +117,7 @@ public class EnemyState : LivingEntity
         Physics2D.IgnoreLayerCollision(footLayer, detecterLayer, true);
         Physics2D.IgnoreLayerCollision(playerLayer, detecterLayer, true);
         Physics2D.IgnoreLayerCollision(enemyFootLayer, enemyFootLayer, true);
+        Physics2D.IgnoreLayerCollision(enemyFootLayer, 15, true);
 
     }
     private void Update()
@@ -144,6 +145,7 @@ public class EnemyState : LivingEntity
         dead = true;
         enemyMove.canMove = false;
         tag = "Dead";
-       
+        Destroy(GetComponent<Rigidbody2D>());
+        GameManager.Instance.monsterRemain--;
     }
 }

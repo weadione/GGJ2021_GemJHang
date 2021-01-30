@@ -61,7 +61,7 @@ public class PlayerState : LivingEntity
 
         attDamage = 10f;
         health = 100f;
-        attType = true;
+        attType = false;
         attSpeed = 1f;
         moveSpeed = 5f;
         dashSpeed = 30f;

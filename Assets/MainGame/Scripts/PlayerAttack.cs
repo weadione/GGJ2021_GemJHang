@@ -7,6 +7,10 @@ public class PlayerAttack : MonoBehaviour
     public float tmpTime;
     public bool canAttack =true;
 
+    public bool canAttackFar = true;
+
+    public GameObject bullet;
+
     public Animator attackAnimator;
 
     private void OnTriggerStay2D(Collider2D other)
@@ -33,9 +37,20 @@ public class PlayerAttack : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.LeftControl) && !canAttack && Time.time >= PlayerState.Instance.lastAttTime + PlayerState.Instance.attSpeed)
         {
-            
-            canAttack = true;
-            StartCoroutine(WaitAttack());
+            if (PlayerState.Instance.attType)
+            {
+                canAttack = true;
+                StartCoroutine(WaitAttack());
+            }
+            else
+            {
+                canAttackFar = true;
+                //원거리
+                GameObject tmpBullet = Instantiate(bullet, transform.position, transform.rotation);
+                tmpBullet.GetComponent<Rigidbody2D>().velocity = PlayerState.Instance.transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
+                tmpBullet.transform.localScale = PlayerState.Instance.transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
+                PlayerState.Instance.lastAttTime = Time.time;
+            }
 
         }
     }
