@@ -178,15 +178,15 @@ MonoBehaviour:
   dead: 0
   attDamage: 10
   attType: 0
-  attSpeed: 1
+  attSpeed: 2
   moveSpeed: 5
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
   item: 050000000200000000000000
   attackAnimator: {fileID: 340901110}
-  monsterBullet:
-  - {fileID: 3319113927516007682, guid: 416e859252f057e40b7d76a5a4887532, type: 3}
+  monsterBullet: {fileID: 3319113927516007682, guid: 416e859252f057e40b7d76a5a4887532,
+    type: 3}
 --- !u!50 &7630634006982442351
 Rigidbody2D:
   serializedVersion: 4

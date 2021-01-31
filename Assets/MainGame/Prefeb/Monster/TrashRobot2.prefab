@@ -107,17 +107,15 @@ MonoBehaviour:
   dead: 0
   attDamage: 25
   attType: 0
-  attSpeed: 1
+  attSpeed: 1.4
   moveSpeed: 7
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
-  item: 
+  item: 000000000500000009000000
   attackAnimator: {fileID: 1816930486}
-  monsterBullet:
-  - {fileID: 6916699379703761257, guid: 1badec48480e81542ab05c88353e70d3, type: 3}
-  - {fileID: 6146271775281546017, guid: adc28fe2a014bb2488af643b6007bf40, type: 3}
-  - {fileID: 1310922660608120541, guid: cb2e8e1a4a0d6b0429c37ff18b3f3acb, type: 3}
+  monsterBullet: {fileID: 6146271775281546017, guid: adc28fe2a014bb2488af643b6007bf40,
+    type: 3}
 --- !u!50 &3442617955890355141
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +155,11 @@ MonoBehaviour:
   right: {fileID: 0}
   Tracer: {fileID: 0}
   teleportPos: {x: 0, y: 0}
-  monsterBullet: {fileID: 0}
+  monsterBullet:
+  - {fileID: 0}
+  cloneSpawner: {fileID: 0}
+  finalBossTeleport: []
+  marcoAnimator: {fileID: 0}
 --- !u!114 &3442617955890355138
 MonoBehaviour:
   m_ObjectHideFlags: 0
