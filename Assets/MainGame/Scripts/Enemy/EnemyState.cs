@@ -155,9 +155,7 @@ public class EnemyState : LivingEntity
     {
         enemyMove.Direction();
         DistanceAttack();
-        Debug.Log(item[0]);
-        Debug.Log(item[1]);
-        Debug.Log(item[2]);
+  
         //Debug.Log("벌레:"+ health);
     }
 
