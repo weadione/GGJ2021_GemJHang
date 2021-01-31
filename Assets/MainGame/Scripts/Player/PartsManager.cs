@@ -27,7 +27,7 @@ public class PartsManager : MonoBehaviour
         if (tmp)
         {
             ChangeParts(0, 1);
-            ChangeParts(1, 8);
+            ChangeParts(1, 7);
             ChangeParts(2, 1);
             tmp = false;
         }
@@ -90,6 +90,9 @@ public class PartsManager : MonoBehaviour
 
     public void ChangeParts(int partsType, int changeNum)   //partsType: 파츠타입, changNum: 원하는 파츠의 번호
     {
+        if (changeNum == 0)
+            return;
+
         if(partsType==0)    //머리
         {
 

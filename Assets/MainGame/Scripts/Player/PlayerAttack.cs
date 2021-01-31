@@ -9,10 +9,15 @@ public class PlayerAttack : MonoBehaviour
 
     public bool canAttackFar = true;
 
-    public GameObject bullet;
+    public GameObject[] bullet;
 
     public Animator attackAnimator;
     public Animator[] armAttackAnimator;
+
+    public AudioSource playerAttackSound;
+    public AudioClip nearAtt;
+    public AudioClip farAtt;
+
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -29,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
 
                 attackAnimator.SetTrigger("attackTrigger");
                 armAttackAnimator[PlayerState.Instance.partsNum[1]-1].SetTrigger("attackTrigger");
+                playerAttackSound.PlayOneShot(nearAtt);
             }
         }
     }
@@ -47,13 +53,39 @@ public class PlayerAttack : MonoBehaviour
             {
                 canAttackFar = true;
                 //원거리
-                GameObject tmpBullet = Instantiate(bullet, transform.position, transform.rotation);
+                int bulletNum = 0;
+                if(PlayerState.Instance.partsNum[1] == 2)
+                {
+                    bulletNum = 0;
+                }
+                else if(PlayerState.Instance.partsNum[1]== 3)
+                {
+                    bulletNum = 1;
+                }
+                else if (PlayerState.Instance.partsNum[1] == 4)
+                {
+                    bulletNum = Random.Range(2, 5);
+                }
+                else if (PlayerState.Instance.partsNum[1] == 5)
+                {
+                    bulletNum = Random.Range(2, 5);
+                }
+                else if (PlayerState.Instance.partsNum[1] == 6)
+                {
+                    bulletNum = Random.Range(5, 7);
+                }
+
+
+
+
+                GameObject tmpBullet = Instantiate(bullet[bulletNum], transform.position, transform.rotation);
                 tmpBullet.GetComponent<Rigidbody2D>().velocity = PlayerState.Instance.transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
                 tmpBullet.transform.localScale = PlayerState.Instance.transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
                 PlayerState.Instance.lastAttTime = Time.time;
 
                 attackAnimator.SetTrigger("attackTrigger");
                 armAttackAnimator[PlayerState.Instance.partsNum[1]-1].SetTrigger("attackTrigger");
+                playerAttackSound.PlayOneShot(farAtt);
             }
 
         }

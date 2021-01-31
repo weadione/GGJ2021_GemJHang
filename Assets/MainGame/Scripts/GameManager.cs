@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public float animalPartsAdaptation;
+    public float machinePartsAdaptation;
 
     public int currentStage;
 
