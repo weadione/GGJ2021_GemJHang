@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Dead
   - Map
+  - IconArrow
   layers:
   - Default
   - TransparentFX
@@ -28,9 +29,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - MapBelow
+  - WorldMap
+  - MapOver
   - 
   - 
   - 
@@ -43,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Hidden
+    uniqueID: 594901203
+    locked: 0
+  - name: Background
+    uniqueID: 1584094729
+    locked: 0
+  - name: Foreground
+    uniqueID: 4251262425
+    locked: 0
+  - name: Foreground
+    uniqueID: 1154606663
     locked: 0
