@@ -26,6 +26,7 @@ public class PlayerState : LivingEntity
     public int jumpCount;
     public bool dash;
     public float jumpForce;
+    public CapsuleCollider2D damageZone;
 
 
     private static PlayerState instance;
@@ -85,6 +86,9 @@ public class PlayerState : LivingEntity
     private void Start()
     {
         partsNum = new int[3];
+        partsNum[0] = 0;
+        partsNum[1] = 0;
+        partsNum[2] = 0;
         partsManager = GetComponent<PartsManager>();
         movement = GetComponent<CharacterMovement>();
         lastAttTime = 0f;
@@ -147,6 +151,7 @@ public class PlayerState : LivingEntity
             attSpeed = partsManager.armParts[partsNum[1]].partsAttSpeed + defaultAttSpeed;
             attRange = partsManager.armParts[partsNum[1]].attRange;
             attType = partsManager.armParts[partsNum[1]].partsType;
+            damageZone.size = new Vector2(attRange, 2);
         }
         else if (partType == 2)
         {

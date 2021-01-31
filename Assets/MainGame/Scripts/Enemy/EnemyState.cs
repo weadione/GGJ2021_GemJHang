@@ -9,10 +9,10 @@ public class EnemyState : LivingEntity
 
     int playerLayer, enemyLayer, footLayer, enemyFootLayer, detecterLayer, playBulletLayer, monsterBulletLayer;
 
-    public int[] item;  //드랍할 파츠
+    public int[] item = new int[3];  //드랍할 파츠
 
     public Animator attackAnimator;
-    public GameObject monsterBullet;
+    public GameObject[] monsterBullet;
 
     float tmpDamage, tmpHealth, tmpattSpeed, tmpmoveSpeed;
     //bool tmp
@@ -31,14 +31,18 @@ public class EnemyState : LivingEntity
 
     //}
 
-    public void changeState(float health, float damage, bool attType,float attSpeed, float moveSpeed)
+
+    public void changeState(float health, float damage, bool attType, float attSpeed, float moveSpeed, int[] itemList)
     {
+        
         this.attDamage = damage;
         this.health = health;
         this.attType = attType;
         this.attSpeed = attSpeed;
         this.moveSpeed = moveSpeed;
-        Debug.Log(this.health);
+        this.item = itemList;
+
+     
     }
 
 
@@ -85,8 +89,9 @@ public class EnemyState : LivingEntity
 
         if(Time.time>=lastAttTime+attSpeed)
         {
-            GameObject tmpBullet = Instantiate(monsterBullet, transform.position, transform.rotation);
-            tmpBullet.transform.parent = transform;
+            int tmp = Random.Range(0, monsterBullet.Length);
+            GameObject tmpBullet = Instantiate(monsterBullet[tmp], transform.position, transform.rotation);
+            tmpBullet.GetComponent<MonsterBullet>().damage = attDamage;
             tmpBullet.GetComponent<Rigidbody2D>().velocity = transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
             tmpBullet.transform.localScale = transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
             lastAttTime = Time.time;
@@ -125,7 +130,6 @@ public class EnemyState : LivingEntity
         enemyMove = GetComponent<EnemyMovement>();
         //StartCoroutine(UpdateMove());
 
-        item = new int[3];
 
         enemyFootLayer = LayerMask.NameToLayer("EnemyFoot");
         detecterLayer = LayerMask.NameToLayer("Detecter");
@@ -143,7 +147,6 @@ public class EnemyState : LivingEntity
         Physics2D.IgnoreLayerCollision(enemyFootLayer, playBulletLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, enemyLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, enemyFootLayer, true);
-        Physics2D.IgnoreLayerCollision(detecterLayer, playBulletLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, detecterLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, monsterBulletLayer, true);
         Physics2D.IgnoreLayerCollision(monsterBulletLayer, footLayer, true);
@@ -152,6 +155,7 @@ public class EnemyState : LivingEntity
     {
         enemyMove.Direction();
         DistanceAttack();
+  
         //Debug.Log("벌레:"+ health);
     }
 

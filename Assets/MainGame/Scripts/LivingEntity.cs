@@ -14,6 +14,8 @@ public class LivingEntity : MonoBehaviour
     public float moveSpeed;
     public float dashSpeed;
 
+    //public int item;
+
     public event Action onDeath;
 
     protected virtual void OnEnable()

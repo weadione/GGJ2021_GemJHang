@@ -21,46 +21,46 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/BS_001.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_001.unity"
     guid: b0016bf3f55945e4aa969bd239d5d182
   - enabled: 1
-    path: Assets/Scenes/BS_002.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_002.unity"
     guid: f0c4c5139bdcee04b8d178007504bf76
   - enabled: 1
-    path: Assets/Scenes/BS_003.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_003.unity"
     guid: 37547c633880d7346a1b6a6cfe00e136
   - enabled: 1
-    path: Assets/Scenes/BS_004.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_004.unity"
     guid: c1507de6569016e449c5e7a22f4a6a76
   - enabled: 1
-    path: Assets/Scenes/BS_005.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_005.unity"
     guid: 2f6f75c7e9fe636438b93434c2f074af
   - enabled: 1
-    path: Assets/Scenes/BS_101.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_101.unity"
     guid: 4b3aaf86f28f85d498165b08a248e245
   - enabled: 1
-    path: Assets/Scenes/BS_102.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_102.unity"
     guid: cb24a3c44e346174abe8bb4ae1a701cc
   - enabled: 1
-    path: Assets/Scenes/BS_103.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_103.unity"
     guid: 2c20ad2935863924db03de5f2b44f143
   - enabled: 1
-    path: Assets/Scenes/BS_201.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_201.unity"
     guid: 3715ff02a28e17f44b86b56103a8fd75
   - enabled: 1
-    path: Assets/Scenes/BS_202.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_202.unity"
     guid: 655afbc63d6a6b340adddca85278b00b
   - enabled: 1
-    path: Assets/Scenes/BS_203.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_203.unity"
     guid: 4209fddc8802ea04dacfe8f7093bb53b
   - enabled: 1
-    path: Assets/Scenes/BS_204.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_204.unity"
     guid: 2f1f152d7237cf64eae652f545b71fe7
   - enabled: 1
-    path: Assets/Scenes/BS_301.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_301.unity"
     guid: c90224d116bccba49a2bb124e093d4a5
   - enabled: 1
-    path: Assets/Scenes/BS_302.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_302.unity"
     guid: ad2260ab6293e0a48a6895b62bfb67a5
   - enabled: 1
     path: Assets/Scenes/BS_303.unity
@@ -69,13 +69,13 @@ EditorBuildSettings:
     path: Assets/Scenes/BS_304.unity
     guid: e3f565b6af36c1b4d92c066dd65e003d
   - enabled: 1
-    path: Assets/Scenes/BS_401.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_401.unity"
     guid: 118d1e86effef1047944b0b23b2175aa
   - enabled: 1
-    path: Assets/Scenes/BS_402.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_402.unity"
     guid: 788e54585164b964092529651f259942
   - enabled: 1
-    path: Assets/Scenes/BS_403.unity
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_403.unity"
     guid: 102dcec6931b6ce4281be9200ea29a3b
   - enabled: 1
     path: Assets/Scenes/Title.unity

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1596683938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596683939}
+  m_Layer: 0
+  m_Name: TelepotePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1596683939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596683938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 228307756788035494}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228307754799177816
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228307754799177816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.1, y: -6.7, z: 65.0161}
+  m_LocalPosition: {x: -16.49, y: -0.59, z: 65.0161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 228307756788035494}
@@ -54,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228307756180854773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -6, z: 65.0161}
+  m_LocalPosition: {x: 20.33, y: -1.83, z: 65.0161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 228307756788035494}
@@ -70,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228307756707093910}
   - component: {fileID: 228307756707093905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tracer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +134,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.478113, y: 0.8744917}
+  m_Offset: {x: 1.3821888, y: 4.4087715}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -115,7 +145,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 33.723576, y: 21.504148}
+  m_Size: {x: 42.444584, y: 22.323433}
   m_EdgeRadius: 0
 --- !u!1 &228307756788035495
 GameObject:
@@ -148,6 +178,7 @@ Transform:
   - {fileID: 228307756180854772}
   - {fileID: 228307754799177819}
   - {fileID: 228307756707093910}
+  - {fileID: 1596683939}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -164,8 +195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 0}
-  mobList: 060000000600000008000000
+  mobList: 0f000000
   left: {fileID: 228307754799177816}
   right: {fileID: 228307756180854773}
   tracer: {fileID: 228307756707093911}
+  telepotePos: {fileID: 1596683938}
   selectPattern: 2
