@@ -29,8 +29,10 @@ public class ChangePosiitonScript : MonoBehaviour
     void Update()
     {
         if(yetChanged){
-
+            
             yetChanged = false;
+            GameObject cam = GameObject.Find("Main Camera").gameObject;
+            Debug.Log(cam.name);
             tryApsoluteXY();
         }
 

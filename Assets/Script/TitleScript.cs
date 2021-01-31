@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class TitleScript : MonoBehaviour
 {
     public string SceneToLoad;
+    string SceneTitle = "WS";
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(SceneToLoad);
+        SceneManager.LoadScene(SceneTitle);
     }
 
     public void LoadConfig()
