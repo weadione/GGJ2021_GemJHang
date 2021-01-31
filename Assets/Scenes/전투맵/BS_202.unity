@@ -3641,5 +3641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MobSpawner2
       objectReference: {fileID: 0}
+    - target: {fileID: 228307756788035495, guid: 3bf57bc0b0c4ca044ae8e64772ec28d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf57bc0b0c4ca044ae8e64772ec28d9, type: 3}
