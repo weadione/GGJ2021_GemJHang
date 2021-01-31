@@ -8,6 +8,7 @@ TagManager:
   - Dead
   - Map
   - IconArrow
+  - DontDestroy
   layers:
   - Default
   - TransparentFX
@@ -29,9 +30,9 @@ TagManager:
   - 
   - 
   - 
-  - MapBelow
-  - WorldMap
-  - MapOver
+  - Background
+  - 
+  - 
   - 
   - 
   - 
