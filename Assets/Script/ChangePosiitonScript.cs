@@ -119,10 +119,7 @@ public class ChangePosiitonScript : MonoBehaviour
         else
             isFront = false;
 
-        for (int i = 0; i < 3; i++)
-        {
-            PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(i, Random.Range(0, 9));
-        }
+        
 
         if (isFront){
         switch(bsn){
