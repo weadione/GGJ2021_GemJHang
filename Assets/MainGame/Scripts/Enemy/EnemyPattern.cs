@@ -238,6 +238,28 @@ public class EnemyPattern : MonoBehaviour
         
     }
 
+    public void MiddleBoss()
+    {
+
+
+
+    }
+
+
+    public void MiddleBossPattern1()
+    {
+
+
+
+    }
+
+    public void MiddleBossPattern2()
+    {
+
+
+
+    }
+
     public void WallJump()
     {
 
