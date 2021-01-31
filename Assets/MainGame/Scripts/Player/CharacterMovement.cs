@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;                    
+    public float moveSpeed;
+    public float tmpSpeed;
     public float dashSpeed = 100f;                  
     public float jumpForce = 700f;                  
     private Rigidbody2D rigid2D;                    
@@ -34,6 +35,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void Move(float x)                       //기본 캐릭터 이동 함수, x가 +면 이동속도와 곱해져서 오른쪽으로 이동 / -면 왼쪽으로 이동
     {
+        moveSpeed = GetComponent<PlayerState>().moveSpeed;
         if (canMove)
             rigid2D.velocity = new Vector2(x * moveSpeed, rigid2D.velocity.y);
     }
@@ -108,7 +110,7 @@ public class CharacterMovement : MonoBehaviour
         rigid2D = GetComponent<Rigidbody2D>();
         isGrounded = true;
         lowerBodyAnimator = lowerBody.GetComponentInChildren<Animator>();
-
+        moveSpeed = GetComponent<PlayerState>().moveSpeed;
         playerLayer = LayerMask.NameToLayer("Player");
         platformLayer = LayerMask.NameToLayer("Platform");
         footLayer = LayerMask.NameToLayer("PlayerFoot");
@@ -160,9 +162,10 @@ public class CharacterMovement : MonoBehaviour
 
     private IEnumerator waitDash()
     {
-        moveSpeed = 30f;
+        tmpSpeed = moveSpeed;
+        moveSpeed = 70f;
         yield return new WaitForSeconds(0.1f);
-        moveSpeed = 5f;
+        moveSpeed = tmpSpeed;
     }
 
  

@@ -151,7 +151,12 @@ public class EnemyState : LivingEntity
     {
         enemyMove.Direction();
         DistanceAttack();
+<<<<<<< Updated upstream
         //Debug.Log("벌레:"+ health);
+=======
+  
+        Debug.Log("벌레:"+ health);
+>>>>>>> Stashed changes
     }
 
     private IEnumerator UpdateMove()
