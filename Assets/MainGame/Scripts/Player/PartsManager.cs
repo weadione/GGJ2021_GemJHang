@@ -28,9 +28,9 @@ public class PartsManager : MonoBehaviour
         //{
 
 
-       ChangeParts(0, 1);
-       ChangeParts(1, 7);
-       ChangeParts(2, 4);
+       //ChangeParts(0, 1);
+       //ChangeParts(1, 7);
+       //ChangeParts(2, 4);
 
         //    tmp = false;
         //}
