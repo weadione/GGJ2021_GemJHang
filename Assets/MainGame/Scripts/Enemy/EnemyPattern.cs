@@ -49,8 +49,6 @@ public class EnemyPattern : MonoBehaviour
         bulletDirection[8] = new Vector2(4, -9.1f);
         bulletDirection[9] = new Vector2(2, -9.7f);
         bulletDirection[10] = new Vector2(10, -2);
-        bulletDirection[11] = new Vector2(9, -4.3f);
-        bulletDirection[11] = new Vector2(-9, -4.3f);
 
 
     }

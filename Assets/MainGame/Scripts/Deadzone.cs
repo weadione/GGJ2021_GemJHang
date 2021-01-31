@@ -18,5 +18,9 @@ public class Deadzone : MonoBehaviour
             PlayerState.Instance.transform.position = respawnPoint.transform.position;
             PlayerState.Instance.OnDamage(10);
         }
+        else if(collision.tag == "Enemy")
+        {
+            collision.GetComponent<EnemyState>().OnDamage(1000);
+        }
     }
 }

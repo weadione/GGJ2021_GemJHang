@@ -27,7 +27,7 @@ public class PartsManager : MonoBehaviour
         if (tmp)
         {
             ChangeParts(0, 2);
-            ChangeParts(1, 7);
+            ChangeParts(1, 6);
             ChangeParts(2, 7);
             tmp = false;
         }
@@ -41,15 +41,15 @@ public class PartsManager : MonoBehaviour
         headParts = new Parts[9];
 
         //체력, 뎀지, 근/원거리, 공속, 이속, 이름, 사거리, 대쉬여부, 점프카운트, 점프력
-        armParts[0] = new Parts(0f, 10f, true, 1f, 0f, "default", 3, false, 1, 0);          //기본
-        armParts[1] = new Parts(0f, 20f, true, 1f, 0f, "bug", 6,false,1,0);                 //송충이 
+        armParts[0] = new Parts(0f, 10f, true, 1f, 0f, "default", 7, false, 1, 0);          //기본
+        armParts[1] = new Parts(0f, 20f, true, 1f, 0f, "bug", 9,false,1,0);                 //송충이 
         armParts[2] = new Parts(0f, 15f, false, 0.9f, 0f, "slime1", 3, false, 1,0);         //슬라임1        
         armParts[3] = new Parts(0f, 25f, false, 0.8f, 0f, "slime2", 3, false, 1, 0);        //슬라임2
         armParts[4] = new Parts(0f, 12f, false, 0.8f, 0f, "trashRobot1", 3, false, 1, 0);   //쓰레기통1
         armParts[5] = new Parts(0f, 22f, false, 0.7f, 0f, "trashRobot2", 3, false, 1, 0);   //쓰레기통2
         armParts[6] = new Parts(0f, 36f, false, 0.6f, 0f, "centaur", 3, false, 1, 0);       //켄타우로스
-        armParts[7] = new Parts(0f, 50f, true, 0.7f, 0f, "chainsaw1", 9, false, 1, 0);      //전기톱1
-        armParts[8] = new Parts(0f, 85f, true, 1.2f, 0f, "chainsaw2", 9, false, 1, 0);      //전기톱2
+        armParts[7] = new Parts(0f, 50f, true, 0.7f, 0f, "chainsaw1", 11, false, 1, 0);      //전기톱1
+        armParts[8] = new Parts(0f, 85f, true, 1.2f, 0f, "chainsaw2", 11, false, 1, 0);      //전기톱2
 
 
         legParts[0] = new Parts(0f, 0f, true, 0f, 10f, "default", 0, false, 1, 400);         //기본
