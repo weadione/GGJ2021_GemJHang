@@ -10908,7 +10908,7 @@ PrefabInstance:
     - target: {fileID: 3502821705891632330, guid: 19b89e8f2f36b3b4689d63a570deed6f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3502821705891632333, guid: 19b89e8f2f36b3b4689d63a570deed6f,
         type: 3}
@@ -10973,7 +10973,7 @@ PrefabInstance:
     - target: {fileID: 3502821705891632335, guid: 19b89e8f2f36b3b4689d63a570deed6f,
         type: 3}
       propertyPath: mobList.Array.data[0]
-      value: 12
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3502821705891632335, guid: 19b89e8f2f36b3b4689d63a570deed6f,
         type: 3}

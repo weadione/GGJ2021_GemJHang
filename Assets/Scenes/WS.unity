@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1619,7 +1619,6 @@ GameObject:
   m_Component:
   - component: {fileID: 115012167}
   - component: {fileID: 115012166}
-  - component: {fileID: 115012165}
   m_Layer: 0
   m_Name: semiCamera
   m_TagString: Untagged
@@ -1627,14 +1626,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &115012165
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115012164}
-  m_Enabled: 1
 --- !u!20 &115012166
 Camera:
   m_ObjectHideFlags: 0
@@ -9113,6 +9104,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2127936205599523272, guid: ac25f54e9d2d4f845adef0b3040e209e,
+        type: 3}
+      propertyPath: rootUI
+      value: 
+      objectReference: {fileID: 1723075578}
+    - target: {fileID: 2127936205764601254, guid: ac25f54e9d2d4f845adef0b3040e209e,
+        type: 3}
+      propertyPath: lootUI
+      value: 
+      objectReference: {fileID: 1723075578}
     - target: {fileID: 2127936205764601255, guid: ac25f54e9d2d4f845adef0b3040e209e,
         type: 3}
       propertyPath: m_Name
@@ -14045,7 +14046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15596,7 +15597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -18699,6 +18700,7 @@ GameObject:
   - component: {fileID: 1723075579}
   - component: {fileID: 1723075581}
   - component: {fileID: 1723075580}
+  - component: {fileID: 1723075582}
   m_Layer: 5
   m_Name: LootPanel
   m_TagString: Untagged
@@ -18770,6 +18772,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723075578}
   m_CullTransparentMesh: 0
+--- !u!114 &1723075582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723075578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827d684684e5f484f9d67f6d9945315a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 1386687081}
+  arm: {fileID: 112845879}
+  leg: {fileID: 1286991414}
+  headSprite:
+  - {fileID: 21300000, guid: 4f0d225bdd3030e4cb443b81910c5799, type: 3}
+  - {fileID: 21300000, guid: 65b15f9fb359d4b49abc763c7dd637e8, type: 3}
+  - {fileID: 21300000, guid: 91ea81ecdfd83dd41a4f367e4914da12, type: 3}
+  - {fileID: 21300000, guid: ded7e406e2806734bb9fd7728cb77ebf, type: 3}
+  - {fileID: 21300000, guid: 3dc97ba126df6ff4f918900668162152, type: 3}
+  - {fileID: 21300000, guid: 2240f5f30897c8f4da3471ac9207aa7a, type: 3}
+  - {fileID: 21300000, guid: 562d5d617a96c2449a72fbd7c7f3beb8, type: 3}
+  - {fileID: 21300000, guid: 086da8535c6b5d2458d40083c4426d6d, type: 3}
+  armSprite:
+  - {fileID: 21300000, guid: 52658f0cd1dae7240ab9660a876ce883, type: 3}
+  - {fileID: 21300000, guid: 6c2c5cb5b0b5c0c4bb8ee38531e3366f, type: 3}
+  - {fileID: 21300000, guid: 75e334234d7ef54448d309be4c5595d5, type: 3}
+  - {fileID: 21300000, guid: 274f88047b607f64da01118d72c6c473, type: 3}
+  - {fileID: 21300000, guid: f85b804248871fb4c9527c90332ba153, type: 3}
+  - {fileID: 21300000, guid: 829f8febc16940a45b35febdda9f0580, type: 3}
+  - {fileID: 21300000, guid: 80a34336967aa694193766312898d197, type: 3}
+  - {fileID: 21300000, guid: fef9582a8cfc1e840995c7fc55f6513a, type: 3}
+  legSprite:
+  - {fileID: 21300000, guid: 9c663fd8247ac2f47a3dd24952666270, type: 3}
+  - {fileID: 21300000, guid: cf7e5039936c306468428c7d4513f5bb, type: 3}
+  - {fileID: 21300000, guid: 810317f0805a23e408dbb214403857ce, type: 3}
+  - {fileID: 21300000, guid: 19ff2156eb2351345b582898282051de, type: 3}
+  - {fileID: 21300000, guid: a0eeafdb35485f24a87d8207290cc93e, type: 3}
+  - {fileID: 21300000, guid: be84cbb4539100842b93f31b2d07efac, type: 3}
+  - {fileID: 21300000, guid: 95df27dbe7837394281f844f626cf8ba, type: 3}
+  - {fileID: 21300000, guid: da2370a25f358724a9c80c5de7a42c6e, type: 3}
+  - {fileID: 21300000, guid: 6be347ae4a89d9b4eb756866f6b8c1f6, type: 3}
+  returnValue: 
+  itemList: 
 --- !u!1 &1727193042
 GameObject:
   m_ObjectHideFlags: 0

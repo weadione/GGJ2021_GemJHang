@@ -11,6 +11,7 @@ public class ChangePosiitonScript : MonoBehaviour
     public static int cur;          // 지나온, 현재 스테이지 레벨.
     public static bool [, ] isVisited = new bool [10,3];
 
+    public PartsManager parts;
 
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
 
@@ -32,7 +33,7 @@ public class ChangePosiitonScript : MonoBehaviour
             
             yetChanged = false;
             GameObject cam = GameObject.Find("Main Camera").gameObject;
-            Debug.Log(cam.name);
+            //Debug.Log(cam.name);
             tryApsoluteXY();
         }
 
@@ -115,7 +116,10 @@ public class ChangePosiitonScript : MonoBehaviour
         else
             isFront = false;
 
+        for(int i = 0;i<3;i++)
+        {
 
+        }
 
         if(isFront){
         switch(bsn){

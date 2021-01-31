@@ -13,7 +13,7 @@ public class PartsManager : MonoBehaviour
     public Parts[] headParts;
     public bool tmp = true;
 
-
+    public GameObject lootUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +24,16 @@ public class PartsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tmp)
-        {
+        //if (tmp)
+        //{
 
-            ChangeParts(0, 1);
-            ChangeParts(1, 7);
-            ChangeParts(2, 4);
 
-            tmp = false;
-        }
+       ChangeParts(0, 1);
+       ChangeParts(1, 7);
+       ChangeParts(2, 4);
+
+        //    tmp = false;
+        //}
 
     }
 
@@ -94,9 +95,10 @@ public class PartsManager : MonoBehaviour
 
     public void ChangeParts(int partsType, int changeNum)   //partsType: 파츠타입, changNum: 원하는 파츠의 번호
     {
+        Debug.Log(partsType);
+        Debug.Log(changeNum);
         if(partsType==0)    //머리
         {
-
             headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
             headParts[changeNum].mainObject.SetActive(true);
             PlayerState.Instance.partsNum[0] = changeNum;
@@ -120,7 +122,7 @@ public class PartsManager : MonoBehaviour
         {
             Debug.LogError("ChangeParts 오류!");
         }
-
+        //lootUI.SetActive(false);
         
 
     }
