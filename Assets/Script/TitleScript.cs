@@ -7,9 +7,15 @@ public class TitleScript : MonoBehaviour
 {
     public string SceneToLoad;
     string SceneTitle = "WS";
+    static bool isFirst = true;
+
 
     public void LoadGame()
     {
+        if(isFirst == true){
+            SceneTitle = "IntroScene";
+            isFirst = false;
+        }
         SceneManager.LoadScene(SceneTitle);
     }
 
@@ -22,7 +28,7 @@ public class TitleScript : MonoBehaviour
     #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
     #else
-            Application.Quit() // 어플리케이션 종료
+            Application.Quit(); // 어플리케이션 종료
     #endif
     }
     

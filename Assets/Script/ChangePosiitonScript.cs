@@ -30,7 +30,8 @@ public class ChangePosiitonScript : MonoBehaviour
     void Update()
     {
         if(yetChanged){
-            
+            if(cur == 10)
+                callEndingScene();
             yetChanged = false;
             GameObject cam = GameObject.Find("Main Camera").gameObject;
             //Debug.Log(cam.name);
@@ -43,6 +44,9 @@ public class ChangePosiitonScript : MonoBehaviour
             cur++;
             stageSelect();           
         }
+    }
+    void callEndingScene(){
+        SceneManager.LoadScene("EndingScene");
     }
     void tryApsoluteXY(){
 //        Debug.Log();
