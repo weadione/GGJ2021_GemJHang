@@ -232,8 +232,9 @@ MonoBehaviour:
   lastAttTime: 0
   item: 
   attackAnimator: {fileID: 1992413250}
-  monsterBullet: {fileID: 5645864843448841108, guid: 965679b8b871ded4cbfa5b4ebeef6157,
-    type: 3}
+  monsterBullet:
+  - {fileID: 1632048314495811619, guid: ed71510fa5afed64292e6e1a98426dc3, type: 3}
+  - {fileID: 1187576815398642114, guid: 82d94439d4afddb44806cd4a12a46e6f, type: 3}
 --- !u!50 &3025165724802572282
 Rigidbody2D:
   serializedVersion: 4
@@ -272,6 +273,8 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   Tracer: {fileID: 0}
+  teleportPos: {x: 0, y: 0}
+  monsterBullet: []
 --- !u!114 &3025165724802572285
 MonoBehaviour:
   m_ObjectHideFlags: 0

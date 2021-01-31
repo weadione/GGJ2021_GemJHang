@@ -25,6 +25,8 @@ public class EnemyManager : MonoBehaviour
 
     private void Awake()
     {
+
+        initialize();
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -33,7 +35,6 @@ public class EnemyManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        initialize();
     }
 
     //체력, 뎀지, 근/원거리, 공속, 이속
@@ -55,6 +56,8 @@ public class EnemyManager : MonoBehaviour
         enemyList[13].GetComponent<EnemyState>().changeState(200f, 50f, true, 1f, 8f);  //전기톱1,2
         enemyList[14].GetComponent<EnemyState>().changeState(150f, 60f, true, 1f, 8f);
         enemyList[15].GetComponent<EnemyState>().changeState(300f, 30f, true, 1f, 7f);  //마르코(중간보스)
+        enemyList[16].GetComponent<EnemyState>().changeState(1000f, 50f, true, 1f, 7f);  //최종보스
+        enemyList[17].GetComponent<EnemyState>().changeState(100f, 10f, true, 1f, 5f);  //잡몹클론
 
 
 

@@ -26,9 +26,9 @@ public class PartsManager : MonoBehaviour
     {
         if (tmp)
         {
-            ChangeParts(0, 2);
-            ChangeParts(1, 7);
-            ChangeParts(2, 7);
+            ChangeParts(0, 1);
+            ChangeParts(1, 8);
+            ChangeParts(2, 1);
             tmp = false;
         }
 

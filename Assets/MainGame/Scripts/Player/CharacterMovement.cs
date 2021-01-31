@@ -133,7 +133,7 @@ public class CharacterMovement : MonoBehaviour
         for (int i = 0; i < collision.contacts.Length; i++)
             if (collision.contacts[i].normal.y > 0.7f && collision.contacts[i].collider.tag == "Map")
             {
-                Debug.Log(collision.contacts.Length);
+                //Debug.Log(collision.contacts.Length);
                 isGrounded = true;
                 jumpCount = 0;
             }

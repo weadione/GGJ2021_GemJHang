@@ -38,12 +38,13 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        
+        monsterRemain = 0;
     }
 
     private void Start()
     {
         initialzeScene();
-        monsterRemain = 0;
         currentStage = 0;
     }
 
