@@ -20,16 +20,18 @@ public class MobSpawner : MonoBehaviour
         //selectPattern = 1;
         enemyManager = FindObjectOfType<EnemyManager>();
         Spawn();
+        for (int i = 0; i < 3; i++)
+        {
+            PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(i, Random.Range(0, 9));
+        }
     }
 
 
 
     private void Spawn()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(i, Random.Range(0, 9));
-        }
+        
+
         if (selectPattern == 1)
         {
             for (int i = 0; i < mobList.Length; i++)
