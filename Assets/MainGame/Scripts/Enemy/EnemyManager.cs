@@ -6,11 +6,33 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject[] enemyList;
 
+    private static EnemyManager instance;
+    public static EnemyManager Instance
+    {
+        get
+        {
+            // 만약 싱글톤 변수에 아직 오브젝트가 할당되지 않았다면
+            if (instance == null)
+            {
+                // 씬에서 GameManager 오브젝트를 찾아 할당
+                instance = FindObjectOfType<EnemyManager>();
+            }
 
-
+            // 싱글톤 오브젝트를 반환
+            return instance;
+        }
+    }
 
     private void Awake()
     {
+        if (instance)
+        {
+            DestroyImmediate(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         initialize();
     }
 
