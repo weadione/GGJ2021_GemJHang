@@ -8,6 +8,7 @@ public class tmpBScript : MonoBehaviour
     void Start()
     {
         
+        
     }
 
     // Update is called once per frame
