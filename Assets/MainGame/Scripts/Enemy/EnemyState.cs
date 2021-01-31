@@ -9,7 +9,7 @@ public class EnemyState : LivingEntity
 
     int playerLayer, enemyLayer, footLayer, enemyFootLayer, detecterLayer, playBulletLayer, monsterBulletLayer;
 
-    public int[] item;  //드랍할 파츠
+    public int[] item = new int[3];  //드랍할 파츠
 
     public Animator attackAnimator;
     public GameObject[] monsterBullet;
@@ -31,14 +31,18 @@ public class EnemyState : LivingEntity
 
     //}
 
-    public void changeState(float health, float damage, bool attType,float attSpeed, float moveSpeed)
+
+    public void changeState(float health, float damage, bool attType, float attSpeed, float moveSpeed, int[] itemList)
     {
+        
         this.attDamage = damage;
         this.health = health;
         this.attType = attType;
         this.attSpeed = attSpeed;
         this.moveSpeed = moveSpeed;
-        //Debug.Log(this.health);
+        this.item = itemList;
+
+     
     }
 
 
@@ -126,7 +130,6 @@ public class EnemyState : LivingEntity
         enemyMove = GetComponent<EnemyMovement>();
         //StartCoroutine(UpdateMove());
 
-        item = new int[3];
 
         enemyFootLayer = LayerMask.NameToLayer("EnemyFoot");
         detecterLayer = LayerMask.NameToLayer("Detecter");
@@ -152,6 +155,9 @@ public class EnemyState : LivingEntity
     {
         enemyMove.Direction();
         DistanceAttack();
+        Debug.Log(item[0]);
+        Debug.Log(item[1]);
+        Debug.Log(item[2]);
         //Debug.Log("벌레:"+ health);
     }
 
