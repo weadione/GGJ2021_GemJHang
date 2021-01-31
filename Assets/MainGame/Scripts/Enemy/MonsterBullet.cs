@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MonsterBullet : MonoBehaviour
 {
+    public float damage;
+
     private void Start()
     {
         Destroy(gameObject, 3.0f);
@@ -13,7 +15,7 @@ public class MonsterBullet : MonoBehaviour
         if (collision.tag == "Player")
         {
             LivingEntity target = collision.GetComponent<LivingEntity>();
-            target.OnDamage(GetComponentInParent<EnemyState>().attDamage);
+            target.OnDamage(damage);
             PlayerState.Instance.HitDetect(GetComponent<Rigidbody2D>().velocity.x);
 
         }

@@ -86,7 +86,7 @@ public class EnemyState : LivingEntity
         if(Time.time>=lastAttTime+attSpeed)
         {
             GameObject tmpBullet = Instantiate(monsterBullet, transform.position, transform.rotation);
-            tmpBullet.transform.parent = transform;
+            tmpBullet.GetComponent<MonsterBullet>().damage = attDamage;
             tmpBullet.GetComponent<Rigidbody2D>().velocity = transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
             tmpBullet.transform.localScale = transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
             lastAttTime = Time.time;

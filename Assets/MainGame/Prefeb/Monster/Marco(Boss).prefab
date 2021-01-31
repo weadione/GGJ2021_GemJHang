@@ -173,16 +173,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c7805103faf8b4cbdf575200ffba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 300
   dead: 0
-  attDamage: 0
-  attType: 0
-  attSpeed: 0
-  moveSpeed: 0
+  attDamage: 30
+  attType: 1
+  attSpeed: 1
+  moveSpeed: 7
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
   item: 
+  attackAnimator: {fileID: 0}
+  monsterBullet: {fileID: 0}
 --- !u!50 &4113008517321313342
 Rigidbody2D:
   serializedVersion: 4
@@ -221,6 +223,9 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   Tracer: {fileID: 0}
+  teleportPos: {x: 0, y: 0}
+  monsterBullet: {fileID: 5645864843448841108, guid: 965679b8b871ded4cbfa5b4ebeef6157,
+    type: 3}
 --- !u!114 &4113008517321313337
 MonoBehaviour:
   m_ObjectHideFlags: 0
