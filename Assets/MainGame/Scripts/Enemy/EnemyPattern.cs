@@ -470,19 +470,19 @@ public class EnemyPattern : MonoBehaviour
         }
 
         ////테스트용 코드임 지우셈
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            finalPattern = 1;
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-            finalPattern = 2;
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-            finalPattern = 3;
-
-        //if(GetComponent<EnemyState>().health<=600)
-        //    finalPattern = 2;
-        //else if (GetComponent<EnemyState>().health <= 300)
-        //    finalPattern = 3;
-        //else
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
         //    finalPattern = 1;
+        //else if (Input.GetKeyDown(KeyCode.Alpha2))
+        //    finalPattern = 2;
+        //else if (Input.GetKeyDown(KeyCode.Alpha3))
+        //    finalPattern = 3;
+
+        if (GetComponent<EnemyState>().health <= 600)
+            finalPattern = 2;
+        else if (GetComponent<EnemyState>().health <= 300)
+            finalPattern = 3;
+        else
+            finalPattern = 1;
 
 
 

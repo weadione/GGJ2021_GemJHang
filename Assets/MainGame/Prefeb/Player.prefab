@@ -220,7 +220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 205034689}
   - component: {fileID: 205034688}
-  - component: {fileID: 205034690}
   m_Layer: 10
   m_Name: "\uD30C\uCE20_\uD314_\uC2AC\uB77C\uC7841(\uACF5\uACA9)"
   m_TagString: Untagged
@@ -236,11 +235,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205034687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0799999, y: 0.37600005, z: 0}
+  m_LocalPosition: {x: -1.013, y: 0.353, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 2127936205181495203}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &205034688
 SpriteRenderer:
@@ -292,25 +291,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &205034690
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205034687}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ae6de342bea14d241a2c0670b5c90200, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &319794748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1561,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1059015602}
   - component: {fileID: 1059015603}
-  - component: {fileID: 1059015604}
   m_Layer: 10
   m_Name: "\uD30C\uCE20_\uD314_\uC2AC\uB77C\uC7842(\uACF5\uACA9)"
   m_TagString: Untagged
@@ -1597,11 +1576,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059015601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0799999, y: 0.37600005, z: 0}
+  m_LocalPosition: {x: -0.982, y: 0.376, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 2127936205181495203}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1059015603
 SpriteRenderer:
@@ -1653,25 +1632,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1059015604
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059015601}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ae6de342bea14d241a2c0670b5c90200, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1175598984
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,8 +3279,8 @@ MonoBehaviour:
   canAttack: 0
   canAttackFar: 1
   bullet:
-  - {fileID: 2163972380826891815, guid: fa637182b45f65f41a8a506dc9092167, type: 3}
   - {fileID: 8366079642607049673, guid: 5fd7e42c7c5f4214a96ba4f92761d178, type: 3}
+  - {fileID: 2163972380826891815, guid: fa637182b45f65f41a8a506dc9092167, type: 3}
   - {fileID: 2798723523072948801, guid: cdf4c59608a9d8f429534fac5947dc36, type: 3}
   - {fileID: 282364777958836183, guid: 33460da4aa997dd438294a0318eacb30, type: 3}
   - {fileID: 4439546520979062267, guid: 5b96183bbcf5dc24894467121653e4d9, type: 3}
@@ -3329,8 +3289,8 @@ MonoBehaviour:
   attackAnimator: {fileID: 983730222}
   armAttackAnimator:
   - {fileID: 1985970382}
-  - {fileID: 205034690}
-  - {fileID: 1059015604}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 319794751}
   - {fileID: 1556553934}
   - {fileID: 151248247}
@@ -3931,8 +3891,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2127936204996199935}
-  - {fileID: 1059015602}
   - {fileID: 205034689}
+  - {fileID: 1059015602}
   - {fileID: 319794749}
   - {fileID: 1556553932}
   - {fileID: 151248245}
