@@ -31,13 +31,14 @@ public class EnemyState : LivingEntity
 
     //}
 
-    public void changeState(float health, float damage, bool attType,float attSpeed, float moveSpeed)
+    public void changeState(float health, float damage, bool attType,float attSpeed, float moveSpeed,int[] item)
     {
         this.attDamage = damage;
         this.health = health;
         this.attType = attType;
         this.attSpeed = attSpeed;
         this.moveSpeed = moveSpeed;
+        this.item = item;
         //Debug.Log(this.health);
     }
 
@@ -151,12 +152,10 @@ public class EnemyState : LivingEntity
     {
         enemyMove.Direction();
         DistanceAttack();
-<<<<<<< Updated upstream
-        //Debug.Log("벌레:"+ health);
-=======
+
   
         Debug.Log("벌레:"+ health);
->>>>>>> Stashed changes
+
     }
 
     private IEnumerator UpdateMove()
