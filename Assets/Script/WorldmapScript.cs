@@ -19,10 +19,10 @@ public class WorldmapScript : MonoBehaviour
 
     public void LoadMap()
     {
-        SceneManager.LoadScene("WS");
+        SceneManager.LoadScene("WorldScene");
     }
     public void LoadTitle(){
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("TitleScene");
     }
     public void LoadEquip(){
         Debug.Log("Window Equip");
