@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PartsManager : MonoBehaviour
 {
@@ -15,27 +16,21 @@ public class PartsManager : MonoBehaviour
 
     public GameObject lootUI;
     // Start is called before the first frame update
-    void Start()
+
+
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Debug.Log("OnSceneLoaded: " + scene.name);
         initalize();
-        
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //if (tmp)
-        //{
 
-
-       //ChangeParts(0, 1);
-       //ChangeParts(1, 7);
-       //ChangeParts(2, 4);
-
-        //    tmp = false;
-        //}
-
-    }
 
     public void initalize()
     {
@@ -122,7 +117,7 @@ public class PartsManager : MonoBehaviour
         {
             Debug.LogError("ChangeParts 오류!");
         }
-        //lootUI.SetActive(false);
+        lootUI.SetActive(false);
         
 
     }
