@@ -114,7 +114,7 @@ public class CharacterMovement : MonoBehaviour
         playerLayer = LayerMask.NameToLayer("Player");
         platformLayer = LayerMask.NameToLayer("Platform");
         footLayer = LayerMask.NameToLayer("PlayerFoot");
-        maplePlatformLayer = LayerMask.NameToLayer("MaplePlatform");
+        maplePlatformLayer = LayerMask.NameToLayer("FloatPlatform");
         bulletLayer = LayerMask.NameToLayer("Bullet");
         Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);           //Player레이어가 Platform 레이어와 충돌하지 않게 만드는 함수
         Physics2D.IgnoreLayerCollision(playerLayer, maplePlatformLayer, true);

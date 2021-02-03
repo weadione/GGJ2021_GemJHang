@@ -26,11 +26,31 @@ public class Rooting : MonoBehaviour
         {
             if (!PlayerState.Instance.dead && click)
             {
+                Debug.Log("루팅");
                 EnemyState enemyState = other.GetComponent<EnemyState>();
-                click = false;
                 rootItemList = enemyState.item;
+                Debug.Log(rootItemList[0]);
+                Debug.Log(rootItemList[1]);
+                Debug.Log(rootItemList[2]);
+                if (rootItemList[0] != 0)
+                {
+                    tmp.ChangeParts(0, rootItemList[0]);
+                }
+                if (rootItemList[1] != 0)
+                {
+                    tmp.ChangeParts(1, rootItemList[1]);
+                }
+                if (rootItemList[2] != 0)
+                {
+                    tmp.ChangeParts(2, rootItemList[2]);
+                }
+                
+
+                
+                //click = false;
+  
                 //rootUI.SetActive(true);
-                tmp.ChangeParts(0, 1);
+                //tmp.ChangeParts(0, 1);
                 //rootUI.GetComponent<LootingUI>().printroot(rootItemList);
             }
         }
