@@ -3260,7 +3260,7 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.73, y: 0.6368402}
+  m_Offset: {x: -0.73, y: 1.79}
   m_Size: {x: 3.0000005, y: 2.5063236}
   m_Direction: 1
 --- !u!114 &2127936204899314073
@@ -3319,7 +3319,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0470297
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -4299,6 +4299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: 0
+  tmp: {fileID: 2127936205764601254}
+  rootUI: {fileID: 0}
 --- !u!1 &2127936205764601255
 GameObject:
   m_ObjectHideFlags: 0
@@ -4357,6 +4359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  tmpSpeed: 0
   dashSpeed: 30
   jumpForce: 400
   canMove: 1
@@ -4481,6 +4484,7 @@ MonoBehaviour:
   legParts: []
   headParts: []
   tmp: 1
+  lootUI: {fileID: 0}
 --- !u!66 &2127936205764601256
 CompositeCollider2D:
   m_ObjectHideFlags: 0

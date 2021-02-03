@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public string[] sceneName;
 
     public int monsterRemain;
+    public bool canExit = false;
+
     private void Awake()
     {
         if (instance)
@@ -52,6 +54,27 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         startGame();
+        exitGame();
+        checkCheat();
+    }
+
+    private void checkCheat(){
+        if(Input.GetKeyDown(KeyCode.Z)){
+            SceneManager.LoadScene("WorldScene");
+        }
+    }
+    private void exitGame()
+    {
+        if(!canExit && monsterRemain>=1)
+        {
+            canExit = true;
+        }
+        
+        if(canExit&&Input.GetKeyDown(KeyCode.E)&&monsterRemain==0)
+        {
+            canExit = false;
+            SceneManager.LoadScene("WorldScene");
+        }
     }
 
     public void startGame()

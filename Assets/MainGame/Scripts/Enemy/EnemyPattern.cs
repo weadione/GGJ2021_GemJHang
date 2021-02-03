@@ -291,13 +291,13 @@ public class EnemyPattern : MonoBehaviour
             berserkerMode = true;
         }
 
-        if (Time.time >= nextPattern + 5.0f && keydown == 1)
+        if (Time.time >= nextPattern + 10.0f && keydown == 1)
         {
             keydown = 2;
             nextPattern = Time.time;
             marcoAnimator.SetBool("flyTrigger", true);
         }
-        else if (Time.time >= nextPattern + 5.0f && keydown == 2)
+        else if (Time.time >= nextPattern + 10.0f && keydown == 2)
         {
             keydown = 1;
             nextPattern = Time.time;

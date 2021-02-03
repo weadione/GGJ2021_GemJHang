@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TitleScript : MonoBehaviour
 {
     public string SceneToLoad;
-    string SceneTitle = "WS";
+    string SceneTitle = "WorldScene";
     static bool isFirst = true;
 
 

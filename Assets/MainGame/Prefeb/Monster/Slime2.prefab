@@ -80,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 5753794138771989674}
   m_LocalRotation: {x: 0.000000150011, y: 0.0034382485, z: 0.000043629807, w: 0.9999941}
   m_LocalPosition: {x: 20.3, y: 2.15, z: 9.89}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 5753794138675869767}
   - {fileID: 5753794138953828243}
@@ -154,15 +154,15 @@ MonoBehaviour:
   dead: 0
   attDamage: 20
   attType: 0
-  attSpeed: 0.8
+  attSpeed: 1.6
   moveSpeed: 7
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
   item: 060000000300000000000000
   attackAnimator: {fileID: 1344914069}
-  monsterBullet:
-  - {fileID: 5645864843448841108, guid: 965679b8b871ded4cbfa5b4ebeef6157, type: 3}
+  monsterBullet: {fileID: 5645864843448841108, guid: 965679b8b871ded4cbfa5b4ebeef6157,
+    type: 3}
 --- !u!50 &5753794138771989678
 Rigidbody2D:
   serializedVersion: 4

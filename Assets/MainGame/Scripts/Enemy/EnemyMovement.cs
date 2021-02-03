@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed;
     public float dashSpeed = 30f;
     public float jumpForce = 400f;
     private Rigidbody2D rigid2D;

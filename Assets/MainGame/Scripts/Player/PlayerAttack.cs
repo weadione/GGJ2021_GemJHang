@@ -78,7 +78,7 @@ public class PlayerAttack : MonoBehaviour
 
 
 
-                GameObject tmpBullet = Instantiate(bullet[bulletNum], transform.position, transform.rotation);
+                GameObject tmpBullet = Instantiate(bullet[bulletNum], new Vector2(transform.position.x,transform.position.y+0.5f), transform.rotation);
                 tmpBullet.GetComponent<Rigidbody2D>().velocity = PlayerState.Instance.transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
                 tmpBullet.transform.localScale = PlayerState.Instance.transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
                 PlayerState.Instance.lastAttTime = Time.time;
