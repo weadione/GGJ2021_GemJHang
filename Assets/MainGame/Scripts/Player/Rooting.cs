@@ -8,6 +8,14 @@ public class Rooting : MonoBehaviour
     public bool click = false;
     int[] rootItemList;
 
+=======
+    int[] selectItem;
+    int input;
+    public PartsManager tmp;
+
+    public GameObject rootUI;
+    public GameObject LootingManager;
+>>>>>>> Stashed changes
     //public Animator rootkAnimator;
 
 
@@ -21,12 +29,29 @@ public class Rooting : MonoBehaviour
         {
             if (!PlayerState.Instance.dead && click)
             {
+<<<<<<< Updated upstream
+=======
+                Debug.Log("루팅");
+                click = false;
+>>>>>>> Stashed changes
                 EnemyState enemyState = other.GetComponent<EnemyState>();
                 click = false;
                 rootItemList = enemyState.item;
+<<<<<<< Updated upstream
                 //uimanager.instance.printroot(rootItemList);
                 //rootAnimator.SetTrigger("root");
 
+=======
+                LootingManager.SetActive(true);
+                LootingManager.GetComponent<LootingManager>().Select(rootItemList);
+
+                
+                
+  
+                //rootUI.SetActive(true);
+                //tmp.ChangeParts(0, 1);
+                //rootUI.GetComponent<LootingUI>().printroot(rootItemList);
+>>>>>>> Stashed changes
             }
         }
     }
@@ -43,10 +68,27 @@ public class Rooting : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !click)
+        if (Input.GetKeyDown(KeyCode.Z) && !click)
         {
 
             click = true;
+            input = 0;
+            StartCoroutine(WaitAttack());
+            //rootUI.GetComponent<LootingUI>().printroot(new int[3] {1,2,3 });
+        }
+        else if (Input.GetKeyDown(KeyCode.X) && !click)
+        {
+
+            click = true;
+            input = 1;
+            StartCoroutine(WaitAttack());
+            //rootUI.GetComponent<LootingUI>().printroot(new int[3] {1,2,3 });
+        }
+        else if (Input.GetKeyDown(KeyCode.C) && !click)
+        {
+
+            click = true;
+            input = 2;
             StartCoroutine(WaitAttack());
 
         }
