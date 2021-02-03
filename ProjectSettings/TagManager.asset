@@ -23,7 +23,7 @@ TagManager:
   - Player
   - Enemy
   - Platform
-  - MaplePlatform
+  - FloatPlatform
   - Detecter
   - Bullet
   - MonsterBullet
