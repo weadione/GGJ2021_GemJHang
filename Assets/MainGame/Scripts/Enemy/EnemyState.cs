@@ -14,6 +14,8 @@ public class EnemyState : LivingEntity
     public Animator attackAnimator;
     public GameObject monsterBullet;
 
+    public GameObject deadIcon;
+
     float tmpDamage, tmpHealth, tmpattSpeed, tmpmoveSpeed;
     //bool tmp
 
@@ -176,5 +178,8 @@ public class EnemyState : LivingEntity
         tag = "Dead";
         Destroy(GetComponent<Rigidbody2D>());
         GameManager.Instance.monsterRemain--;
+
+        Instantiate(Resources.Load("Prefeb/DeadIcon"), new Vector2(transform.GetChild(0).transform.position.x, transform.position.y + 1.9f), transform.rotation);
+        
     }
 }

@@ -28,6 +28,11 @@ public class PlayerState : LivingEntity
     public float jumpForce;
     public CapsuleCollider2D damageZone;
 
+    public float animalAdaptation;
+    public float machineAdaptation;
+    public float animalAdaptationTmp;
+    public float machineAdaptationTmp;
+
 
     private static PlayerState instance;
     public static PlayerState Instance
@@ -61,18 +66,18 @@ public class PlayerState : LivingEntity
     {
         base.OnEnable();
 
-        attDamage = 10f;
-        health = 100f;
+        attDamage = 1000f;   //10
+        health = 100f;     //100
         attType = false;
-        attSpeed = 1f;
-        moveSpeed = 5f;
+        attSpeed = 0.1f;    //1f 
+        moveSpeed = 10f;    //5
         dashSpeed = 30f;
         attRange = 3f;
         maxHealth = 100f;
 
         jumpCount = 1;
         dash = false;
-        jumpForce = 400;
+        jumpForce = 600;    //400
 
         defaultDamage = 10f;
         defaultHealth = 100f;
@@ -93,7 +98,22 @@ public class PlayerState : LivingEntity
         partsManager = GetComponent<PartsManager>();
         movement = GetComponent<CharacterMovement>();
         lastAttTime = 0f;
+
+        animalAdaptation = 1f;
+        machineAdaptation = 1f;
+        animalAdaptationTmp = 0f;
+        machineAdaptationTmp = 0f;
+
+        animalAdaptation = PlayerPrefs.GetFloat("AnimalAdaptation", 1f);
+        machineAdaptation = PlayerPrefs.GetFloat("MachineAdaptation", 1f);
+
     }
+
+
+
+
+
+
 
     public override void OnDamage(float damage)
     {
@@ -105,6 +125,9 @@ public class PlayerState : LivingEntity
     private void Update()
     {
         //Debug.Log(health);
+        Debug.Log("동물" + animalAdaptation);
+        Debug.Log("기계" + machineAdaptation);
+
     }
     
     public void HitDetect(float x)
@@ -128,38 +151,93 @@ public class PlayerState : LivingEntity
         base.Die();
         dead = true;
         movement.canMove = false;
+        animalAdaptation += animalAdaptationTmp;
+        machineAdaptation += machineAdaptationTmp;
+
+        PlayerPrefs.SetFloat("AnimalAdaptation", animalAdaptation);
+        PlayerPrefs.SetFloat("MachineAdaptation", machineAdaptation);
+
+        
+
     }
+
 
     public void updateStatus(int partType)
     {
+
         if (partType == 0)
         {
-            if (partsManager.headParts[partsNum[0]].partsHealth + defaultHealth >= maxHealth)
+            if (partsManager.headParts[partsNum[0]].adaptation == 1)
             {
-                health = partsManager.headParts[partsNum[0]].partsHealth + health;
-                maxHealth = partsManager.headParts[partsNum[0]].partsHealth + defaultHealth;
+                animalAdaptationTmp += 0.05f;
+                if (partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + defaultHealth >= maxHealth)
+                {
+                    health = partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + health;
+                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + defaultHealth;
+                }
+                else
+                {
+                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + defaultHealth;
+                    if (maxHealth < health)
+                        health = maxHealth;
+                }
             }
-            else
+            else if(partsManager.headParts[partsNum[0]].adaptation == 2)
             {
-                maxHealth = partsManager.headParts[partsNum[0]].partsHealth + defaultHealth;
-                if (maxHealth < health)
-                    health = maxHealth;
+                machineAdaptationTmp += 0.05f;
+                if (partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + defaultHealth >= maxHealth)
+                {
+                    health = partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + health;
+                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + defaultHealth;
+                }
+                else
+                {
+                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + defaultHealth;
+                    if (maxHealth < health)
+                        health = maxHealth;
+                }
             }
         }
         else if (partType == 1)
         {
-            attDamage = partsManager.armParts[partsNum[1]].partsDamage + defaultDamage;
-            attSpeed = partsManager.armParts[partsNum[1]].partsAttSpeed + defaultAttSpeed;
-            attRange = partsManager.armParts[partsNum[1]].attRange;
-            attType = partsManager.armParts[partsNum[1]].partsType;
-            damageZone.size = new Vector2(attRange, 2);
+            if (partsManager.armParts[partsNum[1]].adaptation == 1)
+            {
+                animalAdaptationTmp += 0.05f;
+                attDamage = partsManager.armParts[partsNum[1]].partsDamage * animalAdaptation + defaultDamage;
+                attSpeed = partsManager.armParts[partsNum[1]].partsAttSpeed + defaultAttSpeed;
+                attRange = partsManager.armParts[partsNum[1]].attRange;
+                attType = partsManager.armParts[partsNum[1]].partsType;
+                damageZone.size = new Vector2(attRange, 2);
+            }
+            else if (partsManager.armParts[partsNum[1]].adaptation == 2)
+            {
+                machineAdaptationTmp += 0.05f;
+                attDamage = partsManager.armParts[partsNum[1]].partsDamage * machineAdaptation + defaultDamage;
+                attSpeed = partsManager.armParts[partsNum[1]].partsAttSpeed + defaultAttSpeed;
+                attRange = partsManager.armParts[partsNum[1]].attRange;
+                attType = partsManager.armParts[partsNum[1]].partsType;
+                damageZone.size = new Vector2(attRange, 2);
+            }
+
         }
         else if (partType == 2)
         {
-            dash = partsManager.legParts[partsNum[2]].dash;
-            jumpCount = partsManager.legParts[partsNum[2]].jumpCount;
-            moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed;
-            jumpForce = partsManager.legParts[partsNum[2]].jumpForce;
+            if (partsManager.legParts[partsNum[2]].adaptation == 1)
+            {
+                animalAdaptationTmp += 0.05f;
+                dash = partsManager.legParts[partsNum[2]].dash;
+                jumpCount = partsManager.legParts[partsNum[2]].jumpCount;
+                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * animalAdaptation;
+                jumpForce = partsManager.legParts[partsNum[2]].jumpForce;
+            }
+            else if (partsManager.legParts[partsNum[2]].adaptation == 2)
+            {
+                machineAdaptationTmp += 0.05f;
+                dash = partsManager.legParts[partsNum[2]].dash;
+                jumpCount = partsManager.legParts[partsNum[2]].jumpCount;
+                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * machineAdaptation;
+                jumpForce = partsManager.legParts[partsNum[2]].jumpForce;
+            }
         }
     }
 }
