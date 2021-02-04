@@ -39,7 +39,7 @@ public class EnemyState : LivingEntity
         this.attSpeed = attSpeed;
         this.moveSpeed = moveSpeed;
         this.item = item;
-        //Debug.Log(this.health);
+
     }
 
 
@@ -126,7 +126,7 @@ public class EnemyState : LivingEntity
         enemyMove = GetComponent<EnemyMovement>();
         //StartCoroutine(UpdateMove());
 
-        item = new int[3];
+        //item = new int[3];
 
         enemyFootLayer = LayerMask.NameToLayer("EnemyFoot");
         detecterLayer = LayerMask.NameToLayer("Detecter");
@@ -153,8 +153,6 @@ public class EnemyState : LivingEntity
         enemyMove.Direction();
         DistanceAttack();
 
-  
-        Debug.Log("벌레:"+ health);
 
     }
 

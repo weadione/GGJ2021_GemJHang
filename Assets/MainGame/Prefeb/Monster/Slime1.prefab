@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 7630634006982442347}
   m_LocalRotation: {x: 0.000000150011, y: 0.0034382485, z: 0.000043629807, w: 0.9999941}
   m_LocalPosition: {x: 20.3, y: 2.15, z: 9.89}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 7630634007154221446}
   - {fileID: 7630634006863666770}
@@ -174,16 +174,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c7805103faf8b4cbdf575200ffba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 70
   dead: 0
-  attDamage: 70
+  attDamage: 10
   attType: 0
-  attSpeed: 1
+  attSpeed: 2
   moveSpeed: 5
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
-  item: 
+  item: 050000000200000000000000
   attackAnimator: {fileID: 340901110}
   monsterBullet: {fileID: 3319113927516007682, guid: 416e859252f057e40b7d76a5a4887532,
     type: 3}
@@ -225,6 +225,11 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   Tracer: {fileID: 0}
+  teleportPos: {x: 0, y: 0}
+  monsterBullet: []
+  cloneSpawner: {fileID: 0}
+  finalBossTeleport: []
+  marcoAnimator: {fileID: 0}
 --- !u!114 &7630634006982442344
 MonoBehaviour:
   m_ObjectHideFlags: 0

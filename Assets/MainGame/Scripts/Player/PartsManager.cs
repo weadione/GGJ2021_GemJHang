@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PartsManager : MonoBehaviour
 {
@@ -12,65 +13,31 @@ public class PartsManager : MonoBehaviour
     public Parts[] legParts;
     public Parts[] headParts;
     public bool tmp = true;
-    public int[] selectParts;
-    public GameObject LootingManager;
 
-<<<<<<< Updated upstream
-
-=======
-   // public GameObject lootUI;
->>>>>>> Stashed changes
+    public GameObject lootUI;
     // Start is called before the first frame update
-    void Start()
+
+
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Debug.Log("OnSceneLoaded: " + scene.name);
         initalize();
-        
     }
 
     // Update is called once per frame
-    void Update()
-    {
-<<<<<<< Updated upstream
-        if (tmp)
-        {
 
-            ChangeParts(0, 1);
-            ChangeParts(1, 7);
-            ChangeParts(2, 4);
-
-            tmp = false;
-        }
-=======
-        if(LootingManager.GetComponent<LootingManager>().tmp[3] == 1)
-        {
-            LootingManager.GetComponent<LootingManager>().tmp[3] = 0;
-            ChangeParts(0, LootingManager.GetComponent<LootingManager>().tmp[0]);
-            Debug.Log("머가리");
-            
-        }
-        if (LootingManager.GetComponent<LootingManager>().tmp[3] == 2)
-        {
-            LootingManager.GetComponent<LootingManager>().tmp[3] = 0;
-            ChangeParts(1, LootingManager.GetComponent<LootingManager>().tmp[1]);
-            Debug.Log("팔");
-        }
-        if (LootingManager.GetComponent<LootingManager>().tmp[3] == 3)
-        {
-            LootingManager.GetComponent<LootingManager>().tmp[3] = 0;
-            ChangeParts(2, LootingManager.GetComponent<LootingManager>().tmp[2]);
-            Debug.Log("다리");
-        }
-
->>>>>>> Stashed changes
-
-    }
 
     public void initalize()
     {
         armParts = new Parts[9];
         legParts = new Parts[10];
         headParts = new Parts[9];
-        selectParts = new int[4];
+
         //체력, 뎀지, 근/원거리, 공속, 이속, 이름, 사거리, 대쉬여부, 점프카운트, 점프력
 
         armParts[0] = new Parts(0f, 10f, true, 0.4f, 0f, "default", 3, false, 1, 0);          //기본
@@ -123,32 +90,26 @@ public class PartsManager : MonoBehaviour
 
     public void ChangeParts(int partsType, int changeNum)   //partsType: 파츠타입, changNum: 원하는 파츠의 번호
     {
+        Debug.Log(partsType);
+        Debug.Log(changeNum);
         if(partsType==0)    //머리
         {
-<<<<<<< Updated upstream
-
             headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
-=======
-            Debug.Log("머가리 실행");
->>>>>>> Stashed changes
             headParts[changeNum].mainObject.SetActive(true);
-            //headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
-           // PlayerState.Instance.partsNum[0] = changeNum;
-           // PlayerState.Instance.updateStatus(0);
+            PlayerState.Instance.partsNum[0] = changeNum;
+            PlayerState.Instance.updateStatus(0);
         }
         else if(partsType == 1)    //팔
         {
-            armParts[changeNum].mainObject.SetActive(true);
             armParts[PlayerState.Instance.partsNum[1]].mainObject.SetActive(false);
-
+            armParts[changeNum].mainObject.SetActive(true);
             PlayerState.Instance.partsNum[1] = changeNum;
             PlayerState.Instance.updateStatus(1);
         }
         else if (partsType == 2)    //다리
         {
-            legParts[changeNum].mainObject.SetActive(true);
             legParts[PlayerState.Instance.partsNum[2]].mainObject.SetActive(false);
-
+            legParts[changeNum].mainObject.SetActive(true);
             PlayerState.Instance.partsNum[2] = changeNum;
             PlayerState.Instance.updateStatus(2);
         }
@@ -156,7 +117,7 @@ public class PartsManager : MonoBehaviour
         {
             Debug.LogError("ChangeParts 오류!");
         }
-
+        lootUI.SetActive(false);
         
 
     }

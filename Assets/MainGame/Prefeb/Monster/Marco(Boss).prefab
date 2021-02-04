@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 4113008517321313337}
   - component: {fileID: 4386318330099677660}
   - component: {fileID: 703407900}
+  - component: {fileID: 3100560256502710286}
   m_Layer: 11
   m_Name: Marco(Boss)
   m_TagString: Enemy
@@ -184,7 +185,8 @@ MonoBehaviour:
   lastAttTime: 0
   item: 
   attackAnimator: {fileID: 0}
-  monsterBullet: {fileID: 0}
+  monsterBullet:
+  - {fileID: 0}
 --- !u!50 &4113008517321313342
 Rigidbody2D:
   serializedVersion: 4
@@ -224,8 +226,13 @@ MonoBehaviour:
   right: {fileID: 0}
   Tracer: {fileID: 0}
   teleportPos: {x: 0, y: 0}
-  monsterBullet: {fileID: 5645864843448841108, guid: 965679b8b871ded4cbfa5b4ebeef6157,
-    type: 3}
+  monsterBullet:
+  - {fileID: 5648806558601138246, guid: bbaf933f908a7764194ab6eb2aa1964f, type: 3}
+  - {fileID: 5615690056454524927, guid: fdff2706eb988df4cb5de9873ce6a03b, type: 3}
+  - {fileID: 2868614826706154213, guid: c3cd36d6cf86c0f469c7f03864b3c0d2, type: 3}
+  cloneSpawner: {fileID: 0}
+  finalBossTeleport: []
+  marcoAnimator: {fileID: 3100560256502710286}
 --- !u!114 &4113008517321313337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +317,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3034747641917077156}
+--- !u!95 &3100560256502710286
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113008517321313338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5eebe3f0fc5598644b0b58aad1907dd0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4113008517492936912
 GameObject:
   m_ObjectHideFlags: 0

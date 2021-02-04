@@ -200,4 +200,5 @@ MonoBehaviour:
   right: {fileID: 228307756180854773}
   tracer: {fileID: 228307756707093911}
   telepotePos: {fileID: 1596683938}
+  finalBossTeleport: []
   selectPattern: 2

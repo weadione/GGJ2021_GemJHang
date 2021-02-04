@@ -74,7 +74,7 @@ public class CharacterMovement : MonoBehaviour
     public void Hit(float x)                                                    //피격 시 x방향으로 밀려나고 위로도 조금 밀려남(x가 때린 방향)
     {
         x = x >= 0 ? 1 : -1;
-        rigid2D.velocity = new Vector2(x * 15, 3);
+        rigid2D.velocity = new Vector2(x * 10, 3);
     }
 
     public void Dash(float x)                                                   //대쉬 함수 코루틴으로 돌아감
@@ -114,7 +114,7 @@ public class CharacterMovement : MonoBehaviour
         playerLayer = LayerMask.NameToLayer("Player");
         platformLayer = LayerMask.NameToLayer("Platform");
         footLayer = LayerMask.NameToLayer("PlayerFoot");
-        maplePlatformLayer = LayerMask.NameToLayer("MaplePlatform");
+        maplePlatformLayer = LayerMask.NameToLayer("FloatPlatform");
         bulletLayer = LayerMask.NameToLayer("Bullet");
         Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);           //Player레이어가 Platform 레이어와 충돌하지 않게 만드는 함수
         Physics2D.IgnoreLayerCollision(playerLayer, maplePlatformLayer, true);
@@ -135,7 +135,7 @@ public class CharacterMovement : MonoBehaviour
         for (int i = 0; i < collision.contacts.Length; i++)
             if (collision.contacts[i].normal.y > 0.7f && collision.contacts[i].collider.tag == "Map")
             {
-                Debug.Log(collision.contacts.Length);
+                //Debug.Log(collision.contacts.Length);
                 isGrounded = true;
                 jumpCount = 0;
             }

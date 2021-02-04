@@ -17,5 +17,24 @@ public class WorldmapScript : MonoBehaviour
         
     }
 
-
+    public void LoadMap()
+    {
+        SceneManager.LoadScene("WorldScene");
+    }
+    public void LoadTitle(){
+        SceneManager.LoadScene("TitleScene");
+    }
+    public void LoadEquip(){
+        Debug.Log("Window Equip");
+//        SceneManager.LoadScene("");
+    }
+    public void LoadVolume(){
+        Debug.Log("On and Off Volume");
+    }
+    public void LoadOption(){
+        Debug.Log("Window Option");
+    }
+    public void LoadSurrender(){
+        Debug.Log("Surrendered");
+    }
 }

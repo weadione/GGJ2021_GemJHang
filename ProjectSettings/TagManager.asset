@@ -8,6 +8,7 @@ TagManager:
   - Dead
   - Map
   - IconArrow
+  - DontDestroy
   layers:
   - Default
   - TransparentFX
@@ -22,16 +23,16 @@ TagManager:
   - Player
   - Enemy
   - Platform
-  - MaplePlatform
+  - FloatPlatform
   - Detecter
   - Bullet
   - MonsterBullet
   - 
   - 
   - 
-  - MapBelow
-  - WorldMap
-  - MapOver
+  - Background
+  - 
+  - 
   - 
   - 
   - 

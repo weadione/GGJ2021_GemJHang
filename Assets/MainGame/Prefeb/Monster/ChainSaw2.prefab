@@ -154,7 +154,11 @@ MonoBehaviour:
   right: {fileID: 0}
   Tracer: {fileID: 0}
   teleportPos: {x: 0, y: 0}
-  monsterBullet: {fileID: 0}
+  monsterBullet:
+  - {fileID: 0}
+  cloneSpawner: {fileID: 0}
+  finalBossTeleport: []
+  marcoAnimator: {fileID: 0}
 --- !u!114 &8096755324728790738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,9 +217,9 @@ PolygonCollider2D:
       - {x: 1.7286955, y: -0.09116662}
       - {x: 0.93650854, y: 2.0789912}
       - {x: 0.18723422, y: 1.1787676}
-      - {x: -0.6265531, y: 0.11059183}
-      - {x: -1.103024, y: -1.0993202}
-      - {x: -0.51166904, y: -1.7713883}
+      - {x: 0.47589606, y: 0.37864655}
+      - {x: 0.5059562, y: -0.68233705}
+      - {x: 0.41201437, y: -1.4139348}
       - {x: 1.4317721, y: -1.7403361}
       - {x: 1.9138899, y: -1.9962561}
       - {x: 3.78, y: -1.6899999}

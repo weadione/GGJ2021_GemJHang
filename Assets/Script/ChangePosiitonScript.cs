@@ -29,10 +29,11 @@ public class ChangePosiitonScript : MonoBehaviour
     void Update()
     {
         if(yetChanged){
-            
+            if(cur == 10)
+                callEndingScene();
             yetChanged = false;
             GameObject cam = GameObject.Find("Main Camera").gameObject;
-            Debug.Log(cam.name);
+            //Debug.Log(cam.name);
             tryApsoluteXY();
         }
 
@@ -42,6 +43,9 @@ public class ChangePosiitonScript : MonoBehaviour
             cur++;
             stageSelect();           
         }
+    }
+    void callEndingScene(){
+        SceneManager.LoadScene("EndingScene");
     }
     void tryApsoluteXY(){
 //        Debug.Log();
@@ -115,9 +119,9 @@ public class ChangePosiitonScript : MonoBehaviour
         else
             isFront = false;
 
+        
 
-
-        if(isFront){
+        if (isFront){
         switch(bsn){
             case 0:
                 // NextScene = "BS_001";
