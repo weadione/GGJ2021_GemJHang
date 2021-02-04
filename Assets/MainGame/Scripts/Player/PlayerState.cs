@@ -47,6 +47,7 @@ public class PlayerState : LivingEntity
     }
     private void Awake()
     {
+        GetComponent<PartsManager>().initalize();
         if (instance)
         {
             DestroyImmediate(gameObject);
