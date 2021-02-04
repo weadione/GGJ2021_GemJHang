@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_403.unity"
     guid: 102dcec6931b6ce4281be9200ea29a3b
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: ed8f526e85818a3489b0e697387f2ddb
   m_configObjects: {}
