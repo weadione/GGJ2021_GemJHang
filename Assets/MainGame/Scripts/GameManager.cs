@@ -58,11 +58,13 @@ public class GameManager : MonoBehaviour
         checkCheat();
     }
 
+
     private void checkCheat(){
         if(Input.GetKeyDown(KeyCode.Z)){
             SceneManager.LoadScene("WorldScene");
         }
     }
+    
     private void exitGame()
     {
         if(!canExit && monsterRemain>=1)
@@ -90,6 +92,16 @@ public class GameManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Keypad3))
         {
             SceneManager.LoadScene(sceneName[2]);
+        }
+    }
+    public void pauseGame(bool IsPause){
+        if(IsPause == false){
+            Time.timeScale = 1;
+            return;
+        }
+        if(IsPause == true){
+            Time.timeScale = 0;
+            return;
         }
     }
 
