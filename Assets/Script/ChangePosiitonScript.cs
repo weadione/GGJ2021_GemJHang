@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangePosiitonScript : MonoBehaviour
 {
-    public int stageLevel;          // 노드의 정해진 스테이지 레벨.
-    public int stem;
+   public int stageLevel;          // 노드의 정해진 스테이지 레벨.
+   public int stem;
 
     public static int cur;          // 지나온, 현재 스테이지 레벨.
     public static bool [, ] isVisited = new bool [10,3];
@@ -15,42 +15,55 @@ public class ChangePosiitonScript : MonoBehaviour
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
 
     bool isVisitedThis;
-    bool yetChanged = true;
 
     WorldmapScript call;
+
     void start(){
         call = GameObject.Find("Worldmap").GetComponent<WorldmapScript>();
         cur = call.currentStage; 
         DontDestroyOnLoad(gameObject);
+
+        string nameScene = SceneManager.GetActiveScene().name;
+        stageLevel = nameScene[3] - '0';
+        stem = nameScene[5] - '0';
 
         isVisitedThis = isVisited[stageLevel,stem];
     }
 
     void Update()
     {
-        if(yetChanged){
-            if(cur == 10)
-                callEndingScene();
-            yetChanged = false;
-            GameObject cam = GameObject.Find("Main Camera").gameObject;
-            //Debug.Log(cam.name);
-            tryApsoluteXY();
-        }
-
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
             isVisited[stageLevel,stem] = true;
-            yetChanged = true;
             cur++;
             stageSelect();           
         }
     }
+
+    void OnEnable(){
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        if(cur == 10)
+            callEndingScene();
+        tryApsoluteXY();      
+    }    
+
+    void OnDisable(){
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     void callEndingScene(){
         SceneManager.LoadScene("EndingScene");
+         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
+            isVisited[stageLevel,stem] = true;
+            cur++;
+            stageSelect();           
+        }
+         
     }
+
     void tryApsoluteXY(){
-//        Debug.Log();
-
-
         battle = transform.GetChild(0).gameObject;      //  defaultZ: 0
         staying = transform.GetChild(1).gameObject;      //  defaultZ: -20
         chNode = transform.GetChild(2).gameObject;      //  defaultZ: -40
@@ -121,8 +134,6 @@ public class ChangePosiitonScript : MonoBehaviour
             isFront = true;
         else
             isFront = false;
-
-        
 
         if (isFront){
         switch(bsn){

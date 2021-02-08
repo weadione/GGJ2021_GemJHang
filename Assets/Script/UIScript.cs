@@ -21,6 +21,7 @@ public class UIScript : MonoBehaviour
         }
     }
 
+
     private void Awake()
     {
         if (instance)
