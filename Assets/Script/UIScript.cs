@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UIScript : MonoBehaviour
 {
-    static bool IsPause = false;
     private static GameObject instance;
     public static GameObject Instance
     {
@@ -22,18 +21,6 @@ public class UIScript : MonoBehaviour
         }
     }
 
-    public void pauseButton(){
-        if(IsPause == false){
-            Time.timeScale = 0;
-            IsPause = true;
-            return;
-        }
-        if(IsPause == true){
-            Time.timeScale = 1;
-            IsPause = false;
-            return;
-        }
-    }
 
     private void Awake()
     {

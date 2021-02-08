@@ -29,8 +29,6 @@ public class bgCamScript : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("AWAKE AT : ");
-
         if (instance)
         {
             DestroyImmediate(gameObject);
