@@ -58,13 +58,5 @@ public class EnemyManager : MonoBehaviour
         enemyList[15].GetComponent<EnemyState>().changeState(300f, 30f, true, 1f, 7f, new int[3] { 0, 0, 0 });  //마르코(중간보스)
         enemyList[16].GetComponent<EnemyState>().changeState(1000f, 50f, true, 1f, 7f, new int[3] { 0, 0, 0 });  //최종보스
         enemyList[17].GetComponent<EnemyState>().changeState(100f, 10f, true, 1f, 5f, new int[3] { 0, 0, 0 });  //잡몹클론
-
-
-
-
-
-
-
-
     }
 }

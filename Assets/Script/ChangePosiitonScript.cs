@@ -121,6 +121,9 @@ public class ChangePosiitonScript : MonoBehaviour
         string NextScene = "";
         bool isFront;
         int bsn = Random.Range(0,8);
+        GameManager.Instance.canExit = true;
+        Debug.Log(GameManager.Instance.canExit);
+
         if(cur!= 0 &&cur %5 == 0){
             NextScene = "BS_40"+(cur/5+1);
             SceneManager.LoadScene(NextScene);

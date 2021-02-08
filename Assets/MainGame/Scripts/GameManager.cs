@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public GameObject exitButton;
+
     public float animalPartsAdaptation;
     public float machinePartsAdaptation;
 
@@ -47,71 +49,25 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        initialzeScene();
         currentStage = 0;
     }
 
     private void Update()
     {
-        startGame();
         exitGame();
-        checkCheat();
     }
 
-
-    private void checkCheat(){
-        if(Input.GetKeyDown(KeyCode.Z)){
-            SceneManager.LoadScene("WorldScene");
-        }
-    }
-    
     private void exitGame()
-    {
-        if(!canExit && monsterRemain>=1)
-        {
-            canExit = true;
-        }
+    { 
         
-        if(canExit&&Input.GetKeyDown(KeyCode.E)&&monsterRemain==0)
+        if(Input.GetKeyDown(KeyCode.E) && canExit)
         {
             canExit = false;
-            SceneManager.LoadScene("WorldScene");
+            exitButton.SetActive(true);
         }
     }
 
-    public void startGame()
-    {
-        if(Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            SceneManager.LoadScene(sceneName[0]);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            SceneManager.LoadScene(sceneName[1]);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad3))
-        {
-            SceneManager.LoadScene(sceneName[2]);
-        }
-    }
-    public void pauseGame(bool IsPause){
-        if(IsPause == false){
-            Time.timeScale = 1;
-            return;
-        }
-        if(IsPause == true){
-            Time.timeScale = 0;
-            return;
-        }
-    }
 
-    public void initialzeScene()
-    {
-        sceneName = new string[3];
-        sceneName[0] = "GameStart";
-        sceneName[1] = "GameEnd";
-        sceneName[2] = "testscenes";
-    }
 
 
 }

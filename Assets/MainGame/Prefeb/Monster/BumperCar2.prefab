@@ -96,7 +96,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3965647465218264825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: -1.35, z: -0}
+  m_LocalPosition: {x: 1.93, y: 1.87, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3965647465382023706}
@@ -115,7 +115,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08852438, y: -0.8675332}
+  m_Offset: {x: -1.52, y: -4.16}
   m_Size: {x: 4.0509586, y: 1.1902368}
   m_Direction: 1
 --- !u!1 &3965647465382023699
@@ -220,18 +220,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c7805103faf8b4cbdf575200ffba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 150
   dead: 0
-  attDamage: 0
-  attType: 0
-  attSpeed: 0
-  moveSpeed: 0
+  attDamage: 20
+  attType: 1
+  attSpeed: 0.8
+  moveSpeed: 9
   dashSpeed: 0
   enemyMove: {fileID: 0}
   lastAttTime: 0
-  item: 
+  item: 080000000900000005000000
   attackAnimator: {fileID: 0}
   monsterBullet: {fileID: 0}
+  deadIcon: {fileID: 0}
 --- !u!50 &3965647465382023703
 Rigidbody2D:
   serializedVersion: 4
@@ -270,6 +271,11 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   Tracer: {fileID: 0}
+  teleportPos: {x: 0, y: 0}
+  monsterBullet: []
+  cloneSpawner: {fileID: 0}
+  finalBossTeleport: []
+  marcoAnimator: {fileID: 0}
 --- !u!114 &3965647465382023696
 MonoBehaviour:
   m_ObjectHideFlags: 0
