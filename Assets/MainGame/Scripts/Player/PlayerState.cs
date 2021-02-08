@@ -156,7 +156,6 @@ public class PlayerState : LivingEntity
 
         PlayerPrefs.SetFloat("AnimalAdaptation", animalAdaptation);
         PlayerPrefs.SetFloat("MachineAdaptation", machineAdaptation);
-
         
 
     }
