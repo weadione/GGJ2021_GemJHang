@@ -77,38 +77,38 @@ public class LootingUI : MonoBehaviour
 
     private void Update()
     {
-        if (can)
-        { 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
+        //if (can)
+        //{ 
+        //    if (Input.GetKeyDown(KeyCode.Alpha1))
+        //    {
 
-                returnValue = new int[2];
-                returnValue[0] = 0;
-                returnValue[1] = itemList[0];
-                //Debug.Log(returnValue[1]);
-                partsManager.ChangeParts(returnValue[0], returnValue[1]);
-                can = false;
+        //        returnValue = new int[2];
+        //        returnValue[0] = 0;
+        //        returnValue[1] = itemList[0];
+        //        //Debug.Log(returnValue[1]);
+        //        partsManager.ChangeParts(returnValue[0], returnValue[1]);
+        //        can = false;
 
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
+        //    }
+        //    else if (Input.GetKeyDown(KeyCode.Alpha2))
+        //    {
 
-                returnValue = new int[2];
-                returnValue[0] = 1;
-                returnValue[1] = itemList[1];
-                partsManager.ChangeParts(returnValue[0], returnValue[1]);
-                can = false;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
+        //        returnValue = new int[2];
+        //        returnValue[0] = 1;
+        //        returnValue[1] = itemList[1];
+        //        partsManager.ChangeParts(returnValue[0], returnValue[1]);
+        //        can = false;
+        //    }
+        //    else if (Input.GetKeyDown(KeyCode.Alpha3))
+        //    {
 
-                returnValue = new int[2];
-                returnValue[0] = 2;
-                returnValue[1] = itemList[2];
-                partsManager.ChangeParts(returnValue[0], returnValue[1]);
-                can = false;
-            }
-        }
+        //        returnValue = new int[2];
+        //        returnValue[0] = 2;
+        //        returnValue[1] = itemList[2];
+        //        partsManager.ChangeParts(returnValue[0], returnValue[1]);
+        //        can = false;
+        //    }
+        //}
     }
 
     public void select1()

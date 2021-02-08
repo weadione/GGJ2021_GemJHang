@@ -20,7 +20,7 @@ public class ChangePosiitonScript : MonoBehaviour
 
     void start(){
         call = GameObject.Find("Worldmap").GetComponent<WorldmapScript>();
-        cur = call.currentStage; 
+        //cur = call.currentStage; 
         DontDestroyOnLoad(gameObject);
 
         string nameScene = SceneManager.GetActiveScene().name;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,18 +23,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GameObject exitButton;
-
-    public float animalPartsAdaptation;
-    public float machinePartsAdaptation;
-
-    public int currentStage;
-
-    public string[] sceneName;
-
-    public int monsterRemain;
-    public bool canExit = false;
-
     private void Awake()
     {
         if (instance)
@@ -43,18 +32,199 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-        
+
         monsterRemain = 0;
+        playerParts = new int[3];
+        isGameover = false;
+        Load();
     }
 
-    private void Start()
+    public GameObject exitButton;
+    public GameObject gameoverText;
+
+    //적응도 변수
+    public float animalPartsAdaptation;
+    public float machinePartsAdaptation;
+
+    //게임오버 유/무
+    public bool isGameover;
+
+
+    //플레이어 스텟 변수들(세이브 로드용)->사용 안 할수도
+    private float playerAttDamage;
+    private float playerHealth;
+    private bool playerAttType; //->
+    private float playerAttSpped;
+    private float playerMoveSpeed;
+    private float playerDashSpeed;
+    private float playerAttRange;
+    private float playerJumpForce;
+    private int[] playerParts;
+    private int jumpcount;
+
+    //스테이지 클리어 확인 관련 변수
+    public int monsterRemain;
+    public bool canExit = false;
+
+    public void Save()
     {
-        currentStage = 0;
+        //플레이어 상태 관련
+        PlayerPrefs.SetFloat("PlayerAttDamage", PlayerState.Instance.attDamage);
+        PlayerPrefs.SetFloat("PlayerHealth", PlayerState.Instance.health);
+        PlayerPrefs.SetFloat("PlayerAttSpeed", PlayerState.Instance.attSpeed);
+        PlayerPrefs.SetFloat("PlayerMoveSpeed", PlayerState.Instance.moveSpeed);
+        PlayerPrefs.SetFloat("PlayerDashSpeed", PlayerState.Instance.dashSpeed);
+        PlayerPrefs.SetFloat("PlayerAttRange", PlayerState.Instance.attRange);
+        PlayerPrefs.SetFloat("PlayerJumpForce", PlayerState.Instance.jumpForce);
+        PlayerPrefs.SetInt("PlayerJumpCount", PlayerState.Instance.jumpCount);
+        PlayerPrefs.SetFloat("AnimalAdaptationTmp", PlayerState.Instance.animalAdaptationTmp);
+        PlayerPrefs.SetFloat("MachineAdaptationTmp", PlayerState.Instance.machineAdaptationTmp);
+
+        if (PlayerState.Instance.attType)
+            PlayerPrefs.SetInt("PlayerAttType", 1); //근거리
+        else
+            PlayerPrefs.SetInt("PlayerAttType", 0); //원거리
+
+        PlayerPrefs.SetInt("PlayerHeadParts", PlayerState.Instance.partsNum[0]);
+        PlayerPrefs.SetInt("PlayerArmParts", PlayerState.Instance.partsNum[1]);
+        PlayerPrefs.SetInt("PlayerLegParts", PlayerState.Instance.partsNum[2]);
+
+
+
+        //맵 관련
+        PlayerPrefs.SetInt("MapCurrent", ChangePosiitonScript.cur);
+
+        for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
+        {
+            for (int j = 0; j < ChangePosiitonScript.isVisited.GetLength(1); j++)
+            {
+                if (ChangePosiitonScript.isVisited[i, j])
+                    PlayerPrefs.SetInt("MapIsVisited" + i.ToString() + "," + j.ToString(), 1);  //true
+                else
+                    PlayerPrefs.SetInt("MapIsVisited" + i.ToString() + "," + j.ToString(), 0);  //false
+            }
+        }
     }
+
+    public void AdaptationSave()
+    {
+        PlayerPrefs.SetFloat("AnimalAdaptation", animalPartsAdaptation);
+        PlayerPrefs.SetFloat("MachineAdaptation", machinePartsAdaptation);
+    }
+
+    public void ResetSave()
+    {
+        //플레이어 상태 관련
+        PlayerPrefs.SetFloat("PlayerAttDamage", 10f);
+        PlayerPrefs.SetFloat("PlayerHealth", 100f);
+        PlayerPrefs.SetFloat("PlayerAttSpeed", 0.5f);
+        PlayerPrefs.SetFloat("PlayerMoveSpeed",10f);
+        PlayerPrefs.SetFloat("PlayerDashSpeed", 30f);
+        PlayerPrefs.SetFloat("PlayerAttRange",3f);
+        PlayerPrefs.SetFloat("PlayerJumpForce", 400f);
+        PlayerPrefs.SetInt("PlayerJumpCount", 1);
+        PlayerPrefs.SetFloat("AnimalAdaptationTmp", 0f);
+        PlayerPrefs.SetFloat("MachineAdaptationTmp", 0f);
+
+        PlayerPrefs.SetInt("PlayerAttType", 1); //근거리
+
+        PlayerState.Instance.GetComponent<PartsManager>().ResetParts();
+
+        PlayerPrefs.SetInt("PlayerHeadParts", 0);
+        PlayerPrefs.SetInt("PlayerArmParts", 0);
+        PlayerPrefs.SetInt("PlayerLegParts", 0);
+
+
+
+        //맵 관련
+        PlayerPrefs.SetInt("MapCurrent", 0);
+
+        for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
+        {
+            for (int j = 0; j < ChangePosiitonScript.isVisited.GetLength(1); j++)
+            {
+                PlayerPrefs.SetInt("MapIsVisited" + i.ToString() + "," + j.ToString(), 0);  //false
+            }
+        }
+    }
+
+   public void Load()
+    {
+        //플레이어 상태 관련
+        PlayerState.Instance.attDamage = PlayerPrefs.GetFloat("PlayerAttDamage", 10f);
+        PlayerState.Instance.health = PlayerPrefs.GetFloat("PlayerHealth", 100f);
+        PlayerState.Instance.attSpeed = PlayerPrefs.GetFloat("PlayerAttSpeed", 0.5f);
+        PlayerState.Instance.moveSpeed = PlayerPrefs.GetFloat("PlayerMoveSpeed", 10f);
+        PlayerState.Instance.dashSpeed = PlayerPrefs.GetFloat("PlayerDashSpeed", 30f);
+        PlayerState.Instance.attRange = PlayerPrefs.GetFloat("PlayerAttRange", 3f);
+        PlayerState.Instance.jumpForce = PlayerPrefs.GetFloat("PlayerJumpForce", 400f);
+        PlayerState.Instance.jumpCount= PlayerPrefs.GetInt("PlayerJumpCount", 1);
+        PlayerState.Instance.animalAdaptationTmp = PlayerPrefs.GetFloat("AnimalAdaptationTmp", 0f);
+        PlayerState.Instance.machineAdaptationTmp = PlayerPrefs.GetFloat("MachineAdaptationTmp", 0f);
+        
+        animalPartsAdaptation = PlayerPrefs.GetFloat("AnimalAdaptation", 1f);
+        machinePartsAdaptation = PlayerPrefs.GetFloat("MachineAdaptation", 1f);
+
+
+        if (PlayerPrefs.GetInt("PlayerAttType", 1) == 1)
+            PlayerState.Instance.attType = true;    //근거리
+        else
+            PlayerState.Instance.attType = false;   //원거리
+
+  
+        PlayerState.Instance.partsNum[0] = PlayerPrefs.GetInt("PlayerHeadParts", 0);
+        PlayerState.Instance.partsNum[1] = PlayerPrefs.GetInt("PlayerArmParts", 0);
+        PlayerState.Instance.partsNum[2] = PlayerPrefs.GetInt("PlayerLegParts", 0);
+
+        PlayerState.Instance.GetComponent<PartsManager>().LoadParts();
+
+        //맵 관련
+        ChangePosiitonScript.cur = PlayerPrefs.GetInt("MapCurrent", 0);
+
+        for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
+        {
+            for (int j = 0; j < ChangePosiitonScript.isVisited.GetLength(1); j++)
+            {
+                if (PlayerPrefs.GetInt("MapIsVisited" + i.ToString() + "," + j.ToString(), 0) == 1)
+                    ChangePosiitonScript.isVisited[i, j] = true;
+                else
+                    ChangePosiitonScript.isVisited[i, j] = false;
+            }
+        }
+    }
+
+    //죽으면 Gameover됨
+    public void ReturnTitle()
+    {
+        if (isGameover)
+        {
+            gameoverText.SetActive(true);
+            if(Input.GetMouseButtonDown(0))
+            {
+                ResetSave();
+                Load();
+                PlayerState.Instance.dead = false;
+                isGameover = false;
+                PlayerState.Instance.GetComponent<CharacterMovement>().canMove = true;
+                gameoverText.SetActive(false);
+                SceneManager.LoadScene("TitleScene");
+            }
+        }
+    }
+
+    public void Start()
+    {
+        //저장된 값들 초기화하는 함수 오류발생해서 꼬이거나 적응도 리셋 원할시 1번만 실행후 주석 처리 바람
+        //PlayerPrefs.DeleteAll();
+        
+    }
+
 
     private void Update()
     {
         exitGame();
+        ReturnTitle();
+        Debug.Log("동물"+animalPartsAdaptation);
     }
 
     private void exitGame()
