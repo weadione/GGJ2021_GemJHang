@@ -18,10 +18,12 @@ public class Parts : MonoBehaviour
 
     public float jumpForce { get; protected set; }
 
+    public int adaptation { get; protected set; } //1:동물, 2:기계
+
     public GameObject mainObject;
 
 
-    public Parts(float partsHealth, float partsDamage, bool partsType, float partsAttSpeed, float partsMoveSpeed, string name, float attRange, bool dash, int jumpCount, float jumpForce)
+    public Parts(float partsHealth, float partsDamage, bool partsType, float partsAttSpeed, float partsMoveSpeed, string name, float attRange, bool dash, int jumpCount, float jumpForce, int adaptation)
     {
         this.partsHealth = partsHealth;
         this.partsDamage = partsDamage;
@@ -33,5 +35,6 @@ public class Parts : MonoBehaviour
         this.dash = dash;
         this.jumpCount = jumpCount;
         this.jumpForce = jumpForce;
+        this.adaptation = adaptation;
     }
 }

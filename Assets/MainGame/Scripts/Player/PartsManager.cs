@@ -40,39 +40,39 @@ public class PartsManager : MonoBehaviour
 
         //체력, 뎀지, 근/원거리, 공속, 이속, 이름, 사거리, 대쉬여부, 점프카운트, 점프력
 
-        armParts[0] = new Parts(0f, 10f, true, 0.4f, 0f, "default", 3, false, 1, 0);          //기본
-        armParts[1] = new Parts(0f, 15f, true, 0.3f, 0f, "bug", 6,false,1,0);                 //송충이 
-        armParts[2] = new Parts(0f, 10f, false, 0.4f, 0f, "slime1", 3, false, 1,0);         //슬라임1        
-        armParts[3] = new Parts(0f, 20f, false, 0.4f, 0f, "slime2", 3, false, 1, 0);        //슬라임2
-        armParts[4] = new Parts(0f, 5f, false, 0.05f, 0f, "trashRobot1", 3, false, 1, 0);   //쓰레기통1
-        armParts[5] = new Parts(0f, 20f, false, 0.05f, 0f, "trashRobot2", 3, false, 1, 0);   //쓰레기통2
-        armParts[6] = new Parts(0f, 31f, false, 0.4f, 0f, "centaur", 3, false, 1, 0);       //켄타우로스
-        armParts[7] = new Parts(0f, 45f, true, 0.1f, 0f, "chainsaw1", 9, false, 1, 0);      //전기톱1
-        armParts[8] = new Parts(0f, 70f, true, 0.4f, 0f, "chainsaw2", 9, false, 1, 0);      //전기톱2
+        armParts[0] = new Parts(0f, 10f, true, 0.4f, 0f, "default", 3, false, 1, 0, 0);          //기본
+        armParts[1] = new Parts(0f, 15f, true, 0.3f, 0f, "bug", 6, false, 1, 0, 1);                 //송충이 
+        armParts[2] = new Parts(0f, 10f, false, 0.4f, 0f, "slime1", 3, false, 1, 0, 1);         //슬라임1        
+        armParts[3] = new Parts(0f, 20f, false, 0.4f, 0f, "slime2", 3, false, 1, 0, 1);        //슬라임2
+        armParts[4] = new Parts(0f, 5f, false, 0.05f, 0f, "trashRobot1", 3, false, 1, 0, 2);   //쓰레기통1
+        armParts[5] = new Parts(0f, 20f, false, 0.05f, 0f, "trashRobot2", 3, false, 1, 0, 2);   //쓰레기통2
+        armParts[6] = new Parts(0f, 31f, false, 0.4f, 0f, "centaur", 3, false, 1, 0, 1);       //켄타우로스
+        armParts[7] = new Parts(0f, 45f, true, 0.1f, 0f, "chainsaw1", 9, false, 1, 0, 2);    //전기톱1
+        armParts[8] = new Parts(0f, 70f, true, 0.4f, 0f, "chainsaw2", 9, false, 1, 0, 2);     //전기톱2
 
 
-        legParts[0] = new Parts(0f, 0f, true, 0f, 5f, "default", 0, false, 2, 400);         //기본
-        legParts[1] = new Parts(0f, 0f, true, 0f, 6f, "snake1",0, false, 2, 400);           //뱀1
-        legParts[2] = new Parts(0f, 0f, true, 0f, 8f, "snake2", 0, false, 2, 420);          //뱀2
-        legParts[3] = new Parts(0f, 0f, true, 0f, 11f, "snake3", 0, false, 3, 410);          //뱀3
-        legParts[4] = new Parts(0f, 0f, true, 0f, 9f, "bumper1", 0, false, 2, 400);         //범퍼카1
-        legParts[5] = new Parts(0f, 0f, true, 0f, 12f, "bumper2", 0, true, 2, 400);           //범퍼카2
-        legParts[6] = new Parts(0f, 0f, true, 0f, 6f, "woodHorse1", 0, false, 2, 420);      //목마1
-        legParts[7] = new Parts(0f, 0f, true, 0f, 8f, "woodHorse2", 0, false, 3, 410);      //목마2
-        legParts[8] = new Parts(0f, 0f, true, 0f, 8f, "trashRobot1", 0, false, 2, 410);     //쓰레기통1
-        legParts[9] = new Parts(0f, 0f, true, 0f, 11f, "trashRobot2", 0, false, 2, 420);     //쓰레기통2
+        legParts[0] = new Parts(0f, 0f, true, 0f, 5f, "default", 0, false, 2, 400, 0);         //기본
+        legParts[1] = new Parts(0f, 0f, true, 0f, 6f, "snake1",0, false, 2, 400,1);           //뱀1
+        legParts[2] = new Parts(0f, 0f, true, 0f, 8f, "snake2", 0, false, 2, 420,1);          //뱀2
+        legParts[3] = new Parts(0f, 0f, true, 0f, 11f, "snake3", 0, false, 3, 410,1);          //뱀3
+        legParts[4] = new Parts(0f, 0f, true, 0f, 9f, "bumper1", 0, false, 2, 400,2);         //범퍼카1
+        legParts[5] = new Parts(0f, 0f, true, 0f, 12f, "bumper2", 0, true, 2, 400,2);           //범퍼카2
+        legParts[6] = new Parts(0f, 0f, true, 0f, 6f, "woodHorse1", 0, false, 2, 420,2);      //목마1
+        legParts[7] = new Parts(0f, 0f, true, 0f, 8f, "woodHorse2", 0, false, 3, 410,2);      //목마2
+        legParts[8] = new Parts(0f, 0f, true, 0f, 8f, "trashRobot1", 0, false, 2, 410,2);     //쓰레기통1
+        legParts[9] = new Parts(0f, 0f, true, 0f, 11f, "trashRobot2", 0, false, 2, 420,2);     //쓰레기통2
 
 
 
-        headParts[0] = new Parts(0f, 0f, true, 0f, 0f, "default", 0, false, 1, 0);          //기본
-        headParts[1] = new Parts(50f, 0f, true, 0f, 0f, "bug", 0, false, 1, 0);             //송충이
-        headParts[2] = new Parts(50f, 0f, true, 0f, 0f, "snake1", 0, false, 1, 0);          //뱀1
-        headParts[3] = new Parts(75f, 0f, true, 0f, 0f, "snake2", 0, false, 1, 0);          //뱀2
-        headParts[4] = new Parts(100f, 0f, true, 0f, 0f, "snake3", 0, false, 1, 0);         //뱀3
-        headParts[5] = new Parts(50f, 0f, true, 0f, 0f, "slime1", 0, false, 1, 0);          //슬라임1
-        headParts[6] = new Parts(100f, 0f, true, 0f, 0f, "slime2", 0, false, 1, 0);         //슬라임2
-        headParts[7] = new Parts(50f, 0f, true, 0f, 0f, "bumper1", 0, false, 1, 0);         //범퍼카1
-        headParts[8] = new Parts(75f, 0f, true, 0f, 0f, "bumper2", 0, false, 1, 0);        //범퍼카2
+        headParts[0] = new Parts(0f, 0f, true, 0f, 0f, "default", 0, false, 1, 0,0);          //기본
+        headParts[1] = new Parts(50f, 0f, true, 0f, 0f, "bug", 0, false, 1, 0,1);             //송충이
+        headParts[2] = new Parts(50f, 0f, true, 0f, 0f, "snake1", 0, false, 1, 0,1);          //뱀1
+        headParts[3] = new Parts(75f, 0f, true, 0f, 0f, "snake2", 0, false, 1, 0,1);          //뱀2
+        headParts[4] = new Parts(100f, 0f, true, 0f, 0f, "snake3", 0, false, 1, 0,1);         //뱀3
+        headParts[5] = new Parts(50f, 0f, true, 0f, 0f, "slime1", 0, false, 1, 0,1);          //슬라임1
+        headParts[6] = new Parts(100f, 0f, true, 0f, 0f, "slime2", 0, false, 1, 0,1);         //슬라임2
+        headParts[7] = new Parts(50f, 0f, true, 0f, 0f, "bumper1", 0, false, 1, 0,2);         //범퍼카1
+        headParts[8] = new Parts(75f, 0f, true, 0f, 0f, "bumper2", 0, false, 1, 0,2);        //범퍼카2
 
 
 

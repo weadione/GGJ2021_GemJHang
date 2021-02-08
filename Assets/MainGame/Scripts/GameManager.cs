@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public GameObject exitButton;
+
     public float animalPartsAdaptation;
     public float machinePartsAdaptation;
 
@@ -58,16 +60,12 @@ public class GameManager : MonoBehaviour
     }
 
     private void exitGame()
-    {
-        if(!canExit && monsterRemain>=1)
-        {
-            canExit = true;
-        }
+    { 
         
-        if(canExit&&Input.GetKeyDown(KeyCode.E)&&monsterRemain==0)
+        if(Input.GetKeyDown(KeyCode.E) && canExit)
         {
             canExit = false;
-            SceneManager.LoadScene("WS");
+            exitButton.SetActive(true);
         }
     }
 

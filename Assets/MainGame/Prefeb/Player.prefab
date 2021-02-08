@@ -4437,6 +4437,10 @@ MonoBehaviour:
   dash: 0
   jumpForce: 0
   damageZone: {fileID: 2127936204899314072}
+  animalAdaptation: 0
+  machineAdaptation: 0
+  animalAdaptationTmp: 0
+  machineAdaptationTmp: 0
 --- !u!114 &2127936205764601254
 MonoBehaviour:
   m_ObjectHideFlags: 0
