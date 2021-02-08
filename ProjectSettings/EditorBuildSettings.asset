@@ -56,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_202.unity"
     guid: 655afbc63d6a6b340adddca85278b00b
+  - enabled: 1
+    path: "Assets/Scenes/\uC804\uD22C\uB9F5/BS_203.unity"
+    guid: 24eefe2d4de86fb4d9828d2d75290883
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

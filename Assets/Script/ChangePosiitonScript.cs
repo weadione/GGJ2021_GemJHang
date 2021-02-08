@@ -12,6 +12,7 @@ public class ChangePosiitonScript : MonoBehaviour
     public static bool [, ] isVisited = new bool [10,3];
 
 
+    public int current;
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
 
     bool isVisitedThis;
@@ -23,9 +24,9 @@ public class ChangePosiitonScript : MonoBehaviour
         cur = call.currentStage; 
         DontDestroyOnLoad(gameObject);
 
-        string nameScene = SceneManager.GetActiveScene().name;
-        stageLevel = nameScene[3] - '0';
-        stem = nameScene[5] - '0';
+        // string nameScene = SceneManager.GetActiveScene().name;
+        // stageLevel = nameScene[3] - '0';
+        // stem = nameScene[5] - '0';
 
         isVisitedThis = isVisited[stageLevel,stem];
     }
@@ -51,6 +52,7 @@ public class ChangePosiitonScript : MonoBehaviour
 
     void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        current = cur;
     }
 
     void callEndingScene(){
@@ -122,7 +124,7 @@ public class ChangePosiitonScript : MonoBehaviour
         bool isFront;
         int bsn = Random.Range(0,8);
         GameManager.Instance.canExit = true;
-        Debug.Log(GameManager.Instance.canExit);
+//        Debug.Log("DEBUG LOG ON STAGESELECT  "+GameManager.Instance.canExit);
 
         if(cur!= 0 &&cur %5 == 0){
             NextScene = "BS_40"+(cur/5+1);
