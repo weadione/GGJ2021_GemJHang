@@ -19,6 +19,9 @@ public class PlayerState : LivingEntity
     public float defaultDashSpeed;
     public float defaultAttRange;
 
+    public float headPartsHealth;
+    public bool isHeadParts;
+
     public float attRange;
 
     public float maxHealth;
@@ -113,7 +116,18 @@ public class PlayerState : LivingEntity
 
     public override void OnDamage(float damage)
     {
-        base.OnDamage(damage);
+        if(isHeadParts && !dead)
+        {
+            headPartsHealth -= damage;
+            if(headPartsHealth <= 0)
+            {
+                partsManager.ChangeParts(0, 0);
+            }
+        }
+        else
+        {
+            base.OnDamage(damage);
+        }
         GetComponent<HitEffect>().RunEffect();    
         
     }
@@ -158,36 +172,61 @@ public class PlayerState : LivingEntity
 
         if (partType == 0)
         {
-            if (partsManager.headParts[partsNum[0]].adaptation == 1)
+            if(partsManager.headParts[partsNum[0]].adaptation==0)
             {
+                isHeadParts = false;
+                headPartsHealth = 0;
+            }
+            else if (partsManager.headParts[partsNum[0]].adaptation == 1)
+            {
+                if (!isHeadParts)
+                {
+                    isHeadParts = true;
+                }
                 animalAdaptationTmp += 0.05f;
-                if (partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth >= maxHealth)
-                {
-                    health = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + health;
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth;
-                }
-                else
-                {
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth;
-                    if (maxHealth < health)
-                        health = maxHealth;
-                }
+                headPartsHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation;
             }
-            else if(partsManager.headParts[partsNum[0]].adaptation == 2)
+            else
             {
+                if (!isHeadParts)
+                {
+                    isHeadParts = true;
+                }
                 machineAdaptationTmp += 0.05f;
-                if (partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth >= maxHealth)
-                {
-                    health = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + health;
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth;
-                }
-                else
-                {
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth;
-                    if (maxHealth < health)
-                        health = maxHealth;
-                }
+                headPartsHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation;
             }
+
+
+            //if (partsManager.headParts[partsNum[0]].adaptation == 1)
+            //{
+            //    animalAdaptationTmp += 0.05f;
+            //    if (partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth >= maxHealth)
+            //    {
+            //        health = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + health;
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth;
+            //    }
+            //    else
+            //    {
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth;
+            //        if (maxHealth < health)
+            //            health = maxHealth;
+            //    }
+            //}
+            //else if(partsManager.headParts[partsNum[0]].adaptation == 2)
+            //{
+            //    machineAdaptationTmp += 0.05f;
+            //    if (partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth >= maxHealth)
+            //    {
+            //        health = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + health;
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth;
+            //    }
+            //    else
+            //    {
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth;
+            //        if (maxHealth < health)
+            //            health = maxHealth;
+            //    }
+            //}
         }
         else if (partType == 1)
         {

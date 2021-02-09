@@ -80,10 +80,19 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("AnimalAdaptationTmp", PlayerState.Instance.animalAdaptationTmp);
         PlayerPrefs.SetFloat("MachineAdaptationTmp", PlayerState.Instance.machineAdaptationTmp);
 
+
+        PlayerPrefs.SetFloat("PlayerHeadHealth", PlayerState.Instance.headPartsHealth);
+        if (PlayerState.Instance.isHeadParts)
+            PlayerPrefs.SetInt("IsPlayerHeadParts", 1); //머리파츠 장착중
+        else
+            PlayerPrefs.SetInt("IsPlayerHeadParts", 0); //머리파츠 미장착(기본머리)
+
+
         if (PlayerState.Instance.attType)
             PlayerPrefs.SetInt("PlayerAttType", 1); //근거리
         else
             PlayerPrefs.SetInt("PlayerAttType", 0); //원거리
+
 
         PlayerPrefs.SetInt("PlayerHeadParts", PlayerState.Instance.partsNum[0]);
         PlayerPrefs.SetInt("PlayerArmParts", PlayerState.Instance.partsNum[1]);
@@ -126,6 +135,9 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("AnimalAdaptationTmp", 0f);
         PlayerPrefs.SetFloat("MachineAdaptationTmp", 0f);
 
+        PlayerPrefs.SetFloat("PlayerHeadHealth", 0f);
+        PlayerPrefs.SetInt("IsPlayerHeadParts", 0); //머리파츠 미장착
+
         PlayerPrefs.SetInt("PlayerAttType", 1); //근거리
 
         PlayerState.Instance.GetComponent<PartsManager>().ResetParts();
@@ -164,6 +176,12 @@ public class GameManager : MonoBehaviour
         
         animalPartsAdaptation = PlayerPrefs.GetFloat("AnimalAdaptation", 1f);
         machinePartsAdaptation = PlayerPrefs.GetFloat("MachineAdaptation", 1f);
+
+        PlayerState.Instance.headPartsHealth = PlayerPrefs.GetFloat("PlayerHeadHealth", 0f);
+        if (PlayerPrefs.GetInt("IsPlayerHeadParts", 0) == 0)
+            PlayerState.Instance.isHeadParts = false;   //머리파츠 미장착
+        else
+            PlayerState.Instance.isHeadParts = true;    //머리파츠 장착중
 
 
         if (PlayerPrefs.GetInt("PlayerAttType", 1) == 1)
@@ -215,7 +233,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         //저장된 값들 초기화하는 함수 오류발생해서 꼬이거나 적응도 리셋 원할시 1번만 실행후 주석 처리 바람
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         
     }
 
@@ -224,7 +242,7 @@ public class GameManager : MonoBehaviour
     {
         exitGame();
         ReturnTitle();
-        Debug.Log("동물"+animalPartsAdaptation);
+        //Debug.Log("동물"+monsterRemain);
     }
 
     private void exitGame()
