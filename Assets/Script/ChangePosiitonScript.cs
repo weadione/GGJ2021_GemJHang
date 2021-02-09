@@ -7,10 +7,11 @@ public class ChangePosiitonScript : MonoBehaviour
 {
     public int stageLevel;          // 노드의 정해진 스테이지 레벨.
     public int stem;
-    public bool isEvent;
+    public bool isEventThis;
 
     public static int cur;          // 지나온, 현재 스테이지 레벨.
     public static bool [, ] isVisited = new bool [10,3];
+    int [, ] eventNode = WorldmapScript.eventNode; 
 
 
     public int current;
@@ -20,23 +21,19 @@ public class ChangePosiitonScript : MonoBehaviour
 
     WorldmapScript call;
 
-    void start(){
-        call = GameObject.Find("Worldmap").GetComponent<WorldmapScript>();
-        cur = call.currentStage; 
-            tmpRnd = Random.Range(1,10);
-            Debug.Log("DEBUG: tryApsoluteXY " + tmpRnd );
-            if(tmpRnd < 5)
-                isEvent = true;
-            else
-                isEvent = false;
-        DontDestroyOnLoad(gameObject);
-
+    void Start(){
         // string nameScene = SceneManager.GetActiveScene().name;
         // stageLevel = nameScene[3] - '0';
         // stem = nameScene[5] - '0';
+        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem]);
+        if(eventNode[stageLevel,stem] < 50)
+            isEventThis = true;
+        else
+            isEventThis = false;
 
         isVisitedThis = isVisited[stageLevel,stem];
     }
+
     void Update()
     {
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
@@ -50,8 +47,12 @@ public class ChangePosiitonScript : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    // public void randomizeEventsNode(){
+    //     int tmpRandom;
+    //     eventNode[stageLevel,stem] = tmpRandom = Random.Range(0,100);
+    // }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
-
+  
         if(cur == 10)
             callEndingScene();
         tryApsoluteXY();      
@@ -61,6 +62,7 @@ public class ChangePosiitonScript : MonoBehaviour
     void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
         current = cur;
+        tmpRnd = -2;
     }
 
     void callEndingScene(){
@@ -76,9 +78,9 @@ public class ChangePosiitonScript : MonoBehaviour
     void tryApsoluteXY(){
 //        Debug.Log("DEBUG: tryApsoluteXY " + isEvent );
 //        battle = (isEvent == true) ?  transform.GetChild(3).gameObject : transform.GetChild(0).gameObject;
-        if(isEvent == true)
+        if(isEventThis == true)
             battle = transform.GetChild(3).gameObject;
-        if(isEvent == false)
+        if(isEventThis == false)
             battle = transform.GetChild(0).gameObject;      //  defaultZ: 0
         staying = transform.GetChild(1).gameObject;      //  defaultZ: -20
         chNode = transform.GetChild(2).gameObject;      //  defaultZ: -40

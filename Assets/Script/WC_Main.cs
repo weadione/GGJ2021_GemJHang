@@ -11,7 +11,7 @@ public class WC_Main : MonoBehaviour
    int speed = 10; 
    int currentStageCamera = 0;
 
-   void start(){
+   void Start(){
 
    }
    void Update()
