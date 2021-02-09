@@ -73,8 +73,11 @@ public class CharacterMovement : MonoBehaviour
 
     public void Hit(float x)                                                    //피격 시 x방향으로 밀려나고 위로도 조금 밀려남(x가 때린 방향)
     {
-        x = x >= 0 ? 1 : -1;
-        rigid2D.velocity = new Vector2(x * 10, 3);
+        if (!PlayerState.Instance.dead)
+        {
+            x = x >= 0 ? 1 : -1;
+            rigid2D.velocity = new Vector2(x * 10, 3);
+        }
     }
 
     public void Dash(float x)                                                   //대쉬 함수 코루틴으로 돌아감
@@ -133,12 +136,15 @@ public class CharacterMovement : MonoBehaviour
         // 바닥에 닿았음을 감지하는 처리
         //Debug.Log(collision.contacts[0].normal.y);
         for (int i = 0; i < collision.contacts.Length; i++)
+        {
             if (collision.contacts[i].normal.y > 0.7f && collision.contacts[i].collider.tag == "Map")
             {
-                //Debug.Log(collision.contacts.Length);
+                
                 isGrounded = true;
                 jumpCount = 0;
             }
+            //Debug.Log(collision.contacts[i].normal.y);
+        }
 
     }
 

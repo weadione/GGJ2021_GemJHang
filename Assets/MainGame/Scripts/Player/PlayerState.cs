@@ -19,6 +19,9 @@ public class PlayerState : LivingEntity
     public float defaultDashSpeed;
     public float defaultAttRange;
 
+    public float headPartsHealth;
+    public bool isHeadParts;
+
     public float attRange;
 
     public float maxHealth;
@@ -28,8 +31,6 @@ public class PlayerState : LivingEntity
     public float jumpForce;
     public CapsuleCollider2D damageZone;
 
-    public float animalAdaptation;
-    public float machineAdaptation;
     public float animalAdaptationTmp;
     public float machineAdaptationTmp;
 
@@ -60,24 +61,25 @@ public class PlayerState : LivingEntity
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        partsNum = new int[3];
     }
 
     protected override void OnEnable()
     {
         base.OnEnable();
 
-        attDamage = 1000f;   //10
-        health = 100f;     //100
-        attType = false;
-        attSpeed = 0.1f;    //1f 
-        moveSpeed = 10f;    //5
-        dashSpeed = 30f;
-        attRange = 3f;
-        maxHealth = 100f;
+        //attDamage = 1000f;   //10
+        //health = 100f;     //100
+        //attType = false;
+        //attSpeed = 0.1f;    //1f 
+        //moveSpeed = 10f;    //5
+        //dashSpeed = 30f;
+        //attRange = 3f;
+        //maxHealth = 100f;
 
-        jumpCount = 1;
+        //jumpCount = 1;
         dash = false;
-        jumpForce = 600;    //400
+        //jumpForce = 600;    //400
 
         defaultDamage = 10f;
         defaultHealth = 100f;
@@ -91,21 +93,18 @@ public class PlayerState : LivingEntity
 
     private void Start()
     {
-        partsNum = new int[3];
-        partsNum[0] = 0;
-        partsNum[1] = 0;
-        partsNum[2] = 0;
+        //
+        //partsNum[0] = 0;
+        //partsNum[1] = 0;
+        //partsNum[2] = 0;
         partsManager = GetComponent<PartsManager>();
         movement = GetComponent<CharacterMovement>();
         lastAttTime = 0f;
 
-        animalAdaptation = 1f;
-        machineAdaptation = 1f;
+
         animalAdaptationTmp = 0f;
         machineAdaptationTmp = 0f;
 
-        animalAdaptation = PlayerPrefs.GetFloat("AnimalAdaptation", 1f);
-        machineAdaptation = PlayerPrefs.GetFloat("MachineAdaptation", 1f);
 
     }
 
@@ -117,7 +116,18 @@ public class PlayerState : LivingEntity
 
     public override void OnDamage(float damage)
     {
-        base.OnDamage(damage);
+        if(isHeadParts && !dead)
+        {
+            headPartsHealth -= damage;
+            if(headPartsHealth <= 0)
+            {
+                partsManager.ChangeParts(0, 0);
+            }
+        }
+        else
+        {
+            base.OnDamage(damage);
+        }
         GetComponent<HitEffect>().RunEffect();    
         
     }
@@ -125,8 +135,6 @@ public class PlayerState : LivingEntity
     private void Update()
     {
         //Debug.Log(health);
-        Debug.Log("동물" + animalAdaptation);
-        Debug.Log("기계" + machineAdaptation);
 
     }
     
@@ -151,13 +159,11 @@ public class PlayerState : LivingEntity
         base.Die();
         dead = true;
         movement.canMove = false;
-        animalAdaptation += animalAdaptationTmp;
-        machineAdaptation += machineAdaptationTmp;
-
-        PlayerPrefs.SetFloat("AnimalAdaptation", animalAdaptation);
-        PlayerPrefs.SetFloat("MachineAdaptation", machineAdaptation);
-        
-
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        GameManager.Instance.animalPartsAdaptation += animalAdaptationTmp;
+        GameManager.Instance.machinePartsAdaptation += machineAdaptationTmp;
+        GameManager.Instance.AdaptationSave();
+        GameManager.Instance.isGameover = true;
     }
 
 
@@ -166,43 +172,68 @@ public class PlayerState : LivingEntity
 
         if (partType == 0)
         {
-            if (partsManager.headParts[partsNum[0]].adaptation == 1)
+            if(partsManager.headParts[partsNum[0]].adaptation==0)
             {
+                isHeadParts = false;
+                headPartsHealth = 0;
+            }
+            else if (partsManager.headParts[partsNum[0]].adaptation == 1)
+            {
+                if (!isHeadParts)
+                {
+                    isHeadParts = true;
+                }
                 animalAdaptationTmp += 0.05f;
-                if (partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + defaultHealth >= maxHealth)
-                {
-                    health = partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + health;
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + defaultHealth;
-                }
-                else
-                {
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * animalAdaptation + defaultHealth;
-                    if (maxHealth < health)
-                        health = maxHealth;
-                }
+                headPartsHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation;
             }
-            else if(partsManager.headParts[partsNum[0]].adaptation == 2)
+            else
             {
+                if (!isHeadParts)
+                {
+                    isHeadParts = true;
+                }
                 machineAdaptationTmp += 0.05f;
-                if (partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + defaultHealth >= maxHealth)
-                {
-                    health = partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + health;
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + defaultHealth;
-                }
-                else
-                {
-                    maxHealth = partsManager.headParts[partsNum[0]].partsHealth * machineAdaptation + defaultHealth;
-                    if (maxHealth < health)
-                        health = maxHealth;
-                }
+                headPartsHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation;
             }
+
+
+            //if (partsManager.headParts[partsNum[0]].adaptation == 1)
+            //{
+            //    animalAdaptationTmp += 0.05f;
+            //    if (partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth >= maxHealth)
+            //    {
+            //        health = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + health;
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth;
+            //    }
+            //    else
+            //    {
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.animalPartsAdaptation + defaultHealth;
+            //        if (maxHealth < health)
+            //            health = maxHealth;
+            //    }
+            //}
+            //else if(partsManager.headParts[partsNum[0]].adaptation == 2)
+            //{
+            //    machineAdaptationTmp += 0.05f;
+            //    if (partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth >= maxHealth)
+            //    {
+            //        health = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + health;
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth;
+            //    }
+            //    else
+            //    {
+            //        maxHealth = partsManager.headParts[partsNum[0]].partsHealth * GameManager.Instance.machinePartsAdaptation + defaultHealth;
+            //        if (maxHealth < health)
+            //            health = maxHealth;
+            //    }
+            //}
         }
         else if (partType == 1)
         {
             if (partsManager.armParts[partsNum[1]].adaptation == 1)
             {
                 animalAdaptationTmp += 0.05f;
-                attDamage = partsManager.armParts[partsNum[1]].partsDamage * animalAdaptation + defaultDamage;
+                attDamage = partsManager.armParts[partsNum[1]].partsDamage * GameManager.Instance.animalPartsAdaptation + defaultDamage;
                 attSpeed = partsManager.armParts[partsNum[1]].partsAttSpeed + defaultAttSpeed;
                 attRange = partsManager.armParts[partsNum[1]].attRange;
                 attType = partsManager.armParts[partsNum[1]].partsType;
@@ -211,7 +242,7 @@ public class PlayerState : LivingEntity
             else if (partsManager.armParts[partsNum[1]].adaptation == 2)
             {
                 machineAdaptationTmp += 0.05f;
-                attDamage = partsManager.armParts[partsNum[1]].partsDamage * machineAdaptation + defaultDamage;
+                attDamage = partsManager.armParts[partsNum[1]].partsDamage * GameManager.Instance.machinePartsAdaptation + defaultDamage;
                 attSpeed = partsManager.armParts[partsNum[1]].partsAttSpeed + defaultAttSpeed;
                 attRange = partsManager.armParts[partsNum[1]].attRange;
                 attType = partsManager.armParts[partsNum[1]].partsType;
@@ -226,7 +257,7 @@ public class PlayerState : LivingEntity
                 animalAdaptationTmp += 0.05f;
                 dash = partsManager.legParts[partsNum[2]].dash;
                 jumpCount = partsManager.legParts[partsNum[2]].jumpCount;
-                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * animalAdaptation;
+                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * GameManager.Instance.animalPartsAdaptation;
                 jumpForce = partsManager.legParts[partsNum[2]].jumpForce;
             }
             else if (partsManager.legParts[partsNum[2]].adaptation == 2)
@@ -234,9 +265,12 @@ public class PlayerState : LivingEntity
                 machineAdaptationTmp += 0.05f;
                 dash = partsManager.legParts[partsNum[2]].dash;
                 jumpCount = partsManager.legParts[partsNum[2]].jumpCount;
-                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * machineAdaptation;
+                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * GameManager.Instance.machinePartsAdaptation;
                 jumpForce = partsManager.legParts[partsNum[2]].jumpForce;
             }
+            transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
         }
+
+        
     }
 }

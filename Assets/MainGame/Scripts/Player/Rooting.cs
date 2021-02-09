@@ -51,7 +51,7 @@ public class Rooting : MonoBehaviour
   
                 rootUI.SetActive(true);
                 //tmp.ChangeParts(0, 1);
-                rootUI.GetComponent<LootingUI>().printroot(rootItemList);
+                rootUI.GetComponent<LootingUI>().printroot(rootItemList, other.gameObject);
             }
         }
     }

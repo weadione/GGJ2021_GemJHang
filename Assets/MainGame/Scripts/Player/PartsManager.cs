@@ -38,7 +38,7 @@ public class PartsManager : MonoBehaviour
         legParts = new Parts[10];
         headParts = new Parts[9];
 
-        //체력, 뎀지, 근/원거리, 공속, 이속, 이름, 사거리, 대쉬여부, 점프카운트, 점프력
+        //체력, 뎀지, 근/원거리, 공속, 이속, 이름, 사거리, 대쉬여부, 점프카운트, 점프력, 파츠의 타입(동물, 기계)
 
         armParts[0] = new Parts(0f, 10f, true, 0.4f, 0f, "default", 3, false, 1, 0, 0);          //기본
         armParts[1] = new Parts(0f, 15f, true, 0.3f, 0f, "bug", 6, false, 1, 0, 1);                 //송충이 
@@ -117,10 +117,34 @@ public class PartsManager : MonoBehaviour
         {
             Debug.LogError("ChangeParts 오류!");
         }
+        
         lootUI.SetActive(false);
         
 
     }
 
+    public void ResetParts()
+    {
+        headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
+        headParts[0].mainObject.SetActive(true);
+
+        armParts[PlayerState.Instance.partsNum[1]].mainObject.SetActive(false);
+        armParts[0].mainObject.SetActive(true);
+
+        legParts[PlayerState.Instance.partsNum[2]].mainObject.SetActive(false);
+        legParts[0].mainObject.SetActive(true);
+    }
+
+    public void LoadParts()
+    {
+        headParts[0].mainObject.SetActive(false);
+        headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(true);
+
+        armParts[0].mainObject.SetActive(false);
+        armParts[PlayerState.Instance.partsNum[1]].mainObject.SetActive(true);
+
+        legParts[0].mainObject.SetActive(false);
+        legParts[PlayerState.Instance.partsNum[2]].mainObject.SetActive(true);
+    }
 
 }
