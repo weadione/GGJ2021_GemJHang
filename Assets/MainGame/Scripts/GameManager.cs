@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         //저장된 값들 초기화하는 함수 오류발생해서 꼬이거나 적응도 리셋 원할시 1번만 실행후 주석 처리 바람
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         
     }
 
