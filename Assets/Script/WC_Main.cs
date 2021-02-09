@@ -40,7 +40,7 @@ public class WC_Main : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode){
        currentStageCamera = ChangePosiitonScript.cur;
-       Debug.Log("LOG : currentStageCamera = " + currentStageCamera);
+//       Debug.Log("LOG : currentStageCamera = " + currentStageCamera);
       if(currentStageCamera <=1)
          return;
       if(currentStageCamera <4)
