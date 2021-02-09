@@ -58,7 +58,7 @@ public class WC_Background : MonoBehaviour
         if(nameScene != "WorldScene" && nameScene != "Title"){
             stageTier = nameScene[3] - '0';
             stageNo = nameScene[5]- '0';
-//            Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
+ //           Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
             changeCameraPosition(stageTier, stageNo);
         }
     }
