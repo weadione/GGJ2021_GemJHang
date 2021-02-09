@@ -179,7 +179,6 @@ public class EnemyState : LivingEntity
         Destroy(GetComponent<Rigidbody2D>());
         GameManager.Instance.monsterRemain--;
 
-        //object tmp = Instantiate(Resources.Load("Prefeb/DeadIcon"), new Vector2(transform.GetChild(0).transform.position.x, transform.position.y + 1.9f), transform.rotation);
         GameObject tmp = Instantiate(deadIcon, new Vector2(transform.GetChild(0).transform.position.x, transform.position.y + 1.9f), transform.rotation);
         tmp.transform.parent = transform;
     }
