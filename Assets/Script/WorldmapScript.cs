@@ -9,7 +9,7 @@ public class WorldmapScript : MonoBehaviour
 
     void Start()
     {
-        
+  
     }
 
     void Update()
@@ -17,6 +17,9 @@ public class WorldmapScript : MonoBehaviour
         
     }
 
+    public void setCurrentStage(int a){
+        currentStage = a;
+    }
     public void LoadMap()
     {
         SceneManager.LoadScene("WorldScene");

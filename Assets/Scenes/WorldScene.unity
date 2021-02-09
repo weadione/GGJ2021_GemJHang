@@ -710,6 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 8
   stem: 0
+  current: 0
 --- !u!1 &54677203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,9 +1502,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 130630882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77a52bf52272d794e99887a4fe4b298a, type: 3}
+  m_Script: {fileID: 11500000, guid: 668698c7aab64854d8ff6644db8fa190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStageCamera: 0
 --- !u!1 &138484849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,6 +1556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 6
   stem: 2
+  current: 0
 --- !u!61 &138484852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1778,6 +1781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 1
   stem: 0
+  current: 0
 --- !u!61 &151927457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1854,6 +1858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 1
   stem: 2
+  current: 0
 --- !u!61 &154763882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2012,6 +2017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 7
   stem: 1
+  current: 0
 --- !u!61 &184747803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2364,7 +2370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 236719107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f73147d9a84314a8bb2dab807a3907, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e49c64cf3e467f4d839c810ffe25123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &236719109
@@ -5663,6 +5669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 6
   stem: 1
+  current: 0
 --- !u!61 &592810395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5968,6 +5975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 6
   stem: 0
+  current: 0
 --- !u!61 &617793412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10200,7 +10208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978771831}
   m_Layer: 0
-  m_Name: stage_10
+  m_Name: stage_10-0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10663,6 +10671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 0
   stem: 0
+  current: 0
 --- !u!61 &1008952016
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11134,6 +11143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 7
   stem: 2
+  current: 0
 --- !u!61 &1036395673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11560,6 +11570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 2
   stem: 0
+  current: 0
 --- !u!61 &1082775329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12760,6 +12771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 5
   stem: 0
+  current: 0
 --- !u!61 &1178854656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13053,7 +13065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193829498}
   m_Layer: 0
-  m_Name: stage_5
+  m_Name: stage_5-0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14613,6 +14625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 7
   stem: 0
+  current: 0
 --- !u!61 &1264599346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15673,6 +15686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 2
   stem: 1
+  current: 0
 --- !u!1 &1360370135
 GameObject:
   m_ObjectHideFlags: 0
@@ -15966,6 +15980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 1
   stem: 1
+  current: 0
 --- !u!61 &1364210267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16740,6 +16755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 0
   stem: 1
+  current: 0
 --- !u!61 &1428532384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17925,6 +17941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 3
   stem: 0
+  current: 0
 --- !u!61 &1551833792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20403,6 +20420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 9
   stem: 0
+  current: 0
 --- !u!1 &1811981217
 GameObject:
   m_ObjectHideFlags: 0
@@ -21144,7 +21162,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1866007133}
   - component: {fileID: 1866007135}
-  - component: {fileID: 1866007134}
   - component: {fileID: 1866007136}
   m_Layer: 0
   m_Name: stage
@@ -21171,18 +21188,6 @@ Transform:
   m_Father: {fileID: 503878832}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1866007134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866007132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa517e603387eb6448c413e91bb2c93c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1866007135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21223,6 +21228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 8
   stem: 1
+  current: 0
 --- !u!114 &1892697882 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2127936205764601254, guid: ac25f54e9d2d4f845adef0b3040e209e,
@@ -22525,6 +22531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015080242}
   - component: {fileID: 2015080241}
+  - component: {fileID: 2015080243}
   m_Layer: 0
   m_Name: Worldmap
   m_TagString: Untagged
@@ -22596,6 +22603,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2015080243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015080240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758f4abf3a2dd724eadeaa30453c6e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStage: 0
 --- !u!1 &2015731415
 GameObject:
   m_ObjectHideFlags: 0
@@ -22646,6 +22666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 5
   stem: 1
+  current: 0
 --- !u!61 &2015731418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22748,6 +22769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 4
   stem: 0
+  current: 0
 --- !u!1 &2052397200
 GameObject:
   m_ObjectHideFlags: 0
@@ -23075,6 +23097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 3
   stem: 1
+  current: 0
 --- !u!61 &2093837362
 BoxCollider2D:
   m_ObjectHideFlags: 0

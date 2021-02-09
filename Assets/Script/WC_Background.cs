@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class bgCamScript : MonoBehaviour
+public class WC_Background : MonoBehaviour
 {
     string nameScene;
     int stageTier = -1;
@@ -65,7 +65,7 @@ public class bgCamScript : MonoBehaviour
 
     void changeCameraPosition(int tier, int num){
         camera = transform.GetChild(0).gameObject;
-        Debug.Log(camera.name);
+//        Debug.Log("DEBUG LOG ON changeCameraPosition "+ camera.name);
         Vector3 abCam = camera.transform.position;
         float x = abCam.x;
         float y = abCam.y;
