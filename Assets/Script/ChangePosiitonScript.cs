@@ -11,7 +11,7 @@ public class ChangePosiitonScript : MonoBehaviour
 
     public static int cur;          // 지나온, 현재 스테이지 레벨.
     public static bool [, ] isVisited = new bool [10,3];
-    int [, ] eventNode = WorldmapScript.eventNode; 
+    public static int [, ] eventNode = new int [10 ,3]; 
 
 
     public int current;
@@ -19,19 +19,16 @@ public class ChangePosiitonScript : MonoBehaviour
     int tmpRnd = -1;
     bool isVisitedThis;
 
-    WorldmapScript call;
-
     void Start(){
-        // string nameScene = SceneManager.GetActiveScene().name;
-        // stageLevel = nameScene[3] - '0';
-        // stem = nameScene[5] - '0';
-        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem]);
-        if(eventNode[stageLevel,stem] < 50)
+
+        if(eventNode[stageLevel,stem] < 30)
             isEventThis = true;
         else
             isEventThis = false;
+        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem] + isEventThis);
 
         isVisitedThis = isVisited[stageLevel,stem];
+        changeIconPos();    
     }
 
     void Update()
@@ -54,8 +51,7 @@ public class ChangePosiitonScript : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
   
         if(cur == 10)
-            callEndingScene();
-        tryApsoluteXY();      
+            callEndingScene();  
 
     }    
 
@@ -75,13 +71,13 @@ public class ChangePosiitonScript : MonoBehaviour
          
     }
 
-    void tryApsoluteXY(){
-//        Debug.Log("DEBUG: tryApsoluteXY " + isEvent );
-//        battle = (isEvent == true) ?  transform.GetChild(3).gameObject : transform.GetChild(0).gameObject;
-        if(isEventThis == true)
+    void changeIconPos(){
+        if(isEventThis == true && stageLevel != 4 && stageLevel != 9){
             battle = transform.GetChild(3).gameObject;
-        if(isEventThis == false)
+        }
+        else {
             battle = transform.GetChild(0).gameObject;      //  defaultZ: 0
+        }
         staying = transform.GetChild(1).gameObject;      //  defaultZ: -20
         chNode = transform.GetChild(2).gameObject;      //  defaultZ: -40
         eNode = transform.GetChild(3).gameObject;

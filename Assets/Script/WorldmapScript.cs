@@ -5,15 +5,10 @@ using UnityEngine.SceneManagement;
 public class WorldmapScript : MonoBehaviour
 {
     public int currentStage = 0;
-    public static int [, ] eventNode = new int [10 ,3]; 
-    public static bool calledOnlyOnce = false;    
-
+    int [, ] eventNode = ChangePosiitonScript.eventNode; 
     void Start()
     {
-        if(calledOnlyOnce == false){
-            randomizeEventsNode();
-            calledOnlyOnce = true;
-        }
+//        randomizeEventsNode();
     }
 
     void Update()
