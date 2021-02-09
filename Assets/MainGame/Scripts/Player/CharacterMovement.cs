@@ -143,7 +143,7 @@ public class CharacterMovement : MonoBehaviour
                 isGrounded = true;
                 jumpCount = 0;
             }
-            Debug.Log(collision.contacts[i].normal.y);
+            //Debug.Log(collision.contacts[i].normal.y);
         }
 
     }

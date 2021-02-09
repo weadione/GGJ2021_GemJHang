@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
+        //저장된 값들 초기화하는 함수. 세이브&로드 관련해서 오류가 발생해서 꼬이거나 적응도 리셋 원할시 아래 함수를 1번만 실행 후 다시 주석 처리 할 것
+        PlayerPrefs.DeleteAll();
+
         monsterRemain = 0;
         playerParts = new int[3];
         isGameover = false;
@@ -53,7 +56,7 @@ public class GameManager : MonoBehaviour
     //플레이어 스텟 변수들(세이브 로드용)->사용 안 할수도
     private float playerAttDamage;
     private float playerHealth;
-    private bool playerAttType; //->
+    private bool playerAttType;
     private float playerAttSpped;
     private float playerMoveSpeed;
     private float playerDashSpeed;
@@ -230,12 +233,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Start()
-    {
-        //저장된 값들 초기화하는 함수 오류발생해서 꼬이거나 적응도 리셋 원할시 1번만 실행후 주석 처리 바람
-        //PlayerPrefs.DeleteAll();
-        
-    }
 
 
     private void Update()

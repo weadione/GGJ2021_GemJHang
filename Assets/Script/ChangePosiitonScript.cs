@@ -15,21 +15,16 @@ public class ChangePosiitonScript : MonoBehaviour
 
     public int current;
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
-    int tmpRnd = -1;
+    int tmpRnd;
     bool isVisitedThis;
 
     WorldmapScript call;
 
-    void start(){
-        call = GameObject.Find("Worldmap").GetComponent<WorldmapScript>();
-        cur = call.currentStage; 
-            tmpRnd = Random.Range(1,10);
-            Debug.Log("DEBUG: tryApsoluteXY " + tmpRnd );
-            if(tmpRnd < 5)
-                isEvent = true;
-            else
-                isEvent = false;
-        DontDestroyOnLoad(gameObject);
+    private void Start(){
+        //call = GameObject.Find("Worldmap").GetComponent<WorldmapScript>();
+        //cur = call.currentStage; 
+        //DontDestroyOnLoad(gameObject);
+        tmpRnd = -1;
 
         // string nameScene = SceneManager.GetActiveScene().name;
         // stageLevel = nameScene[3] - '0';
@@ -46,12 +41,23 @@ public class ChangePosiitonScript : MonoBehaviour
         }
     }
 
+
+
     void OnEnable(){
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
 
+        if (tmpRnd == -1)
+        {
+            tmpRnd = Random.Range(1, 10);
+            Debug.Log("DEBUG: tryApsoluteXY " + tmpRnd);
+            if (tmpRnd < 5)
+                isEvent = true;
+            else
+                isEvent = false;
+        }
         if(cur == 10)
             callEndingScene();
         tryApsoluteXY();      

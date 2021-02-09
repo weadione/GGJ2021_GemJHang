@@ -20,14 +20,14 @@ public class LootingUI : MonoBehaviour
     public int[] itemList;
 
     public PartsManager partsManager;
- 
+    public GameObject monsterBody;
 
 
 
-    public void printroot(int[] itemlist)
+    public void printroot(int[] itemlist, GameObject monsterBody)
     {
         this.itemList = itemlist;
-
+        this.monsterBody = monsterBody;
 
 
         if (!(itemlist[0] == 0))
@@ -118,6 +118,7 @@ public class LootingUI : MonoBehaviour
         returnValue[0] = 0;
         returnValue[1] = itemList[0];
         partsManager.ChangeParts(returnValue[0], returnValue[1]);
+        monsterBody.SetActive(false);
     }
     public void select2()
     {
@@ -125,6 +126,7 @@ public class LootingUI : MonoBehaviour
         returnValue[0] = 1;
         returnValue[1] = itemList[1];
         partsManager.ChangeParts(returnValue[0], returnValue[1]);
+        monsterBody.SetActive(false);
     }
     public void select3()
     {
@@ -132,6 +134,7 @@ public class LootingUI : MonoBehaviour
         returnValue[0] = 2;
         returnValue[1] = itemList[2];
         partsManager.ChangeParts(returnValue[0], returnValue[1]);
+        monsterBody.SetActive(false);
     }
 
 }
