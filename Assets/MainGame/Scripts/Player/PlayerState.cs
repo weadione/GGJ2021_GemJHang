@@ -35,6 +35,8 @@ public class PlayerState : LivingEntity
     public float machineAdaptationTmp;
 
 
+    
+
     private static PlayerState instance;
     public static PlayerState Instance
     {
