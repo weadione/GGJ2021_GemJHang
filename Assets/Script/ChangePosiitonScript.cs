@@ -7,31 +7,29 @@ public class ChangePosiitonScript : MonoBehaviour
 {
     public int stageLevel;          // 노드의 정해진 스테이지 레벨.
     public int stem;
-    public bool isEvent;
+    public bool isEventThis;
 
     public static int cur;          // 지나온, 현재 스테이지 레벨.
     public static bool [, ] isVisited = new bool [10,3];
+    public static int [, ] eventNode = new int [10 ,3]; 
 
 
     public int current;
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
-    int tmpRnd;
     bool isVisitedThis;
 
-    WorldmapScript call;
+    void Start(){
 
-    private void Start(){
-        //call = GameObject.Find("Worldmap").GetComponent<WorldmapScript>();
-        //cur = call.currentStage; 
-        //DontDestroyOnLoad(gameObject);
-        tmpRnd = -1;
-
-        // string nameScene = SceneManager.GetActiveScene().name;
-        // stageLevel = nameScene[3] - '0';
-        // stem = nameScene[5] - '0';
+        if(eventNode[stageLevel,stem] < 30)
+            isEventThis = true;
+        else
+            isEventThis = false;
+//        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem] + isEventThis);
 
         isVisitedThis = isVisited[stageLevel,stem];
+        changeIconPos();    
     }
+
     void Update()
     {
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
@@ -41,26 +39,19 @@ public class ChangePosiitonScript : MonoBehaviour
         }
     }
 
-
-
     void OnEnable(){
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    // public void randomizeEventsNode(){
+    //     int tmpRandom;
+    //     eventNode[stageLevel,stem] = tmpRandom = Random.Range(0,100);
+    // }
+    
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
-
-        if (tmpRnd == -1)
-        {
-            tmpRnd = Random.Range(1, 10);
-            Debug.Log("DEBUG: tryApsoluteXY " + tmpRnd);
-            if (tmpRnd < 5)
-                isEvent = true;
-            else
-                isEvent = false;
-        }
+  
         if(cur == 10)
-            callEndingScene();
-        tryApsoluteXY();      
+            callEndingScene();  
 
     }    
 
@@ -79,13 +70,13 @@ public class ChangePosiitonScript : MonoBehaviour
          
     }
 
-    void tryApsoluteXY(){
-//        Debug.Log("DEBUG: tryApsoluteXY " + isEvent );
-//        battle = (isEvent == true) ?  transform.GetChild(3).gameObject : transform.GetChild(0).gameObject;
-        if(isEvent == true)
+    void changeIconPos(){
+        if(isEventThis == true && stageLevel != 4 && stageLevel != 9){
             battle = transform.GetChild(3).gameObject;
-        if(isEvent == false)
+        }
+        else {
             battle = transform.GetChild(0).gameObject;      //  defaultZ: 0
+        }
         staying = transform.GetChild(1).gameObject;      //  defaultZ: -20
         chNode = transform.GetChild(2).gameObject;      //  defaultZ: -40
         eNode = transform.GetChild(3).gameObject;
