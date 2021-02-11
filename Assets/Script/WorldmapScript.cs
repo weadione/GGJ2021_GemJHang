@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 public class WorldmapScript : MonoBehaviour
 {
     public int currentStage = 0;
-    
-
+    int [, ] eventNode = ChangePosiitonScript.eventNode; 
     void Start()
     {
-  
+//        randomizeEventsNode();
     }
 
     void Update()
@@ -17,6 +16,17 @@ public class WorldmapScript : MonoBehaviour
         
     }
 
+    public void randomizeEventsNode(){
+        Debug.Log("randomizeEventsNode called ");
+        int tmpRandom;
+        for(int i=0;i<10;i++){
+            for (int j=0;j<3;j++)
+                eventNode[i,j] = Random.Range(0,100);
+        }
+    }
+    public void setEvent(){
+
+    }
     public void setCurrentStage(int a){
         currentStage = a;
     }

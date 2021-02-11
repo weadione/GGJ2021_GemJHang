@@ -116,6 +116,8 @@ MonoBehaviour:
   attackAnimator: {fileID: 1885266637}
   monsterBullet: {fileID: 6916699379703761257, guid: 1badec48480e81542ab05c88353e70d3,
     type: 3}
+  deadIcon: {fileID: 4322994657405290576, guid: 27af7dfe8fd8d144c9b263672713d10d,
+    type: 3}
 --- !u!50 &8442991439674851367
 Rigidbody2D:
   serializedVersion: 4

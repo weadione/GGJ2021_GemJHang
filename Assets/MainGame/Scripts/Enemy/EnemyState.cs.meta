@@ -7,7 +7,7 @@ MonoImporter:
   - enemyMove: {instanceID: 0}
   - attackAnimator: {instanceID: 0}
   - monsterBullet: {instanceID: 0}
-  - deadIcon: {fileID: 4322994657405290576, guid: 27af7dfe8fd8d144c9b263672713d10d,
+  - deadIcon: {fileID: 4322994657405290576, guid: 5d1f4f01ee803c040a145b7ca8eeaadd,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

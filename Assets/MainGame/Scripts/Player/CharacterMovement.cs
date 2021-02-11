@@ -136,12 +136,15 @@ public class CharacterMovement : MonoBehaviour
         // 바닥에 닿았음을 감지하는 처리
         //Debug.Log(collision.contacts[0].normal.y);
         for (int i = 0; i < collision.contacts.Length; i++)
+        {
             if (collision.contacts[i].normal.y > 0.7f && collision.contacts[i].collider.tag == "Map")
             {
-                //Debug.Log(collision.contacts.Length);
+                
                 isGrounded = true;
                 jumpCount = 0;
             }
+            //Debug.Log(collision.contacts[i].normal.y);
+        }
 
     }
 
