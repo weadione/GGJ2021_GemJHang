@@ -16,7 +16,6 @@ public class ChangePosiitonScript : MonoBehaviour
 
     public int current;
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
-    int tmpRnd = -1;
     bool isVisitedThis;
 
     void Start(){
@@ -25,7 +24,7 @@ public class ChangePosiitonScript : MonoBehaviour
             isEventThis = true;
         else
             isEventThis = false;
-        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem] + isEventThis);
+//        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem] + isEventThis);
 
         isVisitedThis = isVisited[stageLevel,stem];
         changeIconPos();    
@@ -48,6 +47,7 @@ public class ChangePosiitonScript : MonoBehaviour
     //     int tmpRandom;
     //     eventNode[stageLevel,stem] = tmpRandom = Random.Range(0,100);
     // }
+    
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
   
         if(cur == 10)
@@ -58,7 +58,6 @@ public class ChangePosiitonScript : MonoBehaviour
     void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
         current = cur;
-        tmpRnd = -2;
     }
 
     void callEndingScene(){
