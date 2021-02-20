@@ -75,9 +75,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EndingScene.unity
     guid: ed8f526e85818a3489b0e697387f2ddb
   - enabled: 1
-    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/A0.unity"
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev0.unity"
     guid: 6abeea59e3c637d4ea7371af55f1871e
   - enabled: 1
-    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/A0_Battle.unity"
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev0_Bs.unity"
     guid: 4a7881892a4d9ca4b94571c8c6db5bde
   m_configObjects: {}
