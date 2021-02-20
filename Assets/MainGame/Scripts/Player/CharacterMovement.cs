@@ -46,7 +46,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && jumpCount < PlayerState.Instance.jumpCount)       // 점프 카운트가 2이상이면 점프 불가능(땅에 있을때 0임)
             {
-                
+                GetComponent<PlayerAudio>().PlayAudioEffect(3);
                 jumpCount++;
                 rigid2D.velocity = Vector2.zero;
                 rigid2D.AddForce(new Vector2(0, PlayerState.Instance.jumpForce));
@@ -55,6 +55,7 @@ public class CharacterMovement : MonoBehaviour
             }
             else if (Input.GetKeyUp(KeyCode.Space) && rigid2D.velocity.y > 0)   //스페이스 키가 떼어질 때 실행되어서 짧은 점프 실행하는거
             {
+//                GetComponent<PlayerAudio>().PlayAudioEffect(3);
                 rigid2D.velocity *= 0.5f;
             }
 
