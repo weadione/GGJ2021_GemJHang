@@ -68,7 +68,7 @@ public class EventManager : MonoBehaviour
     }
     private void Update()
     {
-
+        Debug.Log("ses  " + selectStep + "scn  " + scriptNum + "sec   " + selectNum);
 
         SelectOn();
         RunEvent();
@@ -174,13 +174,12 @@ public class EventManager : MonoBehaviour
         {
             button[0].SetActive(true);
             button[1].SetActive(true);
+            scriptNum = 0;
         }
         else if (scriptNum == 2)
         {
             Debug.Log("싸우러가자");
             SceneManager.LoadScene("A0_Battle");
-            selectStep = 0;
-            scriptNum = 0;
         }
         else if(scriptNum == 3)
         {
@@ -218,6 +217,7 @@ public class EventManager : MonoBehaviour
 
             }
             selectNum = 0;
+            scriptNum = 0;
 
         }
         else if (selectNum == 2)

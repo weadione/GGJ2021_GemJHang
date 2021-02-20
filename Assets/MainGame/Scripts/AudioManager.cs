@@ -9,37 +9,21 @@ public class AudioManager : MonoBehaviour
     int stageTier = -1;
     int stageNo = -1;
     public AudioClip[] audioClipArr;
+    
     public AudioSource audioSource;
+    
     int currentAudio;
 
-    private static GameObject instance;
-    public static GameObject Instance
-    {
-        get
-        {
-            // 만약 싱글톤 변수에 아직 오브젝트가 할당되지 않았다면
-            if (instance == null)
-            {
-                // 씬에서 GameManager 오브젝트를 찾아 할당
-                instance = GameObject.FindWithTag("DontDestroy");
-            }
 
-            // 싱글톤 오브젝트를 반환
-            return instance;
-        }
-    }
 
     private void Awake()
     {
-        if (instance)
-        {
-            DestroyImmediate(gameObject);
-            return;
-        }
-        instance = this.gameObject;
+
         audioSource = GetComponent<AudioSource>();
+        
         currentAudio = -1;
         DontDestroyOnLoad(gameObject);
+        audioSource.volume = 0.5f;
     }
 
 
@@ -159,5 +143,10 @@ public class AudioManager : MonoBehaviour
 
 
     }
+
+    
+
+
+
 
 }
