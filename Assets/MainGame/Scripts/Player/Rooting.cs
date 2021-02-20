@@ -50,6 +50,7 @@ public class Rooting : MonoBehaviour
                 click = false;
   
                 rootUI.SetActive(true);
+                rootUI.GetComponent<LootingUI>().PlayerImageCamera.SetActive(true);
                 //tmp.ChangeParts(0, 1);
                 rootUI.GetComponent<LootingUI>().printroot(rootItemList, other.gameObject);
             }
