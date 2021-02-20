@@ -12,10 +12,12 @@ public class EventManager : MonoBehaviour
     public int scriptNum; // ses에 의해서 증가함(ses가 확인하면 그에 따라서 변화를 일으키는 조건
     public GameObject[] button;
     public int selectStep; // 시작 == 0, 스크립트 클릭하여 변화가 일어나면 1씩 증가(사용자 클릭 확인)
+    public int battle;      // 0-> 노싸움, 1-> 싸움시작 2-> 싸움 끝
 
     string nameScene;
     int stageTier = -1;
     int stageNo = -1;
+    
 
     public static GameObject Instance
     {
@@ -35,12 +37,11 @@ public class EventManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         nameScene = SceneManager.GetActiveScene().name;
-        if (nameScene != "WorldScene" && nameScene != "Title")
-        {
-            stageTier = nameScene[0];
-            stageNo = nameScene[2] - '0';
-            Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
-        }
+
+        stageTier = nameScene[0];
+        stageNo = nameScene[2] - '0';
+        Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
+
         selectStep = 0;
         selectNum = 0;
         scriptNum = 0;
@@ -51,6 +52,12 @@ public class EventManager : MonoBehaviour
         // 씬 매니저의 sceneLoaded에 체인을 건다.
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
 
 
     private void Awake()
@@ -66,12 +73,15 @@ public class EventManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
     }
+
+
     private void Update()
     {
         Debug.Log("ses  " + selectStep + "scn  " + scriptNum + "sec   " + selectNum);
 
         SelectOn();
         RunEvent();
+        
     }
     public void SelectOn()
     {
@@ -170,22 +180,30 @@ public class EventManager : MonoBehaviour
 
     public void EV0RunEvent() //ses 0 -> 선택지ON 1-> 전투 2->탈출 
     {
+        Debug.Log("이벤트로는 들어옴" + scriptNum);
         if (scriptNum == 1)
         {
+            Debug.Log("SCN은 1임");
             button[0].SetActive(true);
             button[1].SetActive(true);
+            Debug.Log("SCN은 1맞음");
             scriptNum = 0;
         }
         else if (scriptNum == 2)
         {
             Debug.Log("싸우러가자");
+            
             SceneManager.LoadScene("EV0_BS");
         }
         else if(scriptNum == 3)
         {
             SceneManager.LoadScene("WorldScene");
         }
+        if(battle ==1)
+        {
+            
 
+        }
 
         if (selectNum == 1)
         {

@@ -147,6 +147,8 @@ public class ChangePosiitonScript : MonoBehaviour
         else
             isFront = false;
 
+
+
         if (isFront){
         switch(bsn){
             case 0:
