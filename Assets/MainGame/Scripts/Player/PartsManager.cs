@@ -90,8 +90,6 @@ public class PartsManager : MonoBehaviour
 
     public void ChangeParts(int partsType, int changeNum)   //partsType: 파츠타입, changNum: 원하는 파츠의 번호
     {
-        Debug.Log(partsType);
-        Debug.Log(changeNum);
         if(partsType==0)    //머리
         {
             headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
