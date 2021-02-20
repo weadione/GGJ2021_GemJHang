@@ -130,6 +130,7 @@ public class PlayerState : LivingEntity
         {
             base.OnDamage(damage);
         }
+        GetComponent<PlayerAudio>().PlayAudioEffect(4);
         GetComponent<HitEffect>().RunEffect();    
         
     }
