@@ -38,7 +38,7 @@ public class EventManager : MonoBehaviour
         if (nameScene != "WorldScene" && nameScene != "Title")
         {
             stageTier = nameScene[0];
-            stageNo = nameScene[1] - '0';
+            stageNo = nameScene[2] - '0';
             Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
         }
         selectStep = 0;
@@ -81,15 +81,15 @@ public class EventManager : MonoBehaviour
 
     public void RunEvent()
     {
-        if(stageTier == 65) // A 아스키코드값
+        if(stageTier == 69) // A 아스키코드값
         {
             if(stageNo == 0) // A0
             {
-                A0RunEvent();
+                EV0RunEvent();
             }
             if(stageNo == 1)
             {
-                A1RunEvent();
+                EV1RunEvent();
             }
 
         }
@@ -97,7 +97,7 @@ public class EventManager : MonoBehaviour
     }
     
     
-    public void A1RunEvent() // ses 0-> 스크립트 1-> 선택지 ON 2-> 전투 3-> 송충이 저주 4-> 탈출
+    public void EV1RunEvent() // ses 0-> 스크립트 1-> 선택지 ON 2-> 전투 3-> 송충이 저주 4-> 탈출
     {
         if(scriptNum == 1)
         {
@@ -168,7 +168,7 @@ public class EventManager : MonoBehaviour
     
 
 
-    public void A0RunEvent() //ses 0 -> 선택지ON 1-> 전투 2->탈출 
+    public void EV0RunEvent() //ses 0 -> 선택지ON 1-> 전투 2->탈출 
     {
         if (scriptNum == 1)
         {
@@ -179,7 +179,7 @@ public class EventManager : MonoBehaviour
         else if (scriptNum == 2)
         {
             Debug.Log("싸우러가자");
-            SceneManager.LoadScene("A0_Battle");
+            SceneManager.LoadScene("EV0_BS");
         }
         else if(scriptNum == 3)
         {
