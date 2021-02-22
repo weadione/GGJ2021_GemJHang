@@ -65,15 +65,21 @@ public class EventManager : MonoBehaviour
 
     private void Awake()
     {
-        selectNum = 0;
+        nameScene = SceneManager.GetActiveScene().name;
+
+        stageTier = nameScene[0];
+        stageNo = nameScene[2] - '0';
         if (instance)
         {
             DestroyImmediate(gameObject);
             return;
         }
         instance = this.gameObject;
-        selectStep = 0;
+        
         DontDestroyOnLoad(gameObject);
+        selectStep = 0;
+        selectNum = 0;
+        scriptNum = 0;
 
     }
 
