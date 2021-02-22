@@ -47,7 +47,7 @@ public class EventManager : MonoBehaviour
 
         stageTier = nameScene[0];
         stageNo = nameScene[2] - '0';
-        Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
+        Debug.Log("EventManagerLOG stageName : " +nameScene);
 
         selectStep = 0;
         selectNum = 0;

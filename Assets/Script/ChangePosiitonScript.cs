@@ -22,7 +22,7 @@ public class ChangePosiitonScript : MonoBehaviour
 
     void Start(){
 
-        if(eventNode[stageLevel,stem] < 30)
+        if(eventNode[stageLevel,stem] < 70)
             isEventThis = true;
         else
             isEventThis = false;
@@ -37,7 +37,14 @@ public class ChangePosiitonScript : MonoBehaviour
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur&& avalStem[formerSelect]){
             isVisited[stageLevel,stem] = true;
             cur++;
-            stageSelect();           
+            switch(isEventThis){
+                case true:
+                eventSelect();
+                break;
+                case false:
+                stageSelect(); 
+                break;
+            }
         }
     }
 
@@ -127,12 +134,46 @@ public class ChangePosiitonScript : MonoBehaviour
         }
     }
 
+    void eventSelect(){            
+        string NextScene = "";
+        bool isFront;
+        GameManager.Instance.canExit = true;
+
+        if(cur < 6)
+            isFront = true;
+        else
+            isFront = false;
+
+
+        int isCommon = Random.Range(0,10);
+        if(isCommon < 2){
+            int bsn = Random.Range(6,9);
+            NextScene = "Ev" + bsn;
+        }
+        else{
+            if (isFront){
+                int bsn = Random.Range(0,4);
+                NextScene = "Ev" + bsn;
+            }
+            else {
+                int bsn = Random.Range(4,6);
+                NextScene = "Ev" + bsn;
+            }
+        }
+
+//        Debug.Log("stageLevel and stage Stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
+        formerSelect = stem;
+//        Debug.Log("formerSelect: "+ formerSelect);
+        SceneManager.LoadScene(NextScene);
+
+   }
+
+
     void stageSelect(){            
         string NextScene = "";
         bool isFront;
         int bsn = Random.Range(0,8);
         GameManager.Instance.canExit = true;
-//        Debug.Log("DEBUG LOG ON STAGESELECT  "+GameManager.Instance.canExit);
 
         if(cur!= 0 &&cur %5 == 0){
             NextScene = "BS_40"+(cur/5+1);
