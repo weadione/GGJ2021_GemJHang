@@ -12,7 +12,7 @@ public class EnemyState : LivingEntity
     public int[] item;  //드랍할 파츠
 
     public Animator attackAnimator;
-    public GameObject[] monsterBullet;
+    public GameObject monsterBullet;
 
     public GameObject deadIcon;
 
@@ -88,8 +88,7 @@ public class EnemyState : LivingEntity
 
         if(Time.time>=lastAttTime+attSpeed)
         {
-            int randomBullet = Random.Range(0, monsterBullet.Length);
-            GameObject tmpBullet = Instantiate(monsterBullet[randomBullet], transform.position, transform.rotation);
+            GameObject tmpBullet = Instantiate(monsterBullet, transform.position, transform.rotation);
             tmpBullet.GetComponent<MonsterBullet>().damage = attDamage;
             tmpBullet.GetComponent<Rigidbody2D>().velocity = transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
             tmpBullet.transform.localScale = transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);

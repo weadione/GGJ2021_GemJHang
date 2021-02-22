@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         //저장된 값들 초기화하는 함수. 세이브&로드 관련해서 오류가 발생해서 꼬이거나 적응도 리셋 원할시 아래 함수를 1번만 실행 후 다시 주석 처리 할 것
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
 
         monsterRemain = 0;
         playerParts = new int[3];

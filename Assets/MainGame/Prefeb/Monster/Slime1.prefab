@@ -185,8 +185,8 @@ MonoBehaviour:
   lastAttTime: 0
   item: 050000000200000000000000
   attackAnimator: {fileID: 340901110}
-  monsterBullet:
-  - {fileID: 3319113927516007682, guid: 416e859252f057e40b7d76a5a4887532, type: 3}
+  monsterBullet: {fileID: 3319113927516007682, guid: 416e859252f057e40b7d76a5a4887532,
+    type: 3}
   deadIcon: {fileID: 4322994657405290576, guid: 27af7dfe8fd8d144c9b263672713d10d,
     type: 3}
 --- !u!50 &7630634006982442351

@@ -415,8 +415,7 @@ MonoBehaviour:
   - {fileID: 5645864843448841108, guid: 965679b8b871ded4cbfa5b4ebeef6157, type: 3}
   - {fileID: 6916699379703761257, guid: 1badec48480e81542ab05c88353e70d3, type: 3}
   - {fileID: 6146271775281546017, guid: adc28fe2a014bb2488af643b6007bf40, type: 3}
-  deadIcon: {fileID: 1310922660608120541, guid: cb2e8e1a4a0d6b0429c37ff18b3f3acb,
-    type: 3}
+  - {fileID: 1310922660608120541, guid: cb2e8e1a4a0d6b0429c37ff18b3f3acb, type: 3}
 --- !u!50 &4121643340438605426
 Rigidbody2D:
   serializedVersion: 4

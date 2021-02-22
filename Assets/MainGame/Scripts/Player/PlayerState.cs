@@ -169,13 +169,6 @@ public class PlayerState : LivingEntity
         GameManager.Instance.isGameover = true;
     }
 
-    public void Win()
-    {
-        GameManager.Instance.animalPartsAdaptation += animalAdaptationTmp;
-        GameManager.Instance.machinePartsAdaptation += machineAdaptationTmp;
-        GameManager.Instance.AdaptationSave();
-    }
-
 
     public void updateStatus(int partType)
     {

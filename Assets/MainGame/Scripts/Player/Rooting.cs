@@ -29,6 +29,9 @@ public class Rooting : MonoBehaviour
                 Debug.Log("루팅");
                 EnemyState enemyState = other.GetComponent<EnemyState>();
                 rootItemList = enemyState.item;
+                Debug.Log(rootItemList[0]);
+                Debug.Log(rootItemList[1]);
+                Debug.Log(rootItemList[2]);
                 //if (rootItemList[0] != 0)
                 //{
                 //    tmp.ChangeParts(0, rootItemList[0]);
@@ -47,7 +50,6 @@ public class Rooting : MonoBehaviour
                 click = false;
   
                 rootUI.SetActive(true);
-                rootUI.GetComponent<LootingUI>().PlayerImageCamera.SetActive(true);
                 //tmp.ChangeParts(0, 1);
                 rootUI.GetComponent<LootingUI>().printroot(rootItemList, other.gameObject);
             }

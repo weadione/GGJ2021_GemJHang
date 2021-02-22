@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6.3195314, y: 1.9716132}
+  m_Offset: {x: -6.3195314, y: 1.220196}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.50247, y: 3.4114347}
+  m_Size: {x: 2.50247, y: 4.9142685}
   m_EdgeRadius: 0
 --- !u!114 &1571593343648721137
 MonoBehaviour:
@@ -231,8 +231,7 @@ MonoBehaviour:
   lastAttTime: 0
   item: 030000000000000002000000
   attackAnimator: {fileID: 0}
-  monsterBullet:
-  - {fileID: 0}
+  monsterBullet: {fileID: 0}
   deadIcon: {fileID: 4322994657405290576, guid: 27af7dfe8fd8d144c9b263672713d10d,
     type: 3}
 --- !u!50 &1571593344002755533
