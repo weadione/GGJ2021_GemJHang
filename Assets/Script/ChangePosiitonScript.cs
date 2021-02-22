@@ -7,9 +7,10 @@ public class ChangePosiitonScript : MonoBehaviour
 {
     public int stageLevel;          // 노드의 정해진 스테이지 레벨.
     public int stem;
-    public bool isEventThis;
+    public bool[] avalStem = new bool [3];
 
     public static int cur;          // 지나온, 현재 스테이지 레벨.
+    public static int formerSelect = 0; // 마지막으로 선택한 스테이지 레벨
     public static bool [, ] isVisited = new bool [10,3];
     public static int [, ] eventNode = new int [10 ,3]; 
 
@@ -17,6 +18,7 @@ public class ChangePosiitonScript : MonoBehaviour
     public int current;
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
     bool isVisitedThis;
+    public bool isEventThis;
 
     void Start(){
 
@@ -32,7 +34,7 @@ public class ChangePosiitonScript : MonoBehaviour
 
     void Update()
     {
-        if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
+        if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur&& avalStem[formerSelect]){
             isVisited[stageLevel,stem] = true;
             cur++;
             stageSelect();           
@@ -43,11 +45,7 @@ public class ChangePosiitonScript : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // public void randomizeEventsNode(){
-    //     int tmpRandom;
-    //     eventNode[stageLevel,stem] = tmpRandom = Random.Range(0,100);
-    // }
-    
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
   
         if(cur == 10)
@@ -203,6 +201,9 @@ public class ChangePosiitonScript : MonoBehaviour
                 break;
         }
         }
+        Debug.Log("stageLevel and stage Stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
+        formerSelect = stem;
+        Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
 
    }

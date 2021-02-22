@@ -710,7 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 8
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!1 &54677203
 GameObject:
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 6
   stem: 2
-  isEventThis: 0
+  avalStem: 000100
   current: 0
 --- !u!61 &138484852
 BoxCollider2D:
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 1
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &151927457
 BoxCollider2D:
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 1
   stem: 2
-  isEventThis: 0
+  avalStem: 000100
   current: 0
 --- !u!61 &154763882
 BoxCollider2D:
@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 7
   stem: 1
-  isEventThis: 0
+  avalStem: 000100
   current: 0
 --- !u!61 &184747803
 BoxCollider2D:
@@ -5915,7 +5915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 6
   stem: 1
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &592810395
 BoxCollider2D:
@@ -6222,7 +6222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 6
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &617793412
 BoxCollider2D:
@@ -11100,7 +11100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 0
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &1008952016
 BoxCollider2D:
@@ -11573,7 +11573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 7
   stem: 2
-  isEventThis: 0
+  avalStem: 000001
   current: 0
 --- !u!61 &1036395673
 BoxCollider2D:
@@ -12001,7 +12001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 2
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &1082775329
 BoxCollider2D:
@@ -13203,7 +13203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 5
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &1178854656
 BoxCollider2D:
@@ -15058,7 +15058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 7
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &1264599346
 BoxCollider2D:
@@ -16120,7 +16120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 2
   stem: 1
-  isEventThis: 0
+  avalStem: 000101
   current: 0
 --- !u!1 &1360370135
 GameObject:
@@ -16415,7 +16415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 1
   stem: 1
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &1364210267
 BoxCollider2D:
@@ -17192,7 +17192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 0
   stem: 1
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &1428532384
 BoxCollider2D:
@@ -18466,7 +18466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 3
   stem: 0
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &1551833792
 BoxCollider2D:
@@ -21025,7 +21025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 9
   stem: 0
-  isEventThis: 0
+  avalStem: 010101
   current: 0
 --- !u!1 &1811981217
 GameObject:
@@ -21834,7 +21834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 8
   stem: 1
-  isEventThis: 0
+  avalStem: 000101
   current: 0
 --- !u!114 &1892697882 stripped
 MonoBehaviour:
@@ -23278,7 +23278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 5
   stem: 1
-  isEventThis: 0
+  avalStem: 010000
   current: 0
 --- !u!61 &2015731418
 BoxCollider2D:
@@ -23382,7 +23382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 4
   stem: 0
-  isEventThis: 0
+  avalStem: 010100
   current: 0
 --- !u!1 &2052397200
 GameObject:
@@ -23711,7 +23711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 3
   stem: 1
-  isEventThis: 0
+  avalStem: 000100
   current: 0
 --- !u!61 &2093837362
 BoxCollider2D:
