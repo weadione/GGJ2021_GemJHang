@@ -19,6 +19,8 @@ public class EnemyState : LivingEntity
     float tmpDamage, tmpHealth, tmpattSpeed, tmpmoveSpeed;
     //bool tmp
 
+
+    
     //protected override void OnEnable()
     //{
     //    base.OnEnable();

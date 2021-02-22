@@ -7,9 +7,9 @@ public class Ending : MonoBehaviour
 {
     public void ReturnTitle()
     {
-        GameManager.Instance.ResetSave();
-        GameManager.Instance.Load();
-        PlayerState.Instance.Win();
-        SceneManager.LoadScene("TitleScene");
+        //GameManager.Instance.ResetSave();
+        //GameManager.Instance.Load();
+        //PlayerState.Instance.Win();
+        SceneManager.LoadScene("AdaptationScene");
     }
 }
