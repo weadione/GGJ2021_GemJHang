@@ -34,6 +34,13 @@ public class EventManager : MonoBehaviour
             return instance;
         }
     }
+
+    void OnEnable()
+    {
+        // 씬 매니저의 sceneLoaded에 체인을 건다.
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         nameScene = SceneManager.GetActiveScene().name;
@@ -47,11 +54,7 @@ public class EventManager : MonoBehaviour
         scriptNum = 0;
     }
 
-    void OnEnable()
-    {
-        // 씬 매니저의 sceneLoaded에 체인을 건다.
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+
 
     void OnDisable()
     {

@@ -37,6 +37,6 @@ public class NextScript : MonoBehaviour
         {
             EventManager.Instance.GetComponent<EventManager>().scriptNum = 6;
         }
-
+        
     }
 }

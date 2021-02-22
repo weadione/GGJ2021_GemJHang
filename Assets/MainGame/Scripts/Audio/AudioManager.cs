@@ -65,8 +65,10 @@ public class AudioManager : MonoBehaviour
         else if (nameScene == "WorldScene" && currentAudio == 3)
         {
             audioSource.clip = audioClipArr[3];
+            audioSource.volume = 0.1f;
             if (currentAudio != 3)
             {
+                
                 audioSource.Play();
 
             }
@@ -100,6 +102,7 @@ public class AudioManager : MonoBehaviour
         else if (tier == 2)
         {
             audioSource.clip = audioClipArr[3];
+            audioSource.volume = 0.1f;
             if (currentAudio != 3)
             {
                 audioSource.Play();
@@ -110,6 +113,7 @@ public class AudioManager : MonoBehaviour
         else if (tier == 3)
         {
             audioSource.clip = audioClipArr[3];
+            audioSource.volume = 0.1f;
             if (currentAudio != 3)
             {
                 audioSource.Play();
@@ -122,6 +126,7 @@ public class AudioManager : MonoBehaviour
             if(num == 2 )
             {
                 audioSource.clip = audioClipArr[2];
+                audioSource.volume = 0.1f;
                 if (currentAudio != 2)
                 {
                     audioSource.Play();
@@ -132,6 +137,7 @@ public class AudioManager : MonoBehaviour
             else if(num == 3 )
             {
                 audioSource.clip = audioClipArr[4];
+                audioSource.volume = 0.07f;
                 if (currentAudio != 4)
                 {
                     audioSource.Play();
