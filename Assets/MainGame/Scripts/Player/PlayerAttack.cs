@@ -15,8 +15,8 @@ public class PlayerAttack : MonoBehaviour
     public Animator[] armAttackAnimator;
 
     public AudioSource playerAttackSound;
-    public AudioClip nearAtt;
-    public AudioClip farAtt;
+//    public AudioClip nearAtt;
+//   public AudioClip farAtt;
 
 
     private void OnTriggerStay2D(Collider2D other)
@@ -32,9 +32,14 @@ public class PlayerAttack : MonoBehaviour
                 canAttack = false;
                 enemyState.HitDetect(0);
 
+                GetComponent<PlayerAudio>().PlayAudioEffect(1);         //근접공격소리
+
                 attackAnimator.SetTrigger("attackTrigger");
                 armAttackAnimator[PlayerState.Instance.partsNum[1]-1].SetTrigger("attackTrigger");
-                playerAttackSound.PlayOneShot(nearAtt);
+                //    playerAttackSound.PlayOneShot(nearAtt);
+                //AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(1);
+                
+                
             }
         }
     }
@@ -82,10 +87,14 @@ public class PlayerAttack : MonoBehaviour
                 tmpBullet.GetComponent<Rigidbody2D>().velocity = PlayerState.Instance.transform.localScale.x >= 0 ? new Vector2(-10, 0) : new Vector2(10, 0);
                 tmpBullet.transform.localScale = PlayerState.Instance.transform.localScale.x >= 0 ? tmpBullet.transform.localScale : new Vector3(-tmpBullet.transform.localScale.x, tmpBullet.transform.localScale.y, tmpBullet.transform.localScale.z);
                 PlayerState.Instance.lastAttTime = Time.time;
+               
+                GetComponent<PlayerAudio>().PlayAudioEffect(2);             //원거리 공격소리
 
                 attackAnimator.SetTrigger("attackTrigger");
                 armAttackAnimator[PlayerState.Instance.partsNum[1]-1].SetTrigger("attackTrigger");
-                playerAttackSound.PlayOneShot(farAtt);
+             //   playerAttackSound.PlayOneShot(farAtt);
+                
+                
             }
 
         }

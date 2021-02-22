@@ -35,6 +35,8 @@ public class PlayerState : LivingEntity
     public float machineAdaptationTmp;
 
 
+    
+
     private static PlayerState instance;
     public static PlayerState Instance
     {
@@ -128,6 +130,7 @@ public class PlayerState : LivingEntity
         {
             base.OnDamage(damage);
         }
+        GetComponent<PlayerAudio>().PlayAudioEffect(4);
         GetComponent<HitEffect>().RunEffect();    
         
     }

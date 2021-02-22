@@ -145,6 +145,8 @@ public class ChangePosiitonScript : MonoBehaviour
         else
             isFront = false;
 
+
+
         if (isFront){
         switch(bsn){
             case 0:
@@ -214,6 +216,7 @@ public class ChangePosiitonScript : MonoBehaviour
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
 
             if (hit.collider != null && hit.collider.transform == this.transform){
+                AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(4);
                 return true;
             }
             else{
