@@ -148,16 +148,16 @@ public class ChangePosiitonScript : MonoBehaviour
         int isCommon = Random.Range(0,10);
         if(isCommon < 2){
             int bsn = Random.Range(6,9);
-            NextScene = "Ev" + bsn;
+            NextScene = "Ev0";
         }
         else{
             if (isFront){
                 int bsn = Random.Range(0,4);
-                NextScene = "Ev" + bsn;
+                NextScene = "Ev0";// + bsn;
             }
             else {
                 int bsn = Random.Range(4,6);
-                NextScene = "Ev" + bsn;
+                NextScene = "Ev0";// + bsn;
             }
         }
 
