@@ -39,15 +39,15 @@ public class EventManager : MonoBehaviour
     {
         // 씬 매니저의 sceneLoaded에 체인을 건다.
         SceneManager.sceneLoaded += OnSceneLoaded;
-        Debug.Log("EventManager On Enable LOG stageName : " +nameScene);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        nameScene = SceneManager.GetActiveScene().name;
 
         stageTier = nameScene[0];
         stageNo = nameScene[2] - '0';
-        Debug.Log("EventManager On SceneLoaded LOG stageName : " +nameScene);
+        Debug.Log("EventManagerLOG stageName : " +nameScene);
 
         selectStep = 0;
         selectNum = 0;
@@ -59,27 +59,27 @@ public class EventManager : MonoBehaviour
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        Debug.Log("EventManager On Disable LOG stageName : " +nameScene);
     }
 
 
 
     private void Awake()
     {
-        nameScene = SceneManager.GetActiveScene().name;        
-        selectStep = 0;
-        selectNum = 0;
-        scriptNum = 0;
+        nameScene = SceneManager.GetActiveScene().name;
+
+        stageTier = nameScene[0];
+        stageNo = nameScene[2] - '0';
         if (instance)
         {
             DestroyImmediate(gameObject);
             return;
         }
         instance = this.gameObject;
-        selectStep = 0;
+        
         DontDestroyOnLoad(gameObject);
-
-        Debug.Log("EventManager On Awake LOG stageName : ");
+        selectStep = 0;
+        selectNum = 0;
+        scriptNum = 0;
 
     }
 
