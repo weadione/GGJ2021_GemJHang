@@ -81,6 +81,45 @@ EditorBuildSettings:
     path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev0_BS.unity"
     guid: 4a7881892a4d9ca4b94571c8c6db5bde
   - enabled: 1
-    path: Assets/Scenes/AdaptationScene.unity
-    guid: 47c31525f3ebc664c8c7f01192fbf8aa
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev1.unity"
+    guid: d4bcbffbb0f09cd498c731377681127d
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev1_BS.unity"
+    guid: 0447439cec31e6846a52b8c28e09d138
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev2.unity"
+    guid: 913a65d9a48a9bd449d8584d4ae9189a
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev2_BS.unity"
+    guid: daf4f2c5af6ee734db61f45ac1880938
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev3.unity"
+    guid: 7d46bc13343d03146878e4a302201d3d
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev3_BS.unity"
+    guid: bbfbcd37e61d17b448d43df5d7c1ceeb
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev4.unity"
+    guid: ad0d6961173a3d54d940a0ce7a869dc5
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev4_BS.unity"
+    guid: f87c0a8296d081c4d819c442d9f6ad6a
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev5.unity"
+    guid: 8ab549cbe9b4b5e458166c4666977a13
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev5_BS1.unity"
+    guid: 262b89273cb26fe4b964c4d4af0bfbff
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev5_BS2.unity"
+    guid: a7835b2a9da23db4f88fe3e0c5ef8b01
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev6.unity"
+    guid: 95cfb056d564c934aa70beb699ea082e
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev7.unity"
+    guid: e355eaa25f8c9e94c878380f429ac74d
+  - enabled: 1
+    path: "Assets/Scenes/\uC774\uBCA4\uD2B8\uAD00\uB828/Ev8.unity"
+    guid: 905abecbfa29bd845a6270aa9f7e0cf8
   m_configObjects: {}

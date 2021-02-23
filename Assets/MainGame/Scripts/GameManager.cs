@@ -222,13 +222,13 @@ public class GameManager : MonoBehaviour
             gameoverText.SetActive(true);
             if(Input.GetMouseButtonDown(0))
             {
-                //ResetSave();
-                //Load();
+                ResetSave();
+                Load();
                 PlayerState.Instance.dead = false;
                 isGameover = false;
                 PlayerState.Instance.GetComponent<CharacterMovement>().canMove = true;
                 gameoverText.SetActive(false);
-                SceneManager.LoadScene("AdaptationScene");
+                SceneManager.LoadScene("TitleScene");
             }
         }
     }
@@ -239,23 +239,17 @@ public class GameManager : MonoBehaviour
     {
         exitGame();
         ReturnTitle();
+        //Debug.Log("동물"+monsterRemain);
     }
 
     private void exitGame()
     { 
-        //디버깅을 위한 강제 탈출버튼 활성화 -> 실제 게임시 주석처리 or 삭제바람
+        
         if(Input.GetKeyDown(KeyCode.E) && canExit)
         {
             canExit = false;
             exitButton.SetActive(true);
         }
-
-        //맵내의 몹을 다 잡을시 탈출버튼 활성화시키는 조건문 -> 실제 게임시 활성화 바람
-        //if (monsterRemain==0 && canExit)
-        //{
-        //    canExit = false;
-        //    exitButton.SetActive(true);
-        //}
     }
 
 

@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) // 0 -> 타이틀, 1-> 초반 2 -> 중간보스 3 -> 후반 4 -> 최종보스
     {
         nameScene = SceneManager.GetActiveScene().name;
-        //Debug.Log(nameScene);
+        Debug.Log(nameScene);
         stageTier = nameScene[3] - '0';
         stageNo = nameScene[5] - '0';
         if (nameScene != "WorldScene" && nameScene != "TitleScene")
