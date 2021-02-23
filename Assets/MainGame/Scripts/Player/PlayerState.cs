@@ -111,7 +111,10 @@ public class PlayerState : LivingEntity
     }
 
 
-
+    private void Update()
+    {
+        Debug.Log("동물적응도: " + animalAdaptationTmp);
+    }
 
 
 
@@ -135,11 +138,6 @@ public class PlayerState : LivingEntity
         
     }
 
-    private void Update()
-    {
-        //Debug.Log(health);
-
-    }
     
     public void HitDetect(float x)
     {
@@ -163,11 +161,18 @@ public class PlayerState : LivingEntity
         dead = true;
         movement.canMove = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        GameManager.Instance.animalPartsAdaptation += animalAdaptationTmp;
-        GameManager.Instance.machinePartsAdaptation += machineAdaptationTmp;
-        GameManager.Instance.AdaptationSave();
+        //GameManager.Instance.animalPartsAdaptation += animalAdaptationTmp;
+        //GameManager.Instance.machinePartsAdaptation += machineAdaptationTmp;
+        //GameManager.Instance.AdaptationSave();
         GameManager.Instance.isGameover = true;
     }
+
+    //public void Win()
+    //{
+    //    GameManager.Instance.animalPartsAdaptation += animalAdaptationTmp;
+    //    GameManager.Instance.machinePartsAdaptation += machineAdaptationTmp;
+    //    GameManager.Instance.AdaptationSave();
+    //}
 
 
     public void updateStatus(int partType)
