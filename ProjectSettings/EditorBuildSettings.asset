@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/WorldScene.unity
     guid: d8211369eb5d9e5469d0f7c6070dc9bf
   - enabled: 1
+    path: Assets/Scenes/MiddleScene.unity
+    guid: f285662113e8c6a47a76b9948ce99957
+  - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: 993d1b701b1b7c645991be1c156448b6
   - enabled: 1
