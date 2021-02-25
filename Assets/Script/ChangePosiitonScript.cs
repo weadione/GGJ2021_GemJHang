@@ -169,11 +169,11 @@ public class ChangePosiitonScript : MonoBehaviour
         else{
             if (isFront){
                 int bsn = Random.Range(0,4);
-                NextScene = "Ev0";// + bsn;
+                NextScene = "Ev0" + bsn;
             }
             else {
                 int bsn = Random.Range(4,6);
-                NextScene = "Ev0";// + bsn;
+                NextScene = "Ev0" + bsn;
             }
         }
 
