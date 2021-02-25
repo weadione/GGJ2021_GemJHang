@@ -168,7 +168,7 @@ public class ChangePosiitonScript : MonoBehaviour
         Debug.Log("ChangePositionScript: EventSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
         formerSelect = stem;
         //        Debug.Log("formerSelect: "+ formerSelect);
-        NextScene = "EV6";
+        //NextScene = "EV8";
         SceneManager.LoadScene(NextScene);
 
    }

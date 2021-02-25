@@ -251,6 +251,13 @@ public class PlayerState : LivingEntity
                 attType = partsManager.armParts[partsNum[1]].partsType;
                 damageZone.size = new Vector2(attRange, 2);
             }
+            else 
+            {
+                attDamage = partsManager.armParts[partsNum[1]].partsDamage + defaultDamage;
+                attSpeed = partsManager.armParts[partsNum[1]].partsAttSpeed + defaultAttSpeed;
+
+
+            }
 
         }
         else if (partType == 2)
