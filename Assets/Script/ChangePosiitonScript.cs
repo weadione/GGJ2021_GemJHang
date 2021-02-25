@@ -12,7 +12,7 @@ public class ChangePosiitonScript : MonoBehaviour
     public static int cur;          // 지나온, 현재 스테이지 레벨.
     public static int formerSelect = 0; // 마지막으로 선택한 스테이지 레벨
     public static bool [, ] isVisited = new bool [10,3];
-    public static int [, ] eventNode = new int [10 ,3]; 
+    public static int [, ] eventNode = new int [10 ,3];
 
 
     public int current;
@@ -29,7 +29,7 @@ public class ChangePosiitonScript : MonoBehaviour
 //        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem] + isEventThis);
 
         isVisitedThis = isVisited[stageLevel,stem];
-        changeIconPos();    
+        changeIconPos();
     }
 
     void Update()
@@ -46,7 +46,7 @@ public class ChangePosiitonScript : MonoBehaviour
                 eventSelect();
                 break;
                 case false:
-                stageSelect(); 
+                stageSelect();
                 break;
             }
         }
@@ -58,11 +58,11 @@ public class ChangePosiitonScript : MonoBehaviour
 
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
-  
-        if(cur == 10)
-            callEndingScene();  
 
-    }    
+        if(cur == 10)
+            callEndingScene();
+
+    }
 
     void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -74,9 +74,9 @@ public class ChangePosiitonScript : MonoBehaviour
          if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
             isVisited[stageLevel,stem] = true;
             cur++;
-            stageSelect();           
+            stageSelect();
         }
-         
+
     }
 
     void changeIconPos(){
@@ -92,53 +92,53 @@ public class ChangePosiitonScript : MonoBehaviour
         arrow = gameObject.transform.parent.gameObject.transform.GetChild(0).gameObject;
         arrow2 = gameObject.transform.parent.gameObject.transform.GetChild(1).gameObject;
 
-        
-        Vector3 abBattle =  battle.transform.position;  
-        Vector3 abStaying =  staying.transform.position;  
-        Vector3 abChNode =  chNode.transform.position;  
-         
-        Vector3 arrowPos =  arrow.transform.position;   
-        Vector3 arrow2Pos =  arrow2.transform.position; 
-        
+
+        Vector3 abBattle =  battle.transform.position;
+        Vector3 abStaying =  staying.transform.position;
+        Vector3 abChNode =  chNode.transform.position;
+
+        Vector3 arrowPos =  arrow.transform.position;
+        Vector3 arrow2Pos =  arrow2.transform.position;
+
 
 
         if(cur == stageLevel){
             battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
-            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
-            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);
         }
         else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == true){
             // show my icon
 
             battle.transform.position = new Vector3(abBattle.x,abBattle.y,-20);   // 안 보이게
-            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);  
-            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y, 10);  
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y, 10);
             staying.transform.position = new Vector3(abStaying.x,abStaying.y,10);   // 보이게
-            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20); 
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20);
         }else if(cur == stageLevel+1 && isVisited[stageLevel,stem] == false){      // 다음방
 
             battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
-            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
-            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
-            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);   
-            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20); 
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20);
             // do nothing
         }else if(cur > stageLevel && isVisited[stageLevel,stem] == true){       // 방문한 지난 방
-            battle.transform.position = new Vector3(abBattle.x,abBattle.y,-20);   // 보이게            
-            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
-            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
-            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);   
-            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,20); 
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,-20);   // 보이게
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,20);
         }else if(cur > stageLevel && isVisited[stageLevel,stem] == false){      // 방문하지 않은 지난 방
-            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게            
-            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);   
-            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);   
-            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);   
-            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20); 
+            battle.transform.position = new Vector3(abBattle.x,abBattle.y,10);   // 보이게
+            arrow.transform.position = new Vector3(arrowPos.x,arrowPos.y,10);
+            arrow2.transform.position = new Vector3(arrow2Pos.x,arrow2Pos.y,10);
+            staying.transform.position = new Vector3(abStaying.x,abStaying.y,-20);
+            chNode.transform.position = new Vector3(abChNode.x,abChNode.y,-20);
         }
     }
 
-    void eventSelect(){            
+    void eventSelect(){
         Debug.Log("eventSelect: Called");
         string NextScene = "";
         bool isFront;
@@ -173,7 +173,7 @@ public class ChangePosiitonScript : MonoBehaviour
    }
 
 
-    void stageSelect(){            
+    void stageSelect(){
         string NextScene = "";
         bool isFront;
         int bsn;
@@ -181,7 +181,7 @@ public class ChangePosiitonScript : MonoBehaviour
         GameManager.Instance.canExit = true;
 
         if(cur!= 0 &&cur %5 == 0){
-            NextScene = "BS_40"+(cur/5+1);      
+            NextScene = "BS_40"+(cur/5+1);
             SceneManager.LoadScene(NextScene);
             return;
         }
@@ -248,7 +248,7 @@ public class ChangePosiitonScript : MonoBehaviour
                 NextScene = "BS_304";
                 break;
         }
-        }        
+        }
         Debug.Log("ChangePositionScript: StageSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
         Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
@@ -271,4 +271,3 @@ public class ChangePosiitonScript : MonoBehaviour
         return false;
     }
 }
-
