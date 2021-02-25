@@ -455,6 +455,7 @@ MonoBehaviour:
   - {fileID: 1407776869}
   - {fileID: 899583467}
   selectStep: 0
+  battle: 0
 --- !u!4 &199221398
 Transform:
   m_ObjectHideFlags: 0
@@ -488,7 +489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &594710750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -522,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6824bdf2703a72747ab5da7a0e3e3932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 199221397}
 --- !u!114 &594710752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e64a4bfc92975e4090f84028fb83153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 199221397}
 --- !u!114 &665378937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &839511518
 RectTransform:
   m_ObjectHideFlags: 0
@@ -808,6 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6824bdf2703a72747ab5da7a0e3e3932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 199221397}
 --- !u!114 &839511520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +856,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 839511519}
-        m_MethodName: Select1
+        m_MethodName: Select2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -996,7 +1000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &899583468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1009,6 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6824bdf2703a72747ab5da7a0e3e3932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 199221397}
 --- !u!114 &899583469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,7 +1058,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 899583468}
-        m_MethodName: Select1
+        m_MethodName: Select4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1527,7 +1532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1407776870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1561,6 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6824bdf2703a72747ab5da7a0e3e3932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 199221397}
 --- !u!114 &1407776872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1605,7 +1611,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1407776871}
-        m_MethodName: Select1
+        m_MethodName: Select3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

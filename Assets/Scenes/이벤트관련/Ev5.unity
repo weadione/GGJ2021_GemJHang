@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e64a4bfc92975e4090f84028fb83153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 1791705535}
 --- !u!114 &296400387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &457648994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -645,6 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6824bdf2703a72747ab5da7a0e3e3932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 1791705535}
 --- !u!114 &457648996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,7 +757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &658355780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6824bdf2703a72747ab5da7a0e3e3932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EM: {fileID: 1791705535}
 --- !u!114 &658355781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,7 +815,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 658355780}
-        m_MethodName: Select1
+        m_MethodName: Select2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1136,10 +1139,11 @@ MonoBehaviour:
   scriptNum: 0
   button:
   - {fileID: 457648993}
-  - {fileID: 0}
+  - {fileID: 658355779}
   - {fileID: 0}
   - {fileID: 658355779}
   selectStep: 0
+  battle: 0
 --- !u!4 &1791705536
 Transform:
   m_ObjectHideFlags: 0
