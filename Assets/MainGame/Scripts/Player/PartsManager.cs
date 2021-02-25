@@ -29,7 +29,6 @@ public class PartsManager : MonoBehaviour
         initalize();
     }
 
-    // Update is called once per frame
 
 
     public void initalize()

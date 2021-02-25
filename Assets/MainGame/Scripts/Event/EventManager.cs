@@ -367,7 +367,8 @@ public class EventManager : MonoBehaviour
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
-            PM.ChangeParts(0, 3);
+            //PM.ChangeParts(0, 3);
+            PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 3);
 
         }
         else if(selectNum ==2)
