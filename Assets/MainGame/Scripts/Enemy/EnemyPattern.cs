@@ -166,11 +166,11 @@ public class EnemyPattern : MonoBehaviour
         {
             if (Tracer.IsTouching(PlayerState.Instance.GetComponent<CompositeCollider2D>()))
             {
-                if (transform.position.x > PlayerState.Instance.transform.position.x)
+                if (transform.position.x > PlayerState.Instance.transform.position.x + 0.5f)
                 {
                        movement.Move(-0.5f);
                 }
-                else if (transform.position.x < PlayerState.Instance.transform.position.x)
+                else if (transform.position.x < PlayerState.Instance.transform.position.x-0.5f)
                 {
                        movement.Move(0.5f);
                 }
@@ -242,7 +242,7 @@ public class EnemyPattern : MonoBehaviour
                 {
                     int paramter = Random.Range(1, 8);
 
-                    Debug.Log(paramter);
+                    //Debug.Log(paramter);
                     if (paramter <= 2)
                     {
                         movement.Move(-0.5f);
@@ -476,12 +476,12 @@ public class EnemyPattern : MonoBehaviour
         //else if (Input.GetKeyDown(KeyCode.Alpha3))
         //    finalPattern = 3;
 
-        if (GetComponent<EnemyState>().health <= 600)
-            finalPattern = 2;
-        else if (GetComponent<EnemyState>().health <= 300)
-            finalPattern = 3;
-        else
+        if (GetComponent<EnemyState>().health >= 600)
             finalPattern = 1;
+        else if (GetComponent<EnemyState>().health >= 300 && GetComponent<EnemyState>().health < 600)
+            finalPattern = 2;
+        else
+            finalPattern = 3;
 
 
 
@@ -517,7 +517,7 @@ public class EnemyPattern : MonoBehaviour
                 {
                     int paramter = Random.Range(1, 8);
 
-                    Debug.Log(paramter);
+                    //Debug.Log(paramter);
                     if (paramter <= 2)
                     {
                         movement.Move(-0.5f);
@@ -552,7 +552,7 @@ public class EnemyPattern : MonoBehaviour
 
     public void LastBossPattern1()
     {
-        float delay = Random.Range(2.0f, 3.0f);
+            float delay = Random.Range(2.0f, 3.0f);
         if (transform.position.x <= left.transform.position.x && borderMove)
         {
             borderMove = false;
