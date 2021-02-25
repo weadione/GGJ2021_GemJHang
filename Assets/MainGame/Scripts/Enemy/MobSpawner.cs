@@ -95,7 +95,7 @@ public class MobSpawner : MonoBehaviour
                 monster.GetComponent<EnemyPattern>().Tracer = tracer.GetComponent<BoxCollider2D>();
                 for (int j = 0; j < 3; j++)
                 {
-                    Debug.Log(finalBossTeleport[j].transform.position);
+                    //Debug.Log(finalBossTeleport[j].transform.position);
                     monster.GetComponent<EnemyPattern>().finalBossTeleport[j] = finalBossTeleport[j].transform.position;
                 }
                 monster.GetComponent<EnemyPattern>().SelectPattern(5);
