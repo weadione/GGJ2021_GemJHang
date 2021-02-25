@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour
 
         //맵 관련
         PlayerPrefs.SetInt("MapCurrent", ChangePosiitonScript.cur);
+        PlayerPrefs.SetInt("FormerSelect", ChangePosiitonScript.formerSelect);
 
         for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
         {
@@ -161,6 +162,7 @@ public class GameManager : MonoBehaviour
 
         //맵 관련
         PlayerPrefs.SetInt("MapCurrent", 0);
+        PlayerPrefs.SetInt("FormerSelect", 0);
 
         for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
         {
@@ -214,6 +216,7 @@ public class GameManager : MonoBehaviour
 
         //맵 관련
         ChangePosiitonScript.cur = PlayerPrefs.GetInt("MapCurrent", 0);
+        ChangePosiitonScript.formerSelect = PlayerPrefs.GetInt("FormerSelect", 0);
 
         for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
         {
