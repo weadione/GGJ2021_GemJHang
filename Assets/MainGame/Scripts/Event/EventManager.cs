@@ -54,6 +54,7 @@ public class EventManager : MonoBehaviour
     private void Start()
     {
         PM = PlayerState.Instance.GetComponent<PartsManager>();
+        PM.initalize();
     }
 
     private void Awake()
@@ -134,9 +135,12 @@ public class EventManager : MonoBehaviour
     {
         if(scriptNum ==1)
         {
-            button[0].SetActive(true);
-            button[1].SetActive(true);
-            button[2].SetActive(true);
+            if (PlayerState.Instance.partsNum[0] != 0)  //실제로 테스트 해야함
+                button[0].SetActive(true);
+            if (PlayerState.Instance.partsNum[1] != 0)
+                button[1].SetActive(true);
+            if (PlayerState.Instance.partsNum[2] != 0)
+                button[2].SetActive(true);
             button[3].SetActive(true);
             randomValue = Random.Range(1, 10);
             randomParts = Random.Range(1, 8);
@@ -181,13 +185,13 @@ public class EventManager : MonoBehaviour
             {
                 selectStep = 1;
                 PM.ChangeParts(0, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); 
             }
             else 
             {
                 selectStep = 5;
                 PM.ChangeParts(0, randomParts);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, randomParts); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, randomParts); 
             }
 
             scriptNum = 0;
@@ -204,14 +208,14 @@ public class EventManager : MonoBehaviour
             {
                 selectStep = 1;
                 PM.ChangeParts(1, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); 
 
             }
             else
             {
                 selectStep = 5;
                 PM.ChangeParts(1, randomParts);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, randomParts); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, randomParts); 
             }
             scriptNum = 0;
             selectNum = 0;
@@ -227,7 +231,7 @@ public class EventManager : MonoBehaviour
             {
                 selectStep = 1;
                 PM.ChangeParts(2, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); 
             }
             else
             {
@@ -235,12 +239,12 @@ public class EventManager : MonoBehaviour
                 if (randomParts == 0)
                 {
                     PM.ChangeParts(2, randomParts);
-                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts); // 실제로 테스트해봐야함
+                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts); 
                 }
                 else
                 {
                     PM.ChangeParts(2, randomParts+1);
-                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts+1); // 실제로 테스트해봐야함
+                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts+1); 
                 }
             }
             scriptNum = 0;
@@ -290,28 +294,30 @@ public class EventManager : MonoBehaviour
             else if(0<randomValue && randomValue<10)
             {
                 text.text = "회복에 당첨되셨습니다!!";
-                //PlayerState.Instance.         //실제로 테스트해봐야함
+                PlayerState.Instance.health = 100;  //플레이어 최대체력
+                PlayerState.Instance.headPartsHealth = PM.headParts[PlayerState.Instance.partsNum[0]].partsHealth;
+                
                 selectStep = 5;
             }
             else if(9<randomValue && randomValue<40)
             {
                 text.text = "머리 손실!";
                 PM.ChangeParts(0,0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); 
                 selectStep = 5;
             }
             else if(39<randomValue && randomValue <70)
             {
                 text.text = "팔 손실!";
                 PM.ChangeParts(1,0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); 
                 selectStep = 5;
             }
             else if (69 < randomValue && randomValue < 100)
             {
                 text.text = "다리 손실!";
                 PM.ChangeParts(2, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); // 실제로 테스트해봐야함
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); 
                 selectStep = 5;
             }
         }
@@ -340,11 +346,11 @@ public class EventManager : MonoBehaviour
     {
         if(scriptNum ==1)
         {
-            //if (PlayerState.Instance.partsNum[0] != 0)  //실제로 테스트 해야함
+            if (PlayerState.Instance.partsNum[0] != 0)  //실제로 테스트 해야함
                 button[0].SetActive(true);
-            //if (PlayerState.Instance.partsNum[1] != 0)
+            if (PlayerState.Instance.partsNum[1] != 0)
                 button[1].SetActive(true);
-            //if (PlayerState.Instance.partsNum[2] != 0)
+            if (PlayerState.Instance.partsNum[2] != 0)
                 button[2].SetActive(true);
 
             button[3].SetActive(true);
@@ -362,12 +368,13 @@ public class EventManager : MonoBehaviour
             button[3].SetActive(false);
             text.text = "당신은 당신의 머리를 제단 위로 올렸습니다.\n엄청난 빛이 난 후에 당신의 머리는 흔적도 없이 사라졌습니다.";
 
-            Debug.Log("PM은 실행");
-            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);  //실제로 테스트 해봐야함
+            
+            PM.ChangeParts(0, 0);
+            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);  
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
-            PM.ChangeParts(0, 3);
+            
 
         }
         else if(selectNum ==2)
@@ -378,7 +385,7 @@ public class EventManager : MonoBehaviour
             button[3].SetActive(false);
             text.text = "당신은 당신의 팔을 제단 위로 올렸습니다.\n엄청난 빛이 난 후에 당신의 팔은 흔적도 없이 사라졌습니다.";
             PM.ChangeParts(1, 0);
-            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); // 실제로 테스트해봐야함
+            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0);
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
@@ -393,7 +400,7 @@ public class EventManager : MonoBehaviour
             button[3].SetActive(false);
             text.text = "당신은 당신의 다리를 제단 위로 올렸습니다.\n엄청난 빛이 난 후에 당신의 다리는 흔적도 없이 사라졌습니다.";
             PM.ChangeParts(2, 0);
-            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); // 실제로 테스트해봐야함
+            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0);
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
@@ -405,7 +412,10 @@ public class EventManager : MonoBehaviour
             button[2].SetActive(false);
             button[3].SetActive(false);
             text.text = "당신은 몸에 상처를 내 제단에 피를 뿌렸습니다.\n엄청난 빛이 난 후에 제단 위의 피는 말끔히 사라졌습니다.";
-           // PlayerState.Instance.health               //실제로 테스트 해봐야함
+            PlayerState.Instance.OnDamage(30);
+
+            // PlayerState.Instance.health               //실제로 테스트 해봐야함
+
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
@@ -442,6 +452,10 @@ public class EventManager : MonoBehaviour
             button[0].SetActive(false);
             button[1].SetActive(false);
             text.text = "당신은 갇혀있던 생물들을 해방했지만, 생물들은 화가 많이 나보입니다.";
+            if (PlayerState.Instance.health + 20 < 100)
+                PlayerState.Instance.health += 20;
+            else
+                PlayerState.Instance.health = 100;
             selectStep = 1;
             scriptNum = 0;
             selectNum = 0;
@@ -452,6 +466,9 @@ public class EventManager : MonoBehaviour
             button[0].SetActive(false);
             button[1].SetActive(false);
             text.text = "당신은 갇혀있는 생물들을 무시하며 지나갑니다.\n그런 당신의 행동을 보고 생물들이 괴성를 지릅니다";
+            PlayerState.Instance.defaultDamage += 20;
+            PlayerState.Instance.defaultAttSpeed -= 0.2f;
+            PlayerState.Instance.updateStatus(1);
             selectStep = 2;
             scriptNum = 0;
             selectNum = 0;
@@ -487,7 +504,8 @@ public class EventManager : MonoBehaviour
         else if(scriptNum ==4)
         {
             text.text = "그런 당신에게 생물체가 물약을 건네줍니다.\n물약을 마시자 강해진 기분이 듭니다.";
-           // PlayerState.Instance.defaultDamage += 50;       //실제로 테스트해야함
+            PlayerState.Instance.defaultDamage += 50;       //실제로 테스트해야함
+            PlayerState.Instance.updateStatus(1);
             selectStep = 4;
             
         }
@@ -506,7 +524,7 @@ public class EventManager : MonoBehaviour
         {
             button[0].SetActive(false);
             button[1].SetActive(false);
-            if(true)//(GameManager.Instance.animalPartsAdaptation >=1.5f)       //실제로 테스트해야함
+            if(GameManager.Instance.animalPartsAdaptation >=1.5f)       //실제로 테스트해야함
             {
                 text.text = "생물체에게 말을 거니, 이 생물체가 한 공책을 보여줍니다.\n공책에는 어떤 실험에 대한 이야기가 적혀있습니다.";
                 selectStep = 1;
@@ -556,12 +574,13 @@ public class EventManager : MonoBehaviour
         if(selectNum == 1)
         {
             button[0].SetActive(false);
-            if (true)//(GameManager.Instance.machinePartsAdaptation >= 1.5f) //실제로 테스트해야함
+            if (GameManager.Instance.machinePartsAdaptation >= 1.5f) //실제로 테스트해야함
             {
                 text.text = "당신은 대장 말과 친구가 되었습니다.\n 대장 말은 자신의 친구에게 축복을 내려주었습니다.";
-                // PlayerState.Instance.defaultDamage += 20;        //실제로 테스트해야함
-                // PlayerState.Instance.defaultAttSpeed -= 0.2f;
-                // PlayerState.Instance.machineAdaptationTmp += 0.1f;
+                 PlayerState.Instance.defaultDamage += 20;        //실제로 테스트해야함
+                 PlayerState.Instance.defaultAttSpeed -= 0.2f;
+                 PlayerState.Instance.machineAdaptationTmp += 0.1f;
+                 PlayerState.Instance.updateStatus(1);
                 selectStep = 1;
             }
             else
@@ -596,6 +615,7 @@ public class EventManager : MonoBehaviour
         else if(scriptNum ==4)
         {
             //    PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 5); // 후반 쓰레기팔로 바꿈//실제로 테스트해야함
+            PM.ChangeParts(1, 5);
             SceneManager.LoadScene("WorldScene");
         }
         else if(scriptNum == 5)
@@ -606,7 +626,7 @@ public class EventManager : MonoBehaviour
         if(selectNum == 1)
         {
             button[0].SetActive(false);
-            if(false)//(PlayerState.Instance.partsNum[1] == 4 || PlayerState.Instance.partsNum[1] == 5 || PlayerState.Instance.partsNum[2] == 8 || PlayerState.Instance.partsNum[2] == 9)//실제로 테스트해야함
+            if(PlayerState.Instance.partsNum[1] == 4 || PlayerState.Instance.partsNum[1] == 5 || PlayerState.Instance.partsNum[2] == 8 || PlayerState.Instance.partsNum[2] == 9)//실제로 테스트해야함
             {
                 //쓰레기통 파츠 보유시
                 text.text = "당신은 완벽하게 쓰레기를 던져 쓰레기통 안으로 넣었습니다.\n쓰레기통 로봇이 만족한 표정을 짓습니다.";
@@ -646,6 +666,7 @@ public class EventManager : MonoBehaviour
 
             text.text = "당신은 송충이의 저주를 받았습니다.";
             //PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 1); // 송충이팔로 변함 //실제로 테스트해야함
+            PM.ChangeParts(1, 1);
             Debug.Log("저주당.");
             selectStep = 3;
         }
@@ -661,7 +682,18 @@ public class EventManager : MonoBehaviour
             selectNum = 0;                                      //선택값 초기화
             scriptNum = 0;                                      //안하면 선택지 안사라짐
             selectStep = 1;
+            PlayerState.Instance.defaultDamage += 10;
+            PlayerState.Instance.defaultAttSpeed -= 0.2f;
+            if(PlayerState.Instance.health +20 <100)
+            {
+                PlayerState.Instance.health += 20;
+            }
+            else
+            {
+                PlayerState.Instance.health = 100;
+            }
 
+            PlayerState.Instance.updateStatus(1);
 
         }
         else if(selectNum == 2)
@@ -720,19 +752,19 @@ public class EventManager : MonoBehaviour
 
         if (selectNum == 1)
         {
-            if(true)//(PlayerState.Instance.partsNum[0] == 2) // 플레이어 머리파츠가 뱀 머리(2) 일때  //실제로 테스트해야함
+            if(PlayerState.Instance.partsNum[0] == 2) // 플레이어 머리파츠가 뱀 머리(2) 일때  //실제로 테스트해야함
             {
                 button[0].SetActive(false);
                 button[1].SetActive(false);
                 text.text = "당신은 뱀의 친구가 되었습니다.";
                 
-                if(PlayerState.Instance.health+30 < PlayerState.Instance.maxHealth) // 체력회복 30  //실제로 테스트해야함
+                if(PlayerState.Instance.health+30 < 100) // 체력회복 30  //실제로 테스트해야함
                 {
-                    PlayerState.Instance.health += 20;
+                    PlayerState.Instance.health += 30;
                 }
                 else
                 {
-                    PlayerState.Instance.health = PlayerState.Instance.maxHealth;
+                    PlayerState.Instance.health = 100;
                 }
                 selectStep = 2;
 
