@@ -22,7 +22,7 @@ public class ChangePosiitonScript : MonoBehaviour
 
     void Start(){
 
-        if(eventNode[stageLevel,stem] < 70)
+        if(eventNode[stageLevel,stem] < 30)
             isEventThis = true;
         else
             isEventThis = false;
@@ -35,8 +35,12 @@ public class ChangePosiitonScript : MonoBehaviour
     void Update()
     {
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur&& avalStem[formerSelect]){
+            Debug.Log("ChangePosition:Update stageLevel, stem" + stageLevel + stem);
+            formerSelect = stem;
             isVisited[stageLevel,stem] = true;
             cur++;
+            if(cur == 0 || cur == 5)
+                isEventThis = false;
             switch(isEventThis){
                 case true:
                 eventSelect();
@@ -135,6 +139,7 @@ public class ChangePosiitonScript : MonoBehaviour
     }
 
     void eventSelect(){            
+        Debug.Log("eventSelect: Called");
         string NextScene = "";
         bool isFront;
         GameManager.Instance.canExit = true;
@@ -148,23 +153,21 @@ public class ChangePosiitonScript : MonoBehaviour
         int isCommon = Random.Range(0,10);
         if(isCommon < 2){
             int bsn = Random.Range(6,9);
-            NextScene = "Ev" + bsn;
+            NextScene = "Ev0";
         }
         else{
             if (isFront){
                 int bsn = Random.Range(0,4);
-                NextScene = "Ev" + bsn;
+                NextScene = "Ev0";// + bsn;
             }
             else {
                 int bsn = Random.Range(4,6);
-                NextScene = "Ev" + bsn;
+                NextScene = "Ev0";// + bsn;
             }
         }
 
-//        Debug.Log("stageLevel and stage Stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
-        formerSelect = stem;
-        //        Debug.Log("formerSelect: "+ formerSelect);
-        //NextScene = "EV8";
+        Debug.Log("ChangePositionScript: EventSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
+        Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
 
    }
@@ -173,11 +176,12 @@ public class ChangePosiitonScript : MonoBehaviour
     void stageSelect(){            
         string NextScene = "";
         bool isFront;
-        int bsn = Random.Range(0,8);
+        int bsn;
+        bsn = Random.Range(0,8);
         GameManager.Instance.canExit = true;
 
         if(cur!= 0 &&cur %5 == 0){
-            NextScene = "BS_40"+(cur/5+1);
+            NextScene = "BS_40"+(cur/5+1);      
             SceneManager.LoadScene(NextScene);
             return;
         }
@@ -244,9 +248,8 @@ public class ChangePosiitonScript : MonoBehaviour
                 NextScene = "BS_304";
                 break;
         }
-        }
-        Debug.Log("stageLevel and stage Stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
-        formerSelect = stem;
+        }        
+        Debug.Log("ChangePositionScript: StageSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
         Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
 

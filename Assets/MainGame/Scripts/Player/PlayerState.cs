@@ -267,7 +267,7 @@ public class PlayerState : LivingEntity
                 animalAdaptationTmp += 0.05f;
                 dash = partsManager.legParts[partsNum[2]].dash;
                 jumpCount = partsManager.legParts[partsNum[2]].jumpCount;
-                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * GameManager.Instance.animalPartsAdaptation;
+                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * GameManager.Instance.animalPartsAdaptation + defaultMoveSpeed;
                 jumpForce = partsManager.legParts[partsNum[2]].jumpForce;
             }
             else if (partsManager.legParts[partsNum[2]].adaptation == 2)
@@ -275,7 +275,7 @@ public class PlayerState : LivingEntity
                 machineAdaptationTmp += 0.05f;
                 dash = partsManager.legParts[partsNum[2]].dash;
                 jumpCount = partsManager.legParts[partsNum[2]].jumpCount;
-                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * GameManager.Instance.machinePartsAdaptation;
+                moveSpeed = partsManager.legParts[partsNum[2]].partsMoveSpeed * GameManager.Instance.machinePartsAdaptation + defaultMoveSpeed;
                 jumpForce = partsManager.legParts[partsNum[2]].jumpForce;
             }
             transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);

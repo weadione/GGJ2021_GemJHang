@@ -50,10 +50,6 @@ public class WC_Background : MonoBehaviour
     }
 
     void OnEnable(){
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         nameScene = SceneManager.GetActiveScene().name;
         if(nameScene != "WorldScene" && nameScene != "Title"){
             stageTier = nameScene[3] - '0';
@@ -61,6 +57,13 @@ public class WC_Background : MonoBehaviour
  //           Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
             changeCameraPosition(stageTier, stageNo);
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;       
+         
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+
     }
 
     void changeCameraPosition(int tier, int num){

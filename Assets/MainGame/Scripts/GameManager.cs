@@ -83,6 +83,10 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("AnimalAdaptationTmp", PlayerState.Instance.animalAdaptationTmp);
         PlayerPrefs.SetFloat("MachineAdaptationTmp", PlayerState.Instance.machineAdaptationTmp);
 
+        PlayerPrefs.SetFloat("PlayerDefaultDamage", PlayerState.Instance.defaultDamage);
+        PlayerPrefs.SetFloat("PlayerDefaultAttSpeed", PlayerState.Instance.defaultAttSpeed);
+        PlayerPrefs.SetFloat("PlayerDefaultMoveSpeed", PlayerState.Instance.defaultMoveSpeed);
+
 
         PlayerPrefs.SetFloat("PlayerHeadHealth", PlayerState.Instance.headPartsHealth);
         if (PlayerState.Instance.isHeadParts)
@@ -105,6 +109,7 @@ public class GameManager : MonoBehaviour
 
         //맵 관련
         PlayerPrefs.SetInt("MapCurrent", ChangePosiitonScript.cur);
+        PlayerPrefs.SetInt("FormerSelect", ChangePosiitonScript.formerSelect);
 
         for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
         {
@@ -138,6 +143,10 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("AnimalAdaptationTmp", 0f);
         PlayerPrefs.SetFloat("MachineAdaptationTmp", 0f);
 
+        PlayerPrefs.SetFloat("PlayerDefaultDamage", 10f);
+        PlayerPrefs.SetFloat("PlayerDefaultAttSpeed", 1f);
+        PlayerPrefs.SetFloat("PlayerDefaultMoveSpeed", 5f);
+
         PlayerPrefs.SetFloat("PlayerHeadHealth", 0f);
         PlayerPrefs.SetInt("IsPlayerHeadParts", 0); //머리파츠 미장착
 
@@ -153,6 +162,7 @@ public class GameManager : MonoBehaviour
 
         //맵 관련
         PlayerPrefs.SetInt("MapCurrent", 0);
+        PlayerPrefs.SetInt("FormerSelect", 0);
 
         for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
         {
@@ -176,7 +186,12 @@ public class GameManager : MonoBehaviour
         PlayerState.Instance.jumpCount= PlayerPrefs.GetInt("PlayerJumpCount", 1);
         PlayerState.Instance.animalAdaptationTmp = PlayerPrefs.GetFloat("AnimalAdaptationTmp", 0f);
         PlayerState.Instance.machineAdaptationTmp = PlayerPrefs.GetFloat("MachineAdaptationTmp", 0f);
-        
+
+        PlayerState.Instance.defaultDamage = PlayerPrefs.GetFloat("PlayerDefaultDamage", 10f);
+        PlayerState.Instance.defaultAttSpeed= PlayerPrefs.GetFloat("PlayerDefaultAttSpeed", 1f);
+        PlayerState.Instance.defaultMoveSpeed = PlayerPrefs.GetFloat("PlayerDefaultMoveSpeed", 5f);
+
+
         animalPartsAdaptation = PlayerPrefs.GetFloat("AnimalAdaptation", 1f);
         machinePartsAdaptation = PlayerPrefs.GetFloat("MachineAdaptation", 1f);
 
@@ -201,6 +216,7 @@ public class GameManager : MonoBehaviour
 
         //맵 관련
         ChangePosiitonScript.cur = PlayerPrefs.GetInt("MapCurrent", 0);
+        ChangePosiitonScript.formerSelect = PlayerPrefs.GetInt("FormerSelect", 0);
 
         for (int i = 0; i < ChangePosiitonScript.isVisited.GetLength(0); i++)
         {
