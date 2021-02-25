@@ -50,19 +50,38 @@ public class WC_Background : MonoBehaviour
     }
 
     void OnEnable(){
-        nameScene = SceneManager.GetActiveScene().name;
-        if(nameScene != "WorldScene" && nameScene != "Title"){
-            stageTier = nameScene[3] - '0';
-            stageNo = nameScene[5]- '0';
- //           Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
-            changeCameraPosition(stageTier, stageNo);
-        }
 
         SceneManager.sceneLoaded += OnSceneLoaded;       
          
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        nameScene = SceneManager.GetActiveScene().name;
+        if(nameScene != "WorldScene" && nameScene != "Title" && nameScene[0] != 'E'){
+            stageTier = nameScene[3] - '0';
+            stageNo = nameScene[5]- '0';
+ //           Debug.Log("LOG: STAGETIER : " + stageTier + "   STAGENO : " + stageNo);
+            changeCameraPosition(stageTier, stageNo);
+        }
+        if(nameScene[0] == 'E'){
+            switch(nameScene[2] - '0'){
+                case 0:
+                case 1:
+                case 3:
+                changeCameraPosition(0,0);
+                break;
+                case 2:
+                changeCameraPosition(1,0);
+                break;
+                case 4:
+                changeCameraPosition(2,0);
+                break;
+                case 5:
+                changeCameraPosition(3,0);
+                break;
+
+            }
+        }
 
     }
 

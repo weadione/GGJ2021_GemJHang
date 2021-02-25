@@ -36,7 +36,6 @@ public class EventManager : MonoBehaviour
 
         stageTier = nameScene[0];
         stageNo = nameScene[2] - '0';
-        Debug.Log("EventManagerLOG stageName : " +nameScene);
         PM = PlayerState.Instance.GetComponent<PartsManager>();
         selectStep = 0;
         selectNum = 0;

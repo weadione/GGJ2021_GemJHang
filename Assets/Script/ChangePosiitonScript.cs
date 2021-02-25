@@ -35,7 +35,6 @@ public class ChangePosiitonScript : MonoBehaviour
     void Update()
     {
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur&& avalStem[formerSelect]){
-            Debug.Log("ChangePosition:Update stageLevel, stem" + stageLevel + stem);
             formerSelect = stem;
             isVisited[stageLevel,stem] = true;
             cur++;
@@ -249,8 +248,6 @@ public class ChangePosiitonScript : MonoBehaviour
                 break;
         }
         }
-        Debug.Log("ChangePositionScript: StageSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
-        Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
 
    }
