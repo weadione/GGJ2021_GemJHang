@@ -20,6 +20,7 @@ public class EventManager : MonoBehaviour
     int randomValue;
     int randomParts;
 
+    public PartsManager PM;
 
 
 
@@ -35,7 +36,8 @@ public class EventManager : MonoBehaviour
 
         stageTier = nameScene[0];
         stageNo = nameScene[2] - '0';
-
+        Debug.Log("EventManagerLOG stageName : " +nameScene);
+        PM = PlayerState.Instance.GetComponent<PartsManager>();
         selectStep = 0;
         selectNum = 0;
         scriptNum = 0;
@@ -49,6 +51,10 @@ public class EventManager : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        PM = PlayerState.Instance.GetComponent<PartsManager>();
+    }
 
     private void Awake()
     {
@@ -56,8 +62,8 @@ public class EventManager : MonoBehaviour
         Debug.Log("EventManagerLOG stageName : " + nameScene);
         stageTier = nameScene[0];
         stageNo = nameScene[2] - '0';
-
         
+
         DontDestroyOnLoad(gameObject);
         selectStep = 0;
         selectNum = 0;
@@ -174,11 +180,13 @@ public class EventManager : MonoBehaviour
             if(randomValue <4)
             {
                 selectStep = 1;
+                PM.ChangeParts(0, 0);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); // 실제로 테스트해봐야함
             }
             else 
             {
                 selectStep = 5;
+                PM.ChangeParts(0, randomParts);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, randomParts); // 실제로 테스트해봐야함
             }
 
@@ -195,12 +203,14 @@ public class EventManager : MonoBehaviour
             if (randomValue < 4)
             {
                 selectStep = 1;
+                PM.ChangeParts(1, 0);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); // 실제로 테스트해봐야함
 
             }
             else
             {
                 selectStep = 5;
+                PM.ChangeParts(1, randomParts);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, randomParts); // 실제로 테스트해봐야함
             }
             scriptNum = 0;
@@ -216,6 +226,7 @@ public class EventManager : MonoBehaviour
             if (randomValue < 4)
             {
                 selectStep = 1;
+                PM.ChangeParts(2, 0);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); // 실제로 테스트해봐야함
             }
             else
@@ -223,10 +234,12 @@ public class EventManager : MonoBehaviour
                 selectStep = 5;
                 if (randomParts == 0)
                 {
-                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, randomParts); // 실제로 테스트해봐야함
+                    PM.ChangeParts(2, randomParts);
+                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts); // 실제로 테스트해봐야함
                 }
                 else
                 {
+                    PM.ChangeParts(2, randomParts+1);
                     // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts+1); // 실제로 테스트해봐야함
                 }
             }
@@ -283,18 +296,21 @@ public class EventManager : MonoBehaviour
             else if(9<randomValue && randomValue<40)
             {
                 text.text = "머리 손실!";
+                PM.ChangeParts(0,0);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); // 실제로 테스트해봐야함
                 selectStep = 5;
             }
             else if(39<randomValue && randomValue <70)
             {
                 text.text = "팔 손실!";
+                PM.ChangeParts(1,0);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); // 실제로 테스트해봐야함
                 selectStep = 5;
             }
             else if (69 < randomValue && randomValue < 100)
             {
                 text.text = "다리 손실!";
+                PM.ChangeParts(2, 0);
                 // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); // 실제로 테스트해봐야함
                 selectStep = 5;
             }
@@ -345,10 +361,13 @@ public class EventManager : MonoBehaviour
             button[2].SetActive(false);
             button[3].SetActive(false);
             text.text = "당신은 당신의 머리를 제단 위로 올렸습니다.\n엄청난 빛이 난 후에 당신의 머리는 흔적도 없이 사라졌습니다.";
-           // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);  //실제로 테스트 해봐야함
+
+            Debug.Log("PM은 실행");
+            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);  //실제로 테스트 해봐야함
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
+            PM.ChangeParts(0, 3);
 
         }
         else if(selectNum ==2)
@@ -358,7 +377,8 @@ public class EventManager : MonoBehaviour
             button[2].SetActive(false);
             button[3].SetActive(false);
             text.text = "당신은 당신의 팔을 제단 위로 올렸습니다.\n엄청난 빛이 난 후에 당신의 팔은 흔적도 없이 사라졌습니다.";
-           // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); // 실제로 테스트해봐야함
+            PM.ChangeParts(1, 0);
+            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); // 실제로 테스트해봐야함
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
@@ -372,6 +392,7 @@ public class EventManager : MonoBehaviour
             button[2].SetActive(false);
             button[3].SetActive(false);
             text.text = "당신은 당신의 다리를 제단 위로 올렸습니다.\n엄청난 빛이 난 후에 당신의 다리는 흔적도 없이 사라졌습니다.";
+            PM.ChangeParts(2, 0);
             // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); // 실제로 테스트해봐야함
             scriptNum = 0;
             selectNum = 0;
