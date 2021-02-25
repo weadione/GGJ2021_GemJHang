@@ -22,7 +22,7 @@ public class ChangePosiitonScript : MonoBehaviour
 
     void Start(){
 
-        if(eventNode[stageLevel,stem] < 70)
+        if(eventNode[stageLevel,stem] < 30)
             isEventThis = true;
         else
             isEventThis = false;

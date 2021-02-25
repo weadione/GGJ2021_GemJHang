@@ -72,7 +72,6 @@ public class MobSpawner : MonoBehaviour
         }
         else if (selectPattern == 4)
         {
-            Debug.Log("4");
             for (int i = 0; i < mobList.Length; i++)
             {
                 GameObject monster = Instantiate(enemyManager.enemyList[mobList[i]], transform.position, transform.rotation);

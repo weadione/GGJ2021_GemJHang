@@ -712,6 +712,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!1 &54677203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1345,94 @@ Transform:
   m_Father: {fileID: 236719109}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &122078611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 122078612}
+  - component: {fileID: 122078614}
+  - component: {fileID: 122078613}
+  - component: {fileID: 122078615}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &122078612
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122078611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1379836012}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -49.991}
+  m_SizeDelta: {x: 101.60123, y: 49.991386}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &122078613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122078611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &122078614
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122078611}
+  m_CullTransparentMesh: 0
+--- !u!114 &122078615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122078611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd215458a00735409203cb41c333251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fade: {fileID: 122078613}
 --- !u!1 &123555150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1658,7 @@ MonoBehaviour:
   stem: 2
   avalStem: 000100
   current: 0
+  isEventThis: 0
 --- !u!61 &138484852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1795,6 +1885,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &151927457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1873,6 +1964,7 @@ MonoBehaviour:
   stem: 2
   avalStem: 000100
   current: 0
+  isEventThis: 0
 --- !u!61 &154763882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2033,6 +2125,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 000100
   current: 0
+  isEventThis: 0
 --- !u!61 &184747803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6040,6 +6133,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &592810395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6347,6 +6441,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &617793412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11343,6 +11438,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &1008952016
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11816,6 +11912,7 @@ MonoBehaviour:
   stem: 2
   avalStem: 000001
   current: 0
+  isEventThis: 0
 --- !u!61 &1036395673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12244,6 +12341,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &1082775329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13446,6 +13544,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &1178854656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15406,6 +15505,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &1264599346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16505,6 +16605,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 000101
   current: 0
+  isEventThis: 0
 --- !u!1 &1360370135
 GameObject:
   m_ObjectHideFlags: 0
@@ -16800,6 +16901,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &1364210267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17122,6 +17224,7 @@ RectTransform:
   - {fileID: 426959455}
   - {fileID: 1763359463}
   - {fileID: 943887887}
+  - {fileID: 122078612}
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17614,6 +17717,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &1428532384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18888,6 +18992,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &1551833792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21479,6 +21584,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010101
   current: 0
+  isEventThis: 0
 --- !u!1 &1811981217
 GameObject:
   m_ObjectHideFlags: 0
@@ -22299,6 +22405,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 000101
   current: 0
+  isEventThis: 0
 --- !u!114 &1892697882 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2127936205764601254, guid: ac25f54e9d2d4f845adef0b3040e209e,
@@ -23756,6 +23863,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 010000
   current: 0
+  isEventThis: 0
 --- !u!61 &2015731418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23860,6 +23968,7 @@ MonoBehaviour:
   stem: 0
   avalStem: 010100
   current: 0
+  isEventThis: 0
 --- !u!1 &2052397200
 GameObject:
   m_ObjectHideFlags: 0
@@ -24189,6 +24298,7 @@ MonoBehaviour:
   stem: 1
   avalStem: 000100
   current: 0
+  isEventThis: 0
 --- !u!61 &2093837362
 BoxCollider2D:
   m_ObjectHideFlags: 0
