@@ -35,8 +35,11 @@ public class ChangePosiitonScript : MonoBehaviour
     void Update()
     {
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur&& avalStem[formerSelect]){
+            Debug.Log("ChangePosition:Update stageLevel, stem" + stageLevel + stem);
             isVisited[stageLevel,stem] = true;
             cur++;
+            if(cur == 0 || cur == 5)
+                isEventThis = false;
             switch(isEventThis){
                 case true:
                 eventSelect();
@@ -135,6 +138,7 @@ public class ChangePosiitonScript : MonoBehaviour
     }
 
     void eventSelect(){            
+        Debug.Log("eventSelect: Called");
         string NextScene = "";
         bool isFront;
         GameManager.Instance.canExit = true;
@@ -161,9 +165,9 @@ public class ChangePosiitonScript : MonoBehaviour
             }
         }
 
-//        Debug.Log("stageLevel and stage Stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
+        Debug.Log("ChangePositionScript: EventSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
         formerSelect = stem;
-//        Debug.Log("formerSelect: "+ formerSelect);
+        Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
 
    }
@@ -172,7 +176,9 @@ public class ChangePosiitonScript : MonoBehaviour
     void stageSelect(){            
         string NextScene = "";
         bool isFront;
-        int bsn = Random.Range(0,8);
+        int bsn;
+//        bsn = Random.Range(0,8);
+        bsn = 2;
         GameManager.Instance.canExit = true;
 
         if(cur!= 0 &&cur %5 == 0){
@@ -243,8 +249,8 @@ public class ChangePosiitonScript : MonoBehaviour
                 NextScene = "BS_304";
                 break;
         }
-        }
-        Debug.Log("stageLevel and stage Stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
+        }        
+        Debug.Log("ChangePositionScript: StageSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
         formerSelect = stem;
         Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);

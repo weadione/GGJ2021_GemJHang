@@ -16,19 +16,19 @@ public class TitleScript : MonoBehaviour
             SceneTitle = "IntroScene";
             isFirst = false;
         }
-        AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(4);
+//        AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(4);
         SceneManager.LoadScene(SceneTitle);
     }
 
     public void LoadOption()
     {
         // BGM 크기 조절, 타이틀 화면으로 
-        AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(4);
+//        AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(4);
         SceneManager.LoadScene(SceneToLoad);
     }
     public void LoadExit(){
 
-        AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(4);
+//        AudioEffect.Instance.GetComponent<AudioEffect>().PlayAudio(4);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
     #else

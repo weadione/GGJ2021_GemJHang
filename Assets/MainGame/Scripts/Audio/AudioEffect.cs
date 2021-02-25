@@ -43,27 +43,31 @@ public class AudioEffect : MonoBehaviour
     {
         if (num == 1)
         {
+            Debug.Log("AudioEffect: PlayAudio 1");
             effectSource.clip = audioEffect[0];
 
         }
         else if (num == 2)
         {
+            Debug.Log("AudioEffect: PlayAudio 2");
             effectSource.clip = audioEffect[1];
 
 
         }
         else if (num == 3)
         {
+            Debug.Log("AudioEffect: PlayAudio 3");
             effectSource.clip = audioEffect[2];
         }
         else if (num == 4)
         {
+            Debug.Log("AudioEffect: PlayAudio 4");
             effectSource.clip = audioEffect[3];
 
         }
         else
-        {
-
+        {   
+            Debug.Log("ERROR");
         }
         effectSource.Play();
 
