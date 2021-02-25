@@ -36,7 +36,6 @@ public class EventManager : MonoBehaviour
 
         stageTier = nameScene[0];
         stageNo = nameScene[2] - '0';
-        Debug.Log("EventManagerLOG stageName : " +nameScene);
         PM = PlayerState.Instance.GetComponent<PartsManager>();
         selectStep = 0;
         selectNum = 0;
@@ -63,7 +62,7 @@ public class EventManager : MonoBehaviour
         Debug.Log("EventManagerLOG stageName : " + nameScene);
         stageTier = nameScene[0];
         stageNo = nameScene[2] - '0';
-        
+
 
         DontDestroyOnLoad(gameObject);
         selectStep = 0;
@@ -79,7 +78,7 @@ public class EventManager : MonoBehaviour
 
         SelectOn();
         RunEvent();
-        
+
     }
     public void SelectOn()
     {
@@ -185,13 +184,13 @@ public class EventManager : MonoBehaviour
             {
                 selectStep = 1;
                 PM.ChangeParts(0, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);
             }
-            else 
+            else
             {
                 selectStep = 5;
                 PM.ChangeParts(0, randomParts);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, randomParts); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, randomParts);
             }
 
             scriptNum = 0;
@@ -208,14 +207,14 @@ public class EventManager : MonoBehaviour
             {
                 selectStep = 1;
                 PM.ChangeParts(1, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0);
 
             }
             else
             {
                 selectStep = 5;
                 PM.ChangeParts(1, randomParts);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, randomParts); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, randomParts);
             }
             scriptNum = 0;
             selectNum = 0;
@@ -231,7 +230,7 @@ public class EventManager : MonoBehaviour
             {
                 selectStep = 1;
                 PM.ChangeParts(2, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0);
             }
             else
             {
@@ -239,12 +238,12 @@ public class EventManager : MonoBehaviour
                 if (randomParts == 0)
                 {
                     PM.ChangeParts(2, randomParts);
-                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts); 
+                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts);
                 }
                 else
                 {
                     PM.ChangeParts(2, randomParts+1);
-                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts+1); 
+                    // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, randomParts+1);
                 }
             }
             scriptNum = 0;
@@ -267,12 +266,12 @@ public class EventManager : MonoBehaviour
 
     public void EV7RunEvent()
     {
-        
+
         if (scriptNum ==1)
         {
             button[0].SetActive(true);
             randomValue = Random.Range(0, 99);
-        }    
+        }
         else if(scriptNum ==2)
         {
             text.text = "돌림판이 힘차게 돌아갑니다!";
@@ -282,10 +281,10 @@ public class EventManager : MonoBehaviour
         {
             text.text = "과연 당신의 결과는??";
             selectStep = 3;
-        }        
+        }
         else if(scriptNum ==4)
         {
-            
+
             if(randomValue ==0)
             {
                 text.text = "죽음입니다!!";
@@ -296,28 +295,28 @@ public class EventManager : MonoBehaviour
                 text.text = "회복에 당첨되셨습니다!!";
                 PlayerState.Instance.health = 100;  //플레이어 최대체력
                 PlayerState.Instance.headPartsHealth = PM.headParts[PlayerState.Instance.partsNum[0]].partsHealth;
-                
+
                 selectStep = 5;
             }
             else if(9<randomValue && randomValue<40)
             {
                 text.text = "머리 손실!";
                 PM.ChangeParts(0,0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);
                 selectStep = 5;
             }
             else if(39<randomValue && randomValue <70)
             {
                 text.text = "팔 손실!";
                 PM.ChangeParts(1,0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 0);
                 selectStep = 5;
             }
             else if (69 < randomValue && randomValue < 100)
             {
                 text.text = "다리 손실!";
                 PM.ChangeParts(2, 0);
-                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0); 
+                // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(2, 0);
                 selectStep = 5;
             }
         }
@@ -368,13 +367,13 @@ public class EventManager : MonoBehaviour
             button[3].SetActive(false);
             text.text = "당신은 당신의 머리를 제단 위로 올렸습니다.\n엄청난 빛이 난 후에 당신의 머리는 흔적도 없이 사라졌습니다.";
 
-            
+
             PM.ChangeParts(0, 0);
-            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);  
+            // PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(0, 0);
             scriptNum = 0;
             selectNum = 0;
             selectStep = 1;
-            
+
 
         }
         else if(selectNum ==2)
@@ -507,7 +506,7 @@ public class EventManager : MonoBehaviour
             PlayerState.Instance.defaultDamage += 50;       //실제로 테스트해야함
             PlayerState.Instance.updateStatus(1);
             selectStep = 4;
-            
+
         }
         else if(scriptNum ==5)
         {
@@ -560,7 +559,7 @@ public class EventManager : MonoBehaviour
         else if(scriptNum ==2)
         {
             SceneManager.LoadScene("WorldScene");
-        }    
+        }
         else if(scriptNum == 3)
         {
             text.text = "대장 말이 당신에게 돌진하였습니다.";
@@ -647,8 +646,8 @@ public class EventManager : MonoBehaviour
 
 
 
-    
-    
+
+
     public void EV1RunEvent() // ses 0-> 스크립트 1-> 선택지 ON 2-> 전투 3-> 송충이 저주 4-> 탈출
     {
 
@@ -726,10 +725,10 @@ public class EventManager : MonoBehaviour
 
 
 
-    
 
 
-    public void EV0RunEvent() //ses 0 -> 선택지ON 1-> 전투 2->탈출 
+
+    public void EV0RunEvent() //ses 0 -> 선택지ON 1-> 전투 2->탈출
     {
         Debug.Log("이벤트로는 들어옴" + scriptNum);
         if (scriptNum == 1)
@@ -741,7 +740,7 @@ public class EventManager : MonoBehaviour
         else if (scriptNum == 2)
         {
             Debug.Log("싸우러가자");
-            
+
             SceneManager.LoadScene("EV0_BS");
         }
         else if(scriptNum == 3)
@@ -757,7 +756,7 @@ public class EventManager : MonoBehaviour
                 button[0].SetActive(false);
                 button[1].SetActive(false);
                 text.text = "당신은 뱀의 친구가 되었습니다.";
-                
+
                 if(PlayerState.Instance.health+30 < 100) // 체력회복 30  //실제로 테스트해야함
                 {
                     PlayerState.Instance.health += 30;
@@ -803,5 +802,3 @@ public class EventManager : MonoBehaviour
 
 
 }
-
-
