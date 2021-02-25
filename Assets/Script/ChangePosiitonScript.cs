@@ -36,6 +36,7 @@ public class ChangePosiitonScript : MonoBehaviour
     {
         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur&& avalStem[formerSelect]){
             Debug.Log("ChangePosition:Update stageLevel, stem" + stageLevel + stem);
+            formerSelect = stem;
             isVisited[stageLevel,stem] = true;
             cur++;
             if(cur == 0 || cur == 5)
@@ -166,7 +167,6 @@ public class ChangePosiitonScript : MonoBehaviour
         }
 
         Debug.Log("ChangePositionScript: EventSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
-        formerSelect = stem;
         Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
 
@@ -177,12 +177,11 @@ public class ChangePosiitonScript : MonoBehaviour
         string NextScene = "";
         bool isFront;
         int bsn;
-//        bsn = Random.Range(0,8);
-        bsn = 2;
+        bsn = Random.Range(0,8);
         GameManager.Instance.canExit = true;
 
         if(cur!= 0 &&cur %5 == 0){
-            NextScene = "BS_40"+(cur/5+1);
+            NextScene = "BS_40"+(cur/5+1);      
             SceneManager.LoadScene(NextScene);
             return;
         }
@@ -251,7 +250,6 @@ public class ChangePosiitonScript : MonoBehaviour
         }
         }        
         Debug.Log("ChangePositionScript: StageSelect stageLevel, stem: " + stageLevel + stem + "  formerSelect : " + formerSelect);
-        formerSelect = stem;
         Debug.Log("formerSelect: "+ formerSelect);
         SceneManager.LoadScene(NextScene);
 

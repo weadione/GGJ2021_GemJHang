@@ -11436,7 +11436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 0
   stem: 0
-  avalStem: 010000
+  avalStem: 010101
   current: 0
   isEventThis: 0
 --- !u!61 &1008952016
@@ -17715,7 +17715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageLevel: 0
   stem: 1
-  avalStem: 010000
+  avalStem: 010101
   current: 0
   isEventThis: 0
 --- !u!61 &1428532384
