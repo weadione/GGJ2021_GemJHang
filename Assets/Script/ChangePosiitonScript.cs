@@ -14,6 +14,8 @@ public class ChangePosiitonScript : MonoBehaviour
     public static bool [, ] isVisited = new bool [10,3];
     public static int [, ] eventNode = new int [10 ,3];
 
+    public static bool isMiddleBeaten = false;
+
 
     public int current;
     private GameObject battle, staying, chNode, eNode, arrow, arrow2;
@@ -57,7 +59,8 @@ public class ChangePosiitonScript : MonoBehaviour
 
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
-
+        if(cur == 5 && isMiddleBeaten == false)
+            callMiddleScene();
         if(cur == 10)
             callEndingScene();
 
@@ -68,6 +71,15 @@ public class ChangePosiitonScript : MonoBehaviour
         current = cur;
     }
 
+    void callMiddleScene(){
+        SceneManager.LoadScene("MiddleScene");
+         if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
+            isVisited[stageLevel,stem] = true;
+            cur++;
+            stageSelect();
+        }
+
+    }
     void callEndingScene(){
         SceneManager.LoadScene("EndingScene");
          if (isHit()&&!isVisited[stageLevel,stem]&& stageLevel == cur){
