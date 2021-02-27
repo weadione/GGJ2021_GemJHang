@@ -161,6 +161,7 @@ public class EventManager : MonoBehaviour
         }
         else if(scriptNum ==5)
         {
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
         else if(scriptNum ==6)
@@ -326,6 +327,7 @@ public class EventManager : MonoBehaviour
         }
         else if(scriptNum ==6)
         {
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
 
@@ -356,6 +358,7 @@ public class EventManager : MonoBehaviour
         }
         else if(scriptNum ==2)
         {
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
 
@@ -510,6 +513,7 @@ public class EventManager : MonoBehaviour
         }
         else if(scriptNum ==5)
         {
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
         else if(scriptNum ==6)
@@ -558,6 +562,7 @@ public class EventManager : MonoBehaviour
         }
         else if(scriptNum ==2)
         {
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
         else if(scriptNum == 3)
@@ -615,6 +620,7 @@ public class EventManager : MonoBehaviour
         {
             //    PlayerState.Instance.GetComponent<PartsManager>().ChangeParts(1, 5); // 후반 쓰레기팔로 바꿈//실제로 테스트해야함
             PM.ChangeParts(1, 5);
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
         else if(scriptNum == 5)
@@ -671,6 +677,7 @@ public class EventManager : MonoBehaviour
         }
         else if(scriptNum == 4)
         {
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
         if(selectNum == 1)
@@ -745,6 +752,7 @@ public class EventManager : MonoBehaviour
         }
         else if(scriptNum == 3)
         {
+            GameManager.Instance.Save();
             SceneManager.LoadScene("WorldScene");
         }
 

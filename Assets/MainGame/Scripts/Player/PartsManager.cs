@@ -122,25 +122,50 @@ public class PartsManager : MonoBehaviour
 
     public void ResetParts()
     {
-        headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
+        for(int i =0;i<headParts.Length;i++)
+        {
+            headParts[i].mainObject.SetActive(false);
+        }
+        //headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(false);
         headParts[0].mainObject.SetActive(true);
 
-        armParts[PlayerState.Instance.partsNum[1]].mainObject.SetActive(false);
+        for (int i = 0; i < armParts.Length; i++)
+        {
+            armParts[i].mainObject.SetActive(false);
+        }
+        //armParts[PlayerState.Instance.partsNum[1]].mainObject.SetActive(false);
         armParts[0].mainObject.SetActive(true);
 
-        legParts[PlayerState.Instance.partsNum[2]].mainObject.SetActive(false);
+        for (int i = 0; i < legParts.Length; i++)
+        {
+            legParts[i].mainObject.SetActive(false);
+        }
+        //legParts[PlayerState.Instance.partsNum[2]].mainObject.SetActive(false);
         legParts[0].mainObject.SetActive(true);
     }
 
     public void LoadParts()
     {
-        headParts[0].mainObject.SetActive(false);
+        for (int i = 0; i < headParts.Length; i++)
+        {
+            headParts[i].mainObject.SetActive(false);
+        }
+        //headParts[0].mainObject.SetActive(false);
         headParts[PlayerState.Instance.partsNum[0]].mainObject.SetActive(true);
 
-        armParts[0].mainObject.SetActive(false);
+        for (int i = 0; i < armParts.Length; i++)
+        {
+            armParts[i].mainObject.SetActive(false);
+        }
+        //armParts[0].mainObject.SetActive(false);
         armParts[PlayerState.Instance.partsNum[1]].mainObject.SetActive(true);
 
-        legParts[0].mainObject.SetActive(false);
+
+        for (int i = 0; i < legParts.Length; i++)
+        {
+            legParts[i].mainObject.SetActive(false);
+        }
+        //legParts[0].mainObject.SetActive(false);
         legParts[PlayerState.Instance.partsNum[2]].mainObject.SetActive(true);
     }
 

@@ -104,7 +104,7 @@ public class WC_Background : MonoBehaviour
             return;
         }
         camera.transform.position = new Vector3(abCam.x, abCam.y, 10*stageTier-3);
-        Debug.Log(camera.transform.position);
+        //Debug.Log(camera.transform.position);
 
 
     }

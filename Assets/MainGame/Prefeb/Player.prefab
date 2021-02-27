@@ -2073,8 +2073,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.38407716, y: 0.062887676}
-  m_Size: {x: 2.2461548, y: 0.7987936}
+  m_Offset: {x: 0.47905692, y: 0.46725908}
+  m_Size: {x: 2.6253343, y: 1.6075615}
   m_Direction: 1
 --- !u!1 &1629457704
 GameObject:
@@ -3226,6 +3226,7 @@ GameObject:
   - component: {fileID: 2127936204899314072}
   - component: {fileID: 2127936204899314073}
   - component: {fileID: 471262277}
+  - component: {fileID: 1199621451}
   m_Layer: 14
   m_Name: DamageZone
   m_TagString: Untagged
@@ -3296,9 +3297,7 @@ MonoBehaviour:
   - {fileID: 151248247}
   - {fileID: 463038157}
   - {fileID: 2069240227}
-  playerAttackSound: {fileID: 471262277}
-  nearAtt: {fileID: 8300000, guid: e9e12926105ea1a49b4aee840fb74a10, type: 3}
-  farAtt: {fileID: 8300000, guid: 3dbdf7784b1295b4eb03240ddcefe92f, type: 3}
+  playerAttackSound: {fileID: 259644363}
 --- !u!82 &471262277
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3311,7 +3310,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e9e12926105ea1a49b4aee840fb74a10, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3319,7 +3318,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.0470297
+  MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -3395,6 +3394,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1199621451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127936204899314075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb68bc9e44907d4eb3935c81ab3497d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 259644363}
+  audioClip:
+  - {fileID: 8300000, guid: e9e12926105ea1a49b4aee840fb74a10, type: 3}
+  - {fileID: 8300000, guid: 3dbdf7784b1295b4eb03240ddcefe92f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2127936204996062009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,6 +4335,7 @@ GameObject:
   - component: {fileID: 2127936205764601256}
   - component: {fileID: 448205328}
   - component: {fileID: 259644363}
+  - component: {fileID: 1199621449}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -4431,14 +4449,14 @@ MonoBehaviour:
   defaultMoveSpeed: 0
   defaultDashSpeed: 0
   defaultAttRange: 0
+  headPartsHealth: 0
+  isHeadParts: 0
   attRange: 0
   maxHealth: 0
   jumpCount: 0
   dash: 0
   jumpForce: 0
   damageZone: {fileID: 2127936204899314072}
-  animalAdaptation: 0
-  machineAdaptation: 0
   animalAdaptationTmp: 0
   machineAdaptationTmp: 0
 --- !u!114 &2127936205764601254
@@ -4849,7 +4867,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e9e12926105ea1a49b4aee840fb74a10, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4858,7 +4876,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1000
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -4933,6 +4951,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1199621449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127936205764601255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb68bc9e44907d4eb3935c81ab3497d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 259644363}
+  audioClip:
+  - {fileID: 8300000, guid: e9e12926105ea1a49b4aee840fb74a10, type: 3}
+  - {fileID: 8300000, guid: 64ab331f9e54e8e42899a87bdff5e917, type: 3}
+  - {fileID: 8300000, guid: 0adf94f2abaaae74e809cb851239a3e2, type: 3}
+  - {fileID: 8300000, guid: e0194de8ab3d7aa4cac2407879c639c7, type: 3}
 --- !u!1 &2127936205790288456
 GameObject:
   m_ObjectHideFlags: 0

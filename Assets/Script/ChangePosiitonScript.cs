@@ -28,8 +28,9 @@ public class ChangePosiitonScript : MonoBehaviour
             isEventThis = true;
         else
             isEventThis = false;
-//        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem] + isEventThis);
+        //        Debug.Log("START : EVENTNODE [" + stageLevel + ", " + stem + "] " + eventNode[stageLevel,stem] + isEventThis);
 
+        GameManager.Instance.Load();
         isVisitedThis = isVisited[stageLevel,stem];
         changeIconPos();
     }
@@ -153,7 +154,7 @@ public class ChangePosiitonScript : MonoBehaviour
         Debug.Log("eventSelect: Called");
         string NextScene = "";
         bool isFront;
-        GameManager.Instance.canExit = true;
+        //GameManager.Instance.canExit = true;
 
         if(cur < 6)
             isFront = true;
@@ -164,16 +165,16 @@ public class ChangePosiitonScript : MonoBehaviour
         int isCommon = Random.Range(0,10);
         if(isCommon < 2){
             int bsn = Random.Range(6,9);
-            NextScene = "Ev0";
+            NextScene = "EV" + bsn;
         }
         else{
             if (isFront){
                 int bsn = Random.Range(0,4);
-                NextScene = "Ev0" + bsn;
+                NextScene = "EV" + bsn;
             }
             else {
                 int bsn = Random.Range(4,6);
-                NextScene = "Ev0" + bsn;
+                NextScene = "EV" + bsn;
             }
         }
 
@@ -189,7 +190,7 @@ public class ChangePosiitonScript : MonoBehaviour
         bool isFront;
         int bsn;
         bsn = Random.Range(0,8);
-        GameManager.Instance.canExit = true;
+        //GameManager.Instance.canExit = true;
 
         if(cur!= 0 &&cur %5 == 0){
             NextScene = "BS_40"+(cur/5+1);

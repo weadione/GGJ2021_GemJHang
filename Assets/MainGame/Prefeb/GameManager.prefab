@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitButton: {fileID: 0}
+  gameoverText: {fileID: 0}
   animalPartsAdaptation: 0
   machinePartsAdaptation: 0
-  currentStage: 0
-  sceneName: []
+  isGameover: 0
   monsterRemain: 0
   canExit: 0

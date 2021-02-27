@@ -41,8 +41,8 @@ public class Rooting : MonoBehaviour
                 //{
                 //    tmp.ChangeParts(2, rootItemList[2]);
                 //}
-                
 
+                //rootUI = GameObject.Find("LootPanel");
                 
                 click = false;
   

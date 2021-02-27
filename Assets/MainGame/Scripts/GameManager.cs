@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
+    private static GameManager instance = null;
     public static GameManager Instance
     {
         get
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance)
+        if (instance != null && instance != this)
         {
             DestroyImmediate(gameObject);
             return;
@@ -39,7 +39,13 @@ public class GameManager : MonoBehaviour
         monsterRemain = 0;
         playerParts = new int[3];
         isGameover = false;
+        //Load();
+    }
+
+    private void Start()
+    {
         Load();
+        exitButton.SetActive(false);
     }
 
     public GameObject exitButton;
@@ -66,7 +72,7 @@ public class GameManager : MonoBehaviour
     private int jumpcount;
 
     //스테이지 클리어 확인 관련 변수
-    public int monsterRemain;
+    public int monsterRemain=0;
     public bool canExit = false;
 
     public void Save()
@@ -159,7 +165,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("PlayerLegParts", 0);
 
 
-
         //맵 관련
         PlayerPrefs.SetInt("MapCurrent", 0);
         PlayerPrefs.SetInt("FormerSelect", 0);
@@ -176,8 +181,8 @@ public class GameManager : MonoBehaviour
    public void Load()
     {
         //플레이어 상태 관련
-        PlayerState.Instance.attDamage = PlayerPrefs.GetFloat("PlayerAttDamage", 10f);
-        PlayerState.Instance.health = PlayerPrefs.GetFloat("PlayerHealth", 100f);
+        PlayerState.Instance.attDamage = PlayerPrefs.GetFloat("PlayerAttDamage", 100f);
+        PlayerState.Instance.health = PlayerPrefs.GetFloat("PlayerHealth", 1000f);
         PlayerState.Instance.attSpeed = PlayerPrefs.GetFloat("PlayerAttSpeed", 0.5f);
         PlayerState.Instance.moveSpeed = PlayerPrefs.GetFloat("PlayerMoveSpeed", 10f);
         PlayerState.Instance.dashSpeed = PlayerPrefs.GetFloat("PlayerDashSpeed", 30f);
@@ -213,6 +218,8 @@ public class GameManager : MonoBehaviour
         PlayerState.Instance.partsNum[2] = PlayerPrefs.GetInt("PlayerLegParts", 0);
 
         PlayerState.Instance.GetComponent<PartsManager>().LoadParts();
+
+        monsterRemain = 0;
 
         //맵 관련
         ChangePosiitonScript.cur = PlayerPrefs.GetInt("MapCurrent", 0);
@@ -250,21 +257,30 @@ public class GameManager : MonoBehaviour
     }
 
 
+    
+
 
     private void Update()
     {
         exitGame();
         ReturnTitle();
+
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+            PlayerPrefs.DeleteAll();
+        //Debug.Log("남은 몹: " + monsterRemain);
     }
 
     private void exitGame()
-    { 
+    {
         ////디버깅을 위한 강제 탈출버튼 활성화 -> 실제 게임시 주석처리 or 삭제바람
         //if(Input.GetKeyDown(KeyCode.E) && canExit)
         //{
         //    canExit = false;
         //    exitButton.SetActive(true);
         //}
+
+        if (monsterRemain >= 1 && !canExit)
+            canExit = true;
 
         //맵내의 몹을 다 잡을시 탈출버튼 활성화시키는 조건문->실제 게임시 활성화 바람
         if (monsterRemain == 0 && canExit)

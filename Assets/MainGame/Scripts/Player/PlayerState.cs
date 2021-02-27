@@ -53,11 +53,14 @@ public class PlayerState : LivingEntity
             return instance;
         }
     }
+
+
     private void Awake()
     {
         GetComponent<PartsManager>().initalize();
-        if (instance)
+        if (instance != null && instance != this)
         {
+            
             DestroyImmediate(gameObject);
             return;
         }
@@ -113,7 +116,7 @@ public class PlayerState : LivingEntity
 
     private void Update()
     {
-        Debug.Log("동물적응도: " + animalAdaptationTmp);
+        //Debug.Log("동물적응도: " + animalAdaptationTmp);
     }
 
 

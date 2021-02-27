@@ -187,6 +187,7 @@ public class LootingUI : MonoBehaviour
 
     private void Start()
     {
+        PlayerState.Instance.GetComponentInChildren<Rooting>().rootUI = gameObject;
         gameObject.SetActive(false);
     }
 
